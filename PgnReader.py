@@ -14,17 +14,19 @@ class PgnReader:
                 if game is None:
                     break
                 moves = []
-                while not game.is_end():
-                    next_node = game.variation(0)
-                    move_number = game.board().fullmove_number
-                    white_player = Player.Player(game.headers["White"], game.headers["WhiteElo"])
-                    black_player = Player.Player(game.headers["Black"], game.headers["BlackElo"])
-                    move_text = game.board().san(next_node.move)
+                node = game                
+                white_player = Player.Player(game.headers["White"], game.headers["WhiteElo"])
+                black_player = Player.Player(game.headers["Black"], game.headers["BlackElo"])
+                while not node.is_end():
+                    next_node = node.variation(0)
+                    move_number = node.board().fullmove_number
+                    move_text = node.board().san(next_node.move)
                     if move_number % 2 == 0:
                         moves.append(ChessMove.ChessMove(move_number, black_player, move_text))
                     else:
                         moves.append(ChessMove.ChessMove(move_number, white_player, move_text))
-                    game = next_node
+                    node = next_node
+
                 result = game.headers["Result"]
                 games.append(Game.Game(game.headers["Event"], game.headers["Site"], game.headers["Date"],
                                        game.headers["Round"], result, white_player, black_player, moves))
