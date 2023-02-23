@@ -1,0 +1,3 @@
+"Each of these functions must be thoroughly tested." Skal vi nå inkludere automatiserte tester?
+Export a game from(to) a text file: Skal vi generere et parti? Eksportere et parti fra PGN til textfil? wtf
+Managing moves - spillogikk???
