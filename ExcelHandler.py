@@ -14,14 +14,8 @@ class ExcelHandler:
         data = {
             "Move Number": [move.move_number for move in game.moves],
             "Player Name": [move.player.name for move in game.moves],
-            "Player Elo": [move.player.elo for move in game.moves],
+            "Player Rating": [move.player.rating for move in game.moves],
             "Move": [move.move_text for move in game.moves]
         }
-        df = pd.DataFrame(data)
-        df.to_excel(self.file_path, index=False)
-
-game_reader = PgnReader.PgnReader("Stockfish_15_64-bit.commented.[2600].pgn")
-games = game_reader.read_games()
-
-game_exporter = ExcelHandler("firstGame.xlsx")
-game_exporter.export_game_to_excel(games[0])
+        data_frame = pd.DataFrame(data)
+        data_frame.to_excel(self.file_path, index=False)

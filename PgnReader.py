@@ -21,10 +21,10 @@ class PgnReader:
                     next_node = node.variation(0)
                     move_number = node.board().fullmove_number
                     move_text = node.board().san(next_node.move)
-                    if move_number % 2 == 0:
-                        moves.append(ChessMove.ChessMove(move_number, black_player, move_text))
-                    else:
+                    if node.board().turn == chess.WHITE:
                         moves.append(ChessMove.ChessMove(move_number, white_player, move_text))
+                    else:
+                        moves.append(ChessMove.ChessMove(move_number, black_player, move_text))
                     node = next_node
 
                 result = game.headers["Result"]
