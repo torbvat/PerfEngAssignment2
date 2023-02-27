@@ -16,4 +16,4 @@ class Game:
         self.moves = moves
     
     def __repr__(self):
-        return f"(Round: {self.round}, Result: {self.result}, White Player: {self.white_player}, Black Player: {self.black_player})"
+        return f"(Round: {self.round}, Result: {self.result}, White Player: {self.white_player}, Black Player: {self.black_player})\n"

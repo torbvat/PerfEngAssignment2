@@ -1,7 +1,7 @@
 import chess.pgn
-import Game
-import Player
-import ChessMove
+import Game #Class for storing game data
+import Player #Class for storing player data
+import ChessMove #Class for storing data about a single move
 class PgnReader:
     def __init__(self, file_path):
         self.file_path = file_path
