@@ -5,7 +5,6 @@ reader = DatabaseHandler.DatabaseHandler("StockfishShort.pgn")
 
 print(reader.read_games())
 
-
 #Excel:
 #game_reader = DatabaseHandler.DatabaseHandler("StockfishShort.pgn")
 #games = game_reader.read_games()

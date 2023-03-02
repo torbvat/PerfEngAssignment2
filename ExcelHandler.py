@@ -15,6 +15,6 @@ class ExcelHandler:
             "Player Name": [move.player.name for move in game.moves],
             "Player Rating": [move.player.rating for move in game.moves],
             "Move": [move.move_text for move in game.moves]
-        }            #"Comment": [move.comment for move in game.moves]
+        }            
         data_frame = pd.DataFrame(data)
         data_frame.to_excel(self.file_path, index=False)

@@ -1,5 +1,0 @@
-"Each of these functions must be thoroughly tested." Skal vi nå inkludere automatiserte tester?
-Managing moves - spillogikk???
-
-https://python-chess.readthedocs.io/en/latest/pgn.html
-Dokumentasjon med eksempler chess.pgn^
