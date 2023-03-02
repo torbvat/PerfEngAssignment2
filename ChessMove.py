@@ -5,4 +5,4 @@ class ChessMove:
         self.move_text = move_text
 
     def __repr__(self):
-        return f"Player: {self.player}, Move Number: {self.move_number}, Move Text: {self.move_text}"
+        return f" Move Number: {self.move_number}, Move Text: {self.move_text}\n"
