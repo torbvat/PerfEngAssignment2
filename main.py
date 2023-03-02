@@ -12,6 +12,8 @@ game_exporter = ExcelHandler.ExcelHandler("first_game.xlsx")
 #print(games[0].moves)
 game_exporter.export_game_to_excel(games[0])
 
-game_exporter_2 = ExcelHandler.ExcelHandler("second_game.xlsx")
-print(games[0].moves)
-game_exporter_2.export_game_to_excel(games[1])
+#game_exporter_2 = ExcelHandler.ExcelHandler("second_game.xlsx")
+#print(games[0].moves)
+#game_exporter_2.export_game_to_excel(games[1])
+
+game_reader.write_to_file(games, "testfile.pgn")

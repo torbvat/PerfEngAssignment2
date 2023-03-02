@@ -11,8 +11,9 @@ class DatabaseHandler:
         moves = []
         move_string = ""
         with open(self.file_path, 'r') as file:
-            event = site = date = round = result = eco = opening = variation = plycount = None
+            event = site = date = round = result = eco = opening  = plycount = None
             white_name = white_elo = black_name = black_elo = None
+            variation = "Standard"
             for line in file:
                 if line is None or line=="\n" or line == " " or line == "": #Skip empty lines
                     continue
@@ -68,6 +69,30 @@ class DatabaseHandler:
                     games.append(Game.Game(event, site, date, round, result, eco, opening, plycount, white_player, black_player, moves, variation))
         return games
     
+    def write_to_file(self, Games, file_path):
+        with open(file_path, 'w') as file:
+            for game in Games:
+                move_counter = 0
+                file.write("[Event\t" + game.get_event() + "]\n")
+                file.write("[Site\t" + game.get_site() + "]\n")
+                file.write("[Date\t" + game.get_date() + "]\n")
+                file.write("[Round\t" + game.get_round() + "]\n")
+                file.write("[White\t" + game.get_white_player().get_name() + "]\n")
+                file.write("[Black\t" + game.get_black_player().get_name() + "]\n")
+                file.write("[Result\t" + game.get_result() + "]\n")
+                file.write("[ECO\t" + game.get_eco() + "]\n")
+                file.write("[Opening\t" + game.get_opening() + "]\n")
+                file.write("[Variation\t" + game.get_variation() + "]\n")
+                file.write("[PlyCount\t" + game.get_plycount() + "]\n")
+                file.write("[WhiteElo\t" + game.get_white_player().get_rating() + "]\n")
+                file.write("[BlackElo\t" + game.get_black_player().get_rating() + "]\n")
+                file.write("\n")
+                for i in range(0, len(game.get_moves()), 2):
+                    move_counter += 1
+                    file.write(game.get_moves()[i].get_move_number() + ". " + game.get_moves()[i].get_move_text() + " " + game.get_moves()[i+1].get_move_text()+ " ")\
+                    if i+1 < len(game.get_moves()) else file.write(game.get_moves()[i].get_move_number() + ". " + game.get_moves()[i].get_move_text() + " " + game.get_result() + "\n\n")
+                    if move_counter % 4 == 0:
+                        file.write("\n")
 
 
 
