@@ -6,7 +6,8 @@ class DatabaseHandler:
     def __init__(self, file_path):
         self.file_path = file_path
 
-    def read_games(self):
+    def read_games(self, number_of_games = None):
+        game_count = 0
         games = []
         moves = []
         move_string = ""
@@ -18,7 +19,10 @@ class DatabaseHandler:
                 if line is None or line=="\n" or line == " " or line == "": #Skip empty lines
                     continue
                 elif line.startswith('[Event'):
+                    if game_count == number_of_games: #If we have read the number of games we want to read, stop reading
+                        break
                     moves = []
+                    game_count += 1
                     event = line.split('"')[1]
                 elif line.startswith('[Site '):
                     site = line.split('"')[1]
@@ -89,8 +93,10 @@ class DatabaseHandler:
                 file.write("\n")
                 for i in range(0, len(game.get_moves()), 2):
                     move_counter += 1
-                    file.write(game.get_moves()[i].get_move_number() + ". " + game.get_moves()[i].get_move_text() + " " + game.get_moves()[i+1].get_move_text()+ " ")\
-                    if i+1 < len(game.get_moves()) else file.write(game.get_moves()[i].get_move_number() + ". " + game.get_moves()[i].get_move_text() + " " + game.get_result() + "\n\n")
+                    if i+1 < len(game.get_moves()):
+                        file.write(game.get_moves()[i].get_move_number() + ". " + game.get_moves()[i].get_move_text() + " " + game.get_moves()[i+1].get_move_text()+ " ")
+                    else: 
+                        file.write(game.get_moves()[i].get_move_number() + ". " + game.get_moves()[i].get_move_text() + " " + game.get_result() + "\n\n")
                     if move_counter % 4 == 0:
                         file.write("\n")
 

@@ -6,3 +6,5 @@ result = re.findall(r'\S+', re.sub(r'{.*?}', '', input_str))
 
 print(result)
 print(input_str.endswith("1-0") or input_str.endswith("0-1") or input_str.endswith("1/2-1/2"))
+liste = [""]
+print(liste)
