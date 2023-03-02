@@ -1,18 +1,17 @@
 import ExcelHandler
 import DatabaseHandler
 
+#Database:
 reader = DatabaseHandler.DatabaseHandler("StockfishShort.pgn")
-#Excel:
 game_reader = DatabaseHandler.DatabaseHandler("StockfishShort.pgn")
 games = game_reader.read_games()
 first_two_games = game_reader.read_games(2)
-
-#print(games)
-#print(first_two_games)
-#print(games[0].moves)
+#Excel:
 game_exporter = ExcelHandler.ExcelHandler()
 game_exporter.export_game_to_excel(games[0], "first_game.xlsx")
 imported_game = game_exporter.import_game_from_excel("first_game.xlsx")
+game_reader.write_to_file([imported_game], "imported_game_from_excel.pgn")
+game_reader.write_to_file(games, "StockfishShort_rewritten.pgn")
 """
 print(imported_game.black_player)
 print(imported_game.white_player)
@@ -28,8 +27,4 @@ print(imported_game.plycount)
 print(imported_game.variation)
 """
 
-#game_exporter_2 = ExcelHandler.ExcelHandler("second_game.xlsx")
-#print(games[0].moves)
-#game_exporter_2.export_game_to_excel(games[1])
 
-#game_reader.write_to_file(games, "testfile2.pgn")

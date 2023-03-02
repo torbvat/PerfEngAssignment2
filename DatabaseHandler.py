@@ -93,13 +93,18 @@ class DatabaseHandler:
                 file.write("\n")
                 for i in range(0, len(game.get_moves()), 2):
                     move_counter += 1
-                    if i+1 < len(game.get_moves()):
-                        file.write(game.get_moves()[i].get_move_number() + ". " + game.get_moves()[i].get_move_text() + " " + game.get_moves()[i+1].get_move_text()+ " ")
+                    if i+2 == len(game.get_moves()):
+                        file.write(str(game.get_moves()[i].get_move_number()) + ". " + game.get_moves()[i].get_move_text() + " " + game.get_moves()[i+1].get_move_text() + " " + game.get_result() + "\n\n")
+                    elif i+1 < len(game.get_moves()):
+                        file.write(str(game.get_moves()[i].get_move_number()) + ". " + game.get_moves()[i].get_move_text() + " " + game.get_moves()[i+1].get_move_text()+ " ")
+                    elif i+1 == len(game.get_moves()):
+                        file.write(str(game.get_moves()[i].get_move_number()) + ". " + game.get_moves()[i].get_move_text() + " " + game.get_result() + "\n\n")
                     else: 
-                        file.write(game.get_moves()[i].get_move_number() + ". " + game.get_moves()[i].get_move_text() + " " + game.get_result() + "\n\n")
+                        file.write(str(game.get_moves()[i].get_move_number()) + ". " + game.get_moves()[i].get_move_text() + " " + game.get_result() + "\n\n")
                     if move_counter % 4 == 0:
                         file.write("\n")
-
+                if move_counter % 4 != 0:
+                    file.write("\n\n")
 
 
     

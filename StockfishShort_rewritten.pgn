@@ -1,0 +1,188 @@
+[Event	CCRL 40/15]
+[Site	CCRL]
+[Date	2022.04.20]
+[Round	820.1.525]
+[White	Stockfish 15 64-bit]
+[Black	Arasan 23.3 64-bit]
+[Result	1-0]
+[ECO	A03]
+[Opening	Bird's opening]
+[Variation	Standard]
+[PlyCount	99]
+[WhiteElo	3511]
+[BlackElo	3333]
+
+1. f4 d5 2. b3 Bg4 3. Bb2 Nc6 4. h3 Bh5 
+5. g4 Bg6 6. Nf3 h5 7. g5 e6 8. e3 Nge7 
+9. Bb5 a6 10. Bxc6+ Nxc6 11. d3 Qe7 12. Qe2 O-O-O 
+13. Qf2 f6 14. Nh4 Bf7 15. gxf6 gxf6 16. Nc3 Qe8 
+17. O-O-O e5 18. Rdf1 Be6 19. f5 Bf7 20. Kb1 Rg8 
+21. Rhg1 Rxg1 22. Rxg1 Bc5 23. Ng6 b6 24. Na4 Bd6 
+25. Nc3 Bc5 26. Bc1 Qd7 27. Qf3 Kb8 28. Qxh5 Nb4 
+29. Na4 Bd6 30. Qg4 Qc6 31. Qg2 b5 32. Nb2 Qb6 
+33. Bd2 Bc5 34. c3 Nc6 35. d4 Bd6 36. h4 b4 
+37. dxe5 Nxe5 38. cxb4 d4 39. e4 d3 40. Rd1 Nc6 
+41. h5 Bxb4 42. Bc1 d2 43. Bxd2 Ba3 44. Qe2 Kb7 
+45. Bc1 Bxb2 46. Kxb2 Rxd1 47. Qxd1 Qf2+ 48. Qd2 Qg1 
+49. h6 Bxg6 50. fxg6 1-0
+
+
+
+[Event	CCRL 40/15]
+[Site	CCRL]
+[Date	2022.04.20]
+[Round	820.1.526]
+[White	Arasan 23.3 64-bit]
+[Black	Stockfish 15 64-bit]
+[Result	0-1]
+[ECO	A03]
+[Opening	Bird's opening]
+[Variation	Standard]
+[PlyCount	121]
+[WhiteElo	3333]
+[BlackElo	3511]
+
+1. f4 d5 2. b3 Bg4 3. Bb2 Nc6 4. h3 Bh5 
+5. g4 Bg6 6. Nf3 h5 7. g5 e6 8. e3 Nge7 
+9. Bb5 h4 10. Ne5 Bh5 11. Be2 Bxe2 12. Qxe2 Nxe5 
+13. Bxe5 c6 14. Nc3 Nf5 15. Rg1 Ba3 16. Qd3 f6 
+17. Bd4 Kf7 18. Ne2 c5 19. Bc3 a6 20. e4 dxe4 
+21. Qxe4 Qd7 22. Kf2 b5 23. Rad1 Rad8 24. Ba5 Rc8 
+25. c3 Qc6 26. d3 Rhe8 27. c4 Re7 28. Nc3 Rd7 
+29. gxf6 gxf6 30. Qe2 Ng3 31. Qg4 Rh8 32. Ne4 Bb2 
+33. Nxg3 Bd4+ 34. Ke2 hxg3 35. Rxg3 f5 36. Qf3 Qxf3+ 
+37. Kxf3 b4 38. Rf1 Kf6 39. Kg2 e5 40. fxe5+ Bxe5 
+41. Rgf3 Rg8+ 42. Kh1 f4 43. a3 bxa3 44. Bd2 Kg6 
+45. Bxf4 Bc3 46. R3f2 Rxd3 47. Bc1 Rxh3+ 48. Kg2 Rh4 
+49. Bxa3 Kh5+ 50. Kf3 Bd4 51. Ke2 Bxf2 52. Rxf2 Rg3 
+53. Rf8 Re4+ 54. Kd2 Rxb3 55. Bxc5 Rxc4 56. Bg1 Kg6 
+57. Ra8 Ra3 58. Bb6 Kf7 59. Ra7+ Ke6 60. Rg7 a5 
+61. Rg6+ 0-1
+
+
+
+[Event	CCRL 40/15]
+[Site	CCRL]
+[Date	2022.04.20]
+[Round	820.1.527]
+[White	Stockfish 15 64-bit]
+[Black	Berserk 8.5.1 64-bit]
+[Result	1-0]
+[ECO	E55]
+[Opening	Nimzo-Indian]
+[Variation	4.e3, Gligoric system, Bronstein variation]
+[PlyCount	150]
+[WhiteElo	3511]
+[BlackElo	3412]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 O-O 
+5. Bd3 d5 6. Nf3 c5 7. O-O dxc4 8. Bxc4 Nbd7 
+9. a3 Bxc3 10. bxc3 b6 11. Nd2 Qc7 12. a4 Rd8 
+13. Qe2 Bb7 14. Bb2 Bc6 15. Bd3 Nf8 16. f4 Ng6 
+17. f5 exf5 18. Rxf5 Rd7 19. Raf1 Re8 20. e4 Bxa4 
+21. Rxf6 gxf6 22. Rxf6 a5 23. Rf2 Qd8 24. Qf3 b5 
+25. e5 Kh8 26. Bxg6 fxg6 27. Ne4 Bb3 28. c4 cxd4 
+29. Qxb3 Rxe5 30. Re2 bxc4 31. Qxc4 Kg7 32. Nd2 Rxe2 
+33. Qxe2 Rd5 34. Nf3 Kf7 35. Qc4 d3 36. h3 Qb6+ 
+37. Bd4 Qb1+ 38. Kh2 Qb8+ 39. Kh1 Qb1+ 40. Bg1 Qb5 
+41. Qc7+ Ke8 42. Be3 Rh5 43. Kh2 Qd7 44. Qf4 Rd5 
+45. Kh1 Qd6 46. Qa4+ Kd8 47. Bd2 Kc8 48. Bf4 Qd7 
+49. Qb3 Rb5 50. Qg8+ Kb7 51. Qb8+ Ka6 52. Qa8+ Kb6 
+53. Ne5 Qd5 54. Qb8+ Ka6 55. Qc8+ Qb7 56. Qe6+ Qb6 
+57. Qc8+ Qb7 58. Qe6+ Qb6 59. Qc4 Qc5 60. Qxd3 Qd5 
+61. Qf1 a4 62. Kh2 Ka7 63. Qe2 Rb3 64. Nc4 Ka6 
+65. Nd2+ Rd3 66. Ne4 Ka5 67. Qe1+ Kb6 68. Be3+ Kc7 
+69. Qc1+ Qc6 70. Bf4+ Kb6 71. Qb1+ Qb5 72. Qc2 Rd7 
+73. Qc3 Qc6 74. Qb4+ Qb5 75. Be3+ Kc6 1-0
+
+
+
+[Event	CCRL 40/15]
+[Site	CCRL]
+[Date	2022.04.20]
+[Round	820.1.528]
+[White	Berserk 8.5.1 64-bit]
+[Black	Stockfish 15 64-bit]
+[Result	0-1]
+[ECO	E55]
+[Opening	Nimzo-Indian]
+[Variation	4.e3, Gligoric system, Bronstein variation]
+[PlyCount	129]
+[WhiteElo	3412]
+[BlackElo	3511]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 O-O 
+5. Bd3 d5 6. Nf3 c5 7. O-O dxc4 8. Bxc4 Nbd7 
+9. Bd2 cxd4 10. Nxd4 a6 11. Rc1 Re8 12. Be2 e5 
+13. Nb3 Bf8 14. Qc2 e4 15. Rfd1 b5 16. Nb1 b4 
+17. Qc6 Ra7 18. Be1 a5 19. h3 a4 20. Nd4 Ne5 
+21. Qc2 Bd7 22. Nb5 Ra6 23. Nd4 Ra5 24. a3 Rc5 
+25. Qd2 Rxc1 26. Qxc1 bxa3 27. Nxa3 Qa8 28. Bc3 Qc8 
+29. Bf1 Nd3 30. Qc2 Nd5 31. Nb1 Re5 32. h4 Rh5 
+33. g3 Bh3 34. Bxd3 exd3 35. Rxd3 Rxh4 36. Qxa4 Qg4 
+37. Qd1 Qe4 38. f3 Qg6 39. Ne2 Be6 40. Kg2 Rh3 
+41. b3 Qg5 42. Rxd5 Bxd5 43. Nd2 Rh6 44. Nf4 Ra6 
+45. Qc2 Bb7 46. e4 Bd6 47. Ne2 h5 48. Nc4 Bxg3 
+49. Nxg3 h4 50. Be1 hxg3 51. Bxg3 Rg6 52. Qf2 Bc8 
+53. Ne3 Qh6 54. Nf5 Bxf5 55. exf5 Rf6 56. Qc2 Qg5 
+57. b4 Rxf5 58. Qc8+ Kh7 59. Qc2 g6 60. Qe4 Qd2+ 
+61. Kf1 Qb2 62. Kg1 Kg7 63. Kf1 Rh5 64. Kg1 Rb5 
+65. Qe8 0-1
+
+
+
+[Event	CCRL 40/15]
+[Site	CCRL]
+[Date	2022.04.20]
+[Round	820.1.529]
+[White	Stockfish 15 64-bit]
+[Black	Clover 3.1 64-bit]
+[Result	1-0]
+[ECO	B96]
+[Opening	Sicilian]
+[Variation	Najdorf, 7.f4]
+[PlyCount	54]
+[WhiteElo	3511]
+[BlackElo	3289]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 
+5. Nc3 a6 6. Bg5 e6 7. f4 Nbd7 8. Qf3 Qc7 
+9. O-O-O h6 10. Bh4 Be7 11. Be2 O-O 12. g4 b5 
+13. g5 hxg5 14. Bxg5 b4 15. Nb1 Bb7 16. Nd2 Rfc8 
+17. Rhg1 Bf8 18. Qh3 e5 19. fxe5 dxe5 20. Bc4 exd4 
+21. Rdf1 b3 22. axb3 Qd6 23. Bxf6 Nxf6 24. Rg4 Rxc4 
+25. Rh4 Nh7 26. Rxh7 Rxc2+ 27. Kxc2 f6 1-0
+
+
+
+[Event	CCRL 40/15]
+[Site	CCRL]
+[Date	2022.04.20]
+[Round	820.1.530]
+[White	Clover 3.1 64-bit]
+[Black	Stockfish 15 64-bit]
+[Result	0-1]
+[ECO	B96]
+[Opening	Sicilian]
+[Variation	Najdorf, 7.f4]
+[PlyCount	109]
+[WhiteElo	3289]
+[BlackElo	3511]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 
+5. Nc3 a6 6. Bg5 e6 7. f4 Nbd7 8. Qf3 Qc7 
+9. O-O-O b5 10. e5 Bb7 11. Nxe6 fxe6 12. Qh3 dxe5 
+13. Qxe6+ Be7 14. Bxf6 gxf6 15. Bxb5 axb5 16. Nxb5 Qc6 
+17. Nd6+ Kd8 18. Nxb7+ Qxb7 19. Rxd7+ Qxd7 20. Rd1 Qxd1+ 
+21. Kxd1 Ke8 22. a4 Kf8 23. fxe5 fxe5 24. Qxe5 Rg8 
+25. Qf4+ Kg7 26. Qg4+ Kh8 27. Qd4+ Rg7 28. Kc1 Rf8 
+29. Kb1 Bf6 30. Qd6 Rgf7 31. h4 Ra8 32. Qc6 Rb8 
+33. c3 Bg7 34. Qc5 Rfb7 35. b4 Re8 36. a5 Rbb8 
+37. a6 Rbc8 38. Qb5 Rf8 39. c4 Rcd8 40. Qg5 h6 
+41. Qe3 Rfe8 42. Qf3 Rd2 43. Kc1 Ra2 44. Kd1 Rd8+ 
+45. Ke1 Re8+ 46. Kd1 Rd8+ 47. Ke1 Ra1+ 48. Ke2 Re8+ 
+49. Kd2 Rxa6 50. Qb7 Ra2+ 51. Kd3 Ra3+ 52. Kd2 Bc3+ 
+53. Kd3 Bxb4+ 54. Kd4 Bc3+ 55. Kd5 0-1
+
+
+
