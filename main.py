@@ -2,16 +2,19 @@ import ExcelHandler
 import DatabaseHandler
 
 #Database:
-reader = DatabaseHandler.DatabaseHandler("StockfishShort.pgn")
-game_reader = DatabaseHandler.DatabaseHandler("StockfishShort.pgn")
+game_reader = DatabaseHandler.DatabaseHandler("Stockfish_15_64-bit.commented.[2600].pgn")
 games = game_reader.read_games()
-first_two_games = game_reader.read_games(2)
+game_reader.write_to_file(games, "Stockfish_complete_rewritten.pgn")
+print(games[2000].get_variation())
+
 #Excel:
 game_exporter = ExcelHandler.ExcelHandler()
-game_exporter.export_game_to_excel(games[0], "first_game.xlsx")
-imported_game = game_exporter.import_game_from_excel("first_game.xlsx")
-game_reader.write_to_file([imported_game], "imported_game_from_excel.pgn")
-game_reader.write_to_file(games, "StockfishShort_rewritten.pgn")
+game_exporter.export_game_to_excel(games[2000], "game_2000_v2.xlsx")
+imported_game = game_exporter.import_game_from_excel("game_2000_v2.xlsx")
+
+game_reader.write_to_file(([imported_game]), "game_2000_v2.pgn")
+
+
 """
 print(imported_game.black_player)
 print(imported_game.white_player)

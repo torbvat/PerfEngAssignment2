@@ -18,10 +18,10 @@ class ExcelHandler:
                           "Black: " + game.get_black_player().get_name(),  
                           "Eco: " + game.get_eco(), 
                           "Opening: " + game.get_opening(), 
+                          "Variation: " + game.get_variation(),
                           "Plycount: " + game.get_plycount(), 
                           "WhiteElo: " + game.get_white_player().get_rating(),
-                          "BlackElo: " + game.get_black_player().get_rating(),
-                          "Variation: " + game.get_variation()
+                          "BlackElo: " + game.get_black_player().get_rating()
                         ]
                 }
         for _ in range(0, data.get("Move Number").__len__() - data.get("Meta Data").__len__()):
@@ -42,10 +42,10 @@ class ExcelHandler:
             result = data_frame["Meta Data"][4].split(": ")[1]
             eco = data_frame["Meta Data"][7].split(": ")[1]
             opening = data_frame["Meta Data"][8].split(": ")[1]
-            plycount = data_frame["Meta Data"][9].split(": ")[1]
-            white_player = Player.Player(data_frame["Meta Data"][5], data_frame["Meta Data"][10])
-            black_player = Player.Player(data_frame["Meta Data"][6], data_frame["Meta Data"][11])
-            variation = data_frame["Meta Data"][12].split(": ")[1]
+            plycount = data_frame["Meta Data"][10].split(": ")[1]
+            white_player = Player.Player(data_frame["Meta Data"][5], data_frame["Meta Data"][11])
+            black_player = Player.Player(data_frame["Meta Data"][6], data_frame["Meta Data"][12])
+            variation = data_frame["Meta Data"][9].split(": ")[1]
             if move_count % 2 == 0:
                 move = ChessMove.ChessMove(row["Move Number"], Player.Player(data_frame["Meta Data"][5], data_frame["Meta Data"][10]), row["Move"])
             else:
