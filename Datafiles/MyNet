@@ -1,0 +1,90 @@
+// MyNet
+digraph {
+	f4
+	d5
+	d4
+	Nf6
+	e4
+	c5
+	b3
+	c4
+	Nf3
+	Bg4
+	e6
+	d6
+	Bb2
+	Nc3
+	Nc6
+	Bb4
+	cxd4
+	h3
+	e3
+	Nxd4
+	Bh5
+	"O-O"
+	g4
+	Bd3
+	Bg6
+	a6
+	Bg5
+	f4 -> d5 [label=1]
+	f4 -> d5 [label=1]
+	d4 -> Nf6 [label=1]
+	d4 -> Nf6 [label=1]
+	e4 -> c5 [label=1]
+	e4 -> c5 [label=1]
+	d5 -> b3 [label=1]
+	d5 -> b3 [label=1]
+	Nf6 -> c4 [label=1]
+	Nf6 -> c4 [label=1]
+	c5 -> Nf3 [label=1]
+	c5 -> Nf3 [label=1]
+	b3 -> Bg4 [label=1]
+	b3 -> Bg4 [label=1]
+	c4 -> e6 [label=1]
+	c4 -> e6 [label=1]
+	Nf3 -> d6 [label=1]
+	Nf3 -> d6 [label=1]
+	Bg4 -> Bb2 [label=1]
+	Bg4 -> Bb2 [label=1]
+	e6 -> Nc3 [label=1]
+	e6 -> Nc3 [label=1]
+	d6 -> d4 [label=1]
+	d6 -> d4 [label=1]
+	Bb2 -> Nc6 [label=1]
+	Bb2 -> Nc6 [label=1]
+	Nc3 -> Bb4 [label=1]
+	Nc3 -> Bb4 [label=1]
+	d4 -> cxd4 [label=1]
+	d4 -> cxd4 [label=1]
+	Nc6 -> h3 [label=1]
+	Nc6 -> h3 [label=1]
+	Bb4 -> e3 [label=1]
+	Bb4 -> e3 [label=1]
+	cxd4 -> Nxd4 [label=1]
+	cxd4 -> Nxd4 [label=1]
+	h3 -> Bh5 [label=1]
+	h3 -> Bh5 [label=1]
+	e3 -> "O-O" [label=1]
+	e3 -> "O-O" [label=1]
+	Nxd4 -> Nf6 [label=1]
+	Nxd4 -> Nf6 [label=1]
+	Bh5 -> g4 [label=1]
+	Bh5 -> g4 [label=1]
+	"O-O" -> Bd3 [label=1]
+	"O-O" -> Bd3 [label=1]
+	Nf6 -> Nc3 [label=1]
+	Nf6 -> Nc3 [label=1]
+	g4 -> Bg6 [label=1]
+	g4 -> Bg6 [label=1]
+	Bd3 -> d5 [label=1]
+	Bd3 -> d5 [label=1]
+	Nc3 -> a6 [label=1]
+	Nc3 -> a6 [label=1]
+	Bg6 -> Nf3 [label=1]
+	Bg6 -> Nf3 [label=1]
+	d5 -> Nf3 [label=1]
+	d5 -> Nf3 [label=1]
+	a6 -> Bg5 [label=1]
+	a6 -> Bg5 [label=1]
+}

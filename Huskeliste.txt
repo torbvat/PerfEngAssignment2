@@ -1,3 +1,2 @@
--Organisere filstruktur?
+-Organisere filstruktur i mapper e.l? Evt opprette ei Chess.py-fil som inneholder klassene Player, Move og Game?
 -Forkorte enkelte metoder?
--

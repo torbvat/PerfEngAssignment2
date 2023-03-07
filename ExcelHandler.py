@@ -1,7 +1,5 @@
 import pandas as pd
-import Game
-import ChessMove
-import Player
+import Chess #Chess.py is a file that contains the classes for the chess game
 
 class ExcelHandler:
 
@@ -43,12 +41,12 @@ class ExcelHandler:
             eco = data_frame["Meta Data"][7].split(": ")[1]
             opening = data_frame["Meta Data"][8].split(": ")[1]
             plycount = data_frame["Meta Data"][10].split(": ")[1]
-            white_player = Player.Player(data_frame["Meta Data"][5], data_frame["Meta Data"][11])
-            black_player = Player.Player(data_frame["Meta Data"][6], data_frame["Meta Data"][12])
+            white_player = Chess.ChessPlayer(data_frame["Meta Data"][5], data_frame["Meta Data"][11])
+            black_player = Chess.ChessPlayer(data_frame["Meta Data"][6], data_frame["Meta Data"][12])
             variation = data_frame["Meta Data"][9].split(": ")[1]
             if move_count % 2 == 0:
-                move = ChessMove.ChessMove(row["Move Number"], Player.Player(data_frame["Meta Data"][5], data_frame["Meta Data"][10]), row["Move"])
+                move = Chess.ChessMove(row["Move Number"], Chess.ChessPlayer(data_frame["Meta Data"][5], data_frame["Meta Data"][10]), row["Move"])
             else:
-                move = ChessMove.ChessMove(row["Move Number"], Player.Player(data_frame["Meta Data"][6], data_frame["Meta Data"][11]), row["Move"])
+                move = Chess.ChessMove(row["Move Number"], Chess.ChessPlayer(data_frame["Meta Data"][6], data_frame["Meta Data"][11]), row["Move"])
             moves.append(move)            
-        return Game.Game(event, site, date, round, result, eco, opening, plycount, white_player, black_player, moves, variation)
+        return Chess.ChessGame(event, site, date, round, result, eco, opening, plycount, white_player, black_player, moves, variation)
