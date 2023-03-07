@@ -13,11 +13,11 @@ import sys
 import numpy as np
 print(sys.executable)
 print()
-#for i in range(0, sys.path.__len__()):
+# for i in range(0, sys.path.__len__()):
 #    print(sys.path[i])
 print(sys.path[1].split("\\")[0])
-#print(np.__version__)
-#print(np.__file__)
+# print(np.__version__)
+# print(np.__file__)
 liste = [0]
 liste2 = liste + [1]
 print(liste2)
