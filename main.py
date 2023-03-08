@@ -1,15 +1,18 @@
 import ExcelHandler
 import DatabaseHandler
+from Tree import Printer, Graph
 
-#Database:
-game_reader = DatabaseHandler.DatabaseHandler("Datafiles\Stockfish_15_64-bit.commented.[2600].pgn")
+# Database:
+game_reader = DatabaseHandler.DatabaseHandler(
+    "Datafiles\Stockfish_15_64-bit.commented.[2600].pgn")
 games = game_reader.read_games()
-game_reader.write_to_file(games, "Datafiles\Stockfish_complete_rewritten.pgn")
-print(games[2000].get_variation())
+#game_reader.write_to_file(games, "Datafiles\Stockfish_complete_rewritten.pgn")
+# print(games[2000].get_variation())
+# print(games[0].moves)
 
-#Excel:
-game_exporter = ExcelHandler.ExcelHandler()
-game_exporter.export_game_to_excel(games[0], "Datafiles\game_0.xlsx")
+# Excel:
+#game_exporter = ExcelHandler.ExcelHandler()
+#game_exporter.export_game_to_excel(games[0], "Datafiles\game_0.xlsx")
 #imported_game = game_exporter.import_game_from_excel("Datafiles\game_2000.xlsx")
 
 #game_reader.write_to_file(([imported_game]), "Datafiles\game_0.pgn")
@@ -28,7 +31,7 @@ print(imported_game.plycount)
 print(imported_game.variation)
 """
 
-#Tree:
-
-
-
+# Tree:
+printer = Printer(games)
+graph = printer.createGraph()
+print(graph.nodes)
