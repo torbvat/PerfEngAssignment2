@@ -3,6 +3,8 @@ import DatabaseHandler
 from Tree import Printer, Graph
 
 # Database:
+# game_reader = DatabaseHandler.DatabaseHandler(
+#     "Datafiles\StockfishShort.pgn")
 game_reader = DatabaseHandler.DatabaseHandler(
     "Datafiles\Stockfish_15_64-bit.commented.[2600].pgn")
 games = game_reader.read_games()
@@ -33,5 +35,7 @@ print(imported_game.variation)
 
 # Tree:
 printer = Printer(games)
-graph = printer.createGraph()
+graph = printer.createGraph(3)
 print(graph.nodes)
+# Finn ut koffor dybda ikkje blir større når vi øke parameterennnnnnnnn
+printer.drawPopularOpenings(graph, "MyNet2.dot", 5, 1)

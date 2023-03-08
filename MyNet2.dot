@@ -1,11 +1,554 @@
-graph MyNet
-	node A
-	node B
-	node C
-	node D
-	edge A B 10.000000
-	edge A C 12.000000
-	edge B C 5.000000
-	edge B D 8.000000
-	edge C D 2.000000
-end
+graph ChessOpenings {
+	1 [label = "f4
+3, 7, 6"]; 
+	2 [label = "d5
+2, 2, 6", style = filled, fillcolor = black, fontcolor = white]; 
+	3 [label = "b3
+1, 2, 3"]; 
+	4 [label = "d4
+232, 543, 87"]; 
+	5 [label = "Nf6
+154, 342, 57", style = filled, fillcolor = black, fontcolor = white]; 
+	6 [label = "c4
+133, 290, 50"]; 
+	7 [label = "e4
+345, 746, 149"]; 
+	8 [label = "c5
+166, 360, 92", style = filled, fillcolor = black, fontcolor = white]; 
+	9 [label = "Nf3
+151, 296, 77"]; 
+	10 [label = "d5
+55, 163, 19", style = filled, fillcolor = black, fontcolor = white]; 
+	11 [label = "c4
+47, 130, 16"]; 
+	12 [label = "e6
+37, 67, 10", style = filled, fillcolor = black, fontcolor = white]; 
+	13 [label = "d4
+35, 61, 10"]; 
+	14 [label = "e5
+79, 199, 27", style = filled, fillcolor = black, fontcolor = white]; 
+	15 [label = "Nf3
+73, 175, 23"]; 
+	16 [label = "c4
+57, 124, 25"]; 
+	17 [label = "e5
+18, 49, 10", style = filled, fillcolor = black, fontcolor = white]; 
+	18 [label = "g3
+6, 17, 3"]; 
+	19 [label = "f4
+1, 7, 0"]; 
+	20 [label = "Nf3
+60, 156, 23"]; 
+	21 [label = "c5
+9, 22, 5", style = filled, fillcolor = black, fontcolor = white]; 
+	22 [label = "b3
+1, 2, 1"]; 
+	23 [label = "c6
+37, 75, 10", style = filled, fillcolor = black, fontcolor = white]; 
+	24 [label = "d4
+29, 60, 7"]; 
+	25 [label = "d5
+16, 57, 9", style = filled, fillcolor = black, fontcolor = white]; 
+	26 [label = "d4
+9, 25, 2"]; 
+	27 [label = "c4
+2, 9, 1"]; 
+	28 [label = "Nf6
+27, 71, 8", style = filled, fillcolor = black, fontcolor = white]; 
+	29 [label = "c4
+18, 52, 4"]; 
+	30 [label = "g6
+5, 7, 4", style = filled, fillcolor = black, fontcolor = white]; 
+	31 [label = "c4
+2, 3, 0"]; 
+	32 [label = "Nc3
+2, 3, 3"]; 
+	33 [label = "c5
+1, 3, 2", style = filled, fillcolor = black, fontcolor = white]; 
+	34 [label = "f4
+1, 3, 2"]; 
+	35 [label = "Nc3
+1, 3, 0"]; 
+	36 [label = "e6
+5, 7, 2", style = filled, fillcolor = black, fontcolor = white]; 
+	37 [label = "c4
+2, 3, 1"]; 
+	38 [label = "Nf3
+12, 33, 3"]; 
+	39 [label = "Nf3
+3, 22, 1"]; 
+	40 [label = "Qe2
+1, 3, 0"]; 
+	41 [label = "f4
+1, 8, 1"]; 
+	42 [label = "Nc3
+5, 16, 11"]; 
+	43 [label = "Nf3
+1, 0, 1"]; 
+	44 [label = "c3
+6, 23, 3"]; 
+	45 [label = "g3
+0, 0, 2"]; 
+	46 [label = "g3
+7, 14, 3"]; 
+	47 [label = "e6
+1, 14, 2", style = filled, fillcolor = black, fontcolor = white]; 
+	48 [label = "Nf3
+1, 6, 1"]; 
+	49 [label = "e4
+3, 4, 4"]; 
+	50 [label = "g3
+1, 5, 0"]; 
+	51 [label = "g3
+3, 15, 0"]; 
+	52 [label = "e5
+1, 7, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	53 [label = "c4
+1, 3, 0"]; 
+	54 [label = "Bg5
+2, 9, 2"]; 
+	55 [label = "b3
+0, 3, 1"]; 
+	56 [label = "g3
+4, 20, 4"]; 
+	57 [label = "Nf3
+3, 3, 0"]; 
+	58 [label = "d5
+2, 8, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	59 [label = "Nf3
+1, 3, 0"]; 
+	60 [label = "Nf6
+18, 29, 6", style = filled, fillcolor = black, fontcolor = white]; 
+	61 [label = "Nf3
+1, 4, 1"]; 
+	62 [label = "e4
+2, 5, 1"]; 
+	63 [label = "g6
+9, 11, 5", style = filled, fillcolor = black, fontcolor = white]; 
+	64 [label = "d4
+9, 8, 4"]; 
+	65 [label = "Nc3
+16, 22, 5"]; 
+	66 [label = "Nc3
+11, 29, 7"]; 
+	67 [label = "d4
+2, 7, 1"]; 
+	68 [label = "Nf6
+6, 7, 1", style = filled, fillcolor = black, fontcolor = white]; 
+	69 [label = "e5
+5, 5, 0"]; 
+	70 [label = "Nc3
+1, 3, 0"]; 
+	71 [label = "b4
+1, 2, 1"]; 
+	72 [label = "e5
+1, 2, 1", style = filled, fillcolor = black, fontcolor = white]; 
+	73 [label = "Bb2
+1, 2, 1"]; 
+	74 [label = "c5
+8, 15, 2", style = filled, fillcolor = black, fontcolor = white]; 
+	75 [label = "Nf3
+3, 6, 1"]; 
+	76 [label = "c3
+0, 2, 0"]; 
+	77 [label = "c6
+3, 7, 2", style = filled, fillcolor = black, fontcolor = white]; 
+	78 [label = "Nf3
+2, 0, 2"]; 
+	79 [label = "d6
+7, 9, 3", style = filled, fillcolor = black, fontcolor = white]; 
+	80 [label = "d4
+6, 8, 3"]; 
+	81 [label = "g3
+1, 2, 0"]; 
+	82 [label = "Nc3
+4, 7, 1"]; 
+	83 [label = "d4
+0, 2, 0"]; 
+	84 [label = "Nc6
+2, 2, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	85 [label = "c4
+1, 1, 0"]; 
+	86 [label = "Bf4
+4, 5, 1"]; 
+	87 [label = "Bc4
+3, 7, 2"]; 
+	88 [label = "e4
+3, 4, 1"]; 
+	89 [label = "Nc3
+1, 2, 1"]; 
+	90 [label = "Nc6
+1, 2, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	91 [label = "d4
+1, 1, 0"]; 
+	92 [label = "f5
+6, 14, 4", style = filled, fillcolor = black, fontcolor = white]; 
+	93 [label = "g3
+4, 7, 1"]; 
+	94 [label = "Nc3
+0, 3, 1"]; 
+	95 [label = "d5
+1, 0, 1", style = filled, fillcolor = black, fontcolor = white]; 
+	96 [label = "e4
+1, 0, 1"]; 
+	97 [label = "c4
+5, 10, 3"]; 
+	98 [label = "h3
+0, 4, 0"]; 
+	99 [label = "Bf4
+3, 6, 1"]; 
+	100 [label = "Bg2
+1, 5, 0"]; 
+	101 [label = "d4
+2, 3, 1"]; 
+	102 [label = "d5
+2, 13, 1", style = filled, fillcolor = black, fontcolor = white]; 
+	103 [label = "exd5
+2, 11, 1"]; 
+	104 [label = "d3
+2, 1, 1"]; 
+	105 [label = "g6
+5, 7, 2", style = filled, fillcolor = black, fontcolor = white]; 
+	106 [label = "d4
+1, 1, 0"]; 
+	107 [label = "c4
+1, 5, 2"]; 
+	108 [label = "c4
+0, 4, 0"]; 
+	109 [label = "b3
+1, 3, 1"]; 
+	110 [label = "d5
+1, 3, 1", style = filled, fillcolor = black, fontcolor = white]; 
+	111 [label = "Bb2
+1, 3, 1"]; 
+	112 [label = "g3
+1, 0, 1"]; 
+	114 [label = "Nc3
+1, 1, 0"]; 
+	115 [label = "g3
+1, 2, 0"]; 
+	116 [label = "Qh5
+0, 1, 1"]; 
+	117 [label = "Bg5
+1, 1, 2"]; 
+	118 [label = "f5
+1, 1, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	119 [label = "d3
+1, 1, 0"]; 
+	120 [label = "d3
+0, 1, 1"]; 
+	121 [label = "g6
+0, 1, 1", style = filled, fillcolor = black, fontcolor = white]; 
+	122 [label = "Nd2
+0, 1, 1"]; 
+	123 [label = "d3
+1, 3, 0"]; 
+	124 [label = "d5
+1, 0, 1"]; 
+	125 [label = "d4
+1, 3, 0"]; 
+	126 [label = "Nc3
+1, 2, 1"]; 
+	127 [label = "e4
+1, 2, 1"]; 
+	128 [label = "a3
+0, 2, 0"]; 
+	129 [label = "c5
+2, 2, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	130 [label = "d5
+1, 1, 0"]; 
+	131 [label = "e4
+1, 1, 0"]; 
+	132 [label = "d6
+2, 3, 1", style = filled, fillcolor = black, fontcolor = white]; 
+	133 [label = "Nf3
+2, 3, 1"]; 
+	134 [label = "d4
+0, 2, 0"]; 
+	135 [label = "Nc3
+1, 1, 0"]; 
+	136 [label = "b6
+0, 2, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	137 [label = "d4
+0, 2, 0"]; 
+	138 [label = "e4
+0, 4, 0"]; 
+	139 [label = "g6
+1, 1, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	140 [label = "e4
+1, 1, 0"]; 
+	141 [label = "Bg2
+0, 2, 0"]; 
+	142 [label = "Nc3
+1, 1, 0"]; 
+	143 [label = "Nc3
+0, 5, 0"]; 
+	144 [label = "f5
+3, 2, 1", style = filled, fillcolor = black, fontcolor = white]; 
+	145 [label = "g3
+1, 1, 0"]; 
+	146 [label = "e5
+0, 2, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	147 [label = "fxe5
+0, 2, 0"]; 
+	148 [label = "b4
+0, 2, 0"]; 
+	149 [label = "g6
+4, 3, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	150 [label = "e4
+3, 2, 0"]; 
+	151 [label = "Nc3
+3, 2, 1"]; 
+	152 [label = "d3
+0, 2, 0"]; 
+	153 [label = "Nc3
+1, 0, 1"]; 
+	154 [label = "b6
+0, 2, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	155 [label = "e4
+0, 2, 0"]; 
+	156 [label = "Ne2
+0, 4, 0"]; 
+	157 [label = "e4
+1, 5, 0"]; 
+	158 [label = "a6
+1, 1, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	159 [label = "d4
+1, 1, 0"]; 
+	160 [label = "b6
+1, 1, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	161 [label = "d4
+1, 1, 0"]; 
+	162 [label = "Nc3
+0, 2, 0"]; 
+	163 [label = "g3
+0, 2, 0"]; 
+	164 [label = "d4
+1, 1, 0"]; 
+	165 [label = "e6
+1, 0, 1", style = filled, fillcolor = black, fontcolor = white]; 
+	166 [label = "d4
+1, 0, 1"]; 
+	167 [label = "Nc6
+1, 1, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	168 [label = "c4
+1, 1, 0"]; 
+	169 [label = "Nc3
+2, 1, 1"]; 
+	170 [label = "g3
+1, 1, 0"]; 
+	171 [label = "e3
+0, 2, 0"]; 
+	172 [label = "d6
+1, 1, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	173 [label = "c4
+1, 1, 0"]; 
+	174 [label = "e3
+1, 1, 0"]; 
+	175 [label = "d4
+0, 2, 0"]; 
+	176 [label = "Bg5
+0, 2, 0"]; 
+	177 [label = "c6
+1, 1, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	178 [label = "Nf3
+1, 1, 0"]; 
+	179 [label = "Nc3
+0, 2, 0"]; 
+	180 [label = "Nf6
+0, 2, 0", style = filled, fillcolor = black, fontcolor = white]; 
+	181 [label = "b3
+0, 2, 0"]; 
+	182 [label = "d3
+1, 1, 0"]; 
+	183 [label = "e3
+1, 1, 0"]; 
+	184 [label = "c4
+1, 1, 0"]; 
+	185 [label = "e3
+0, 1, 1"]; 
+	0 -- 1;
+	1 -- 2;
+	2 -- 3;
+	0 -- 4;
+	4 -- 5;
+	5 -- 6;
+	0 -- 7;
+	7 -- 8;
+	8 -- 9;
+	4 -- 10;
+	10 -- 11;
+	7 -- 12;
+	12 -- 13;
+	7 -- 14;
+	14 -- 15;
+	0 -- 16;
+	16 -- 17;
+	17 -- 18;
+	8 -- 19;
+	0 -- 20;
+	20 -- 21;
+	21 -- 22;
+	7 -- 23;
+	23 -- 24;
+	20 -- 25;
+	25 -- 26;
+	23 -- 27;
+	20 -- 28;
+	28 -- 29;
+	4 -- 30;
+	30 -- 31;
+	0 -- 32;
+	32 -- 33;
+	33 -- 34;
+	14 -- 35;
+	4 -- 36;
+	36 -- 37;
+	5 -- 38;
+	10 -- 39;
+	12 -- 40;
+	14 -- 41;
+	8 -- 42;
+	2 -- 43;
+	8 -- 44;
+	2 -- 45;
+	28 -- 46;
+	16 -- 47;
+	47 -- 48;
+	30 -- 49;
+	21 -- 50;
+	0 -- 51;
+	51 -- 52;
+	52 -- 53;
+	5 -- 54;
+	25 -- 55;
+	25 -- 56;
+	23 -- 57;
+	51 -- 58;
+	58 -- 59;
+	16 -- 60;
+	60 -- 61;
+	21 -- 62;
+	7 -- 63;
+	63 -- 64;
+	60 -- 65;
+	17 -- 66;
+	8 -- 67;
+	7 -- 68;
+	68 -- 69;
+	12 -- 70;
+	0 -- 71;
+	71 -- 72;
+	72 -- 73;
+	16 -- 74;
+	74 -- 75;
+	5 -- 76;
+	16 -- 77;
+	77 -- 78;
+	7 -- 79;
+	79 -- 80;
+	74 -- 81;
+	74 -- 82;
+	77 -- 83;
+	4 -- 84;
+	84 -- 85;
+	5 -- 86;
+	14 -- 87;
+	36 -- 88;
+	23 -- 89;
+	7 -- 90;
+	90 -- 91;
+	4 -- 92;
+	92 -- 93;
+	63 -- 94;
+	32 -- 95;
+	95 -- 96;
+	21 -- 97;
+	8 -- 98;
+	10 -- 99;
+	58 -- 100;
+	28 -- 101;
+	7 -- 102;
+	102 -- 103;
+	23 -- 104;
+	16 -- 105;
+	105 -- 106;
+	25 -- 107;
+	92 -- 108;
+	0 -- 109;
+	109 -- 110;
+	110 -- 111;
+	105 -- 112;
+	25 -- 114;
+	5 -- 115;
+	14 -- 116;
+	92 -- 117;
+	20 -- 118;
+	118 -- 119;
+	0 -- 120;
+	120 -- 121;
+	121 -- 122;
+	17 -- 123;
+	92 -- 124;
+	14 -- 125;
+	68 -- 126;
+	10 -- 127;
+	25 -- 128;
+	4 -- 129;
+	129 -- 130;
+	84 -- 131;
+	4 -- 132;
+	132 -- 133;
+	60 -- 134;
+	79 -- 135;
+	7 -- 136;
+	136 -- 137;
+	105 -- 138;
+	1 -- 139;
+	139 -- 140;
+	52 -- 141;
+	10 -- 142;
+	47 -- 143;
+	16 -- 144;
+	144 -- 145;
+	1 -- 146;
+	146 -- 147;
+	8 -- 148;
+	20 -- 149;
+	149 -- 150;
+	105 -- 151;
+	14 -- 152;
+	144 -- 153;
+	4 -- 154;
+	154 -- 155;
+	8 -- 156;
+	77 -- 157;
+	7 -- 158;
+	158 -- 159;
+	16 -- 160;
+	160 -- 161;
+	102 -- 162;
+	47 -- 163;
+	144 -- 164;
+	20 -- 165;
+	165 -- 166;
+	20 -- 167;
+	167 -- 168;
+	5 -- 169;
+	60 -- 170;
+	28 -- 171;
+	20 -- 172;
+	172 -- 173;
+	129 -- 174;
+	52 -- 175;
+	10 -- 176;
+	4 -- 177;
+	177 -- 178;
+	92 -- 179;
+	1 -- 180;
+	180 -- 181;
+	8 -- 182;
+	25 -- 183;
+	149 -- 184;
+	47 -- 185;
+}

@@ -1,16 +1,16 @@
-#Graphs
+# Graphs
 
 # 1. Imported Modules
 # -------------------
-from graphviz import Digraph
+#from graphviz import Digraph
 import DatabaseHandler
-import os
+#import os
 # 2. Nodes
 # --------
 
 
 class Node:
-    def __init__(self, move, ply_count=0):
+    def __init__(self, move, ply_count=0, nodeID=0):
         self.name = move.get_move_text() if not ply_count == 0 else "Root"
         self.meta = {
             'white_wins': 0,
@@ -20,12 +20,16 @@ class Node:
         self.children = []
         self.ply_count = ply_count
         self.white_player = True if int(self.ply_count) % 2 == 1 else False
+        self.nodeID = nodeID
 
     def getName(self):
         return self.name
 
     def getMoveNumber(self):
         return self.ply_count
+
+    def getGamesPlayed(self):
+        return self.meta['white_wins'] + self.meta['black_wins'] + self.meta['draws']
 
     def isWhitePlayer(self):
         return self.white_player
@@ -41,15 +45,6 @@ class Node:
 
     def getChildren(self):
         return self.children
-
-    def increaseWhiteWins(self):
-        self.meta['white_wins'] += 1
-
-    def increaseBlackWins(self):
-        self.meta['black_wins'] += 1
-
-    def increaseDraws(self):
-        self.meta['draws'] += 1
 
     def __repr__(self):
         return (f"|{self.name} : {self.ply_count} : {len(self.children)}|")
@@ -82,12 +77,13 @@ class Edge:
 class Graph:
     def __init__(self, games):
         #self.move_counter = 0
-        
+
         self.edges = []
         self.games = games
-        self.root = Node("", 0)
+        self.root = Node("", 0, 0)
         self.nodes = [self.root]
-    # def lookForNode(self, move, previousMoves):
+        self.nodeID = 1
+    # def lookForNodeInChildren(self, move, previousMoves):
     #     for node in self.nodes:
     #         if node.getName() == move.get_move_text() and node.getMoveNumber() == self.move_counter and node.getPreviousMoves == previousMoves:
     #             return node
@@ -99,19 +95,21 @@ class Graph:
                 return edge
         return None
 
-    def newNode(self, move, ply_count):
-        if move not in self.nodes[ply_count-1].children:
-            self.nodes[-1].children.append(move)
-            self.nodes.append(Node(move, ply_count))
-            self.edges.append(Edge(self.nodes[ply_count-1], self.nodes[ply_count]))
-        #else:
+    def newNode(self, move, ply_count, currentNode, winner):
+        newNode = Node(move, ply_count, self.nodeID)
+        newNode.meta[winner] += 1
+        self.nodes.append(newNode)
+        self.edges.append(Edge(currentNode, newNode))
+        self.nodeID += 1
+
+        # else:
         #    for edge in self.edges:
         #        if edge.getSourceNode() == self.nodes[ply_count-1] and edge.getTargetNode().getName() == move.get_move_text():
         #            edge.increaseWeight()
-            
-            #self.nodes[ply_count].increaseWhiteWins() if self.nodes[ply_count].isWhitePlayer() else self.nodes[ply_count].increaseBlackWins()
-            #self.nodes[ply_count].increaseDraws() if self.nodes[ply_count].isWhitePlayer() else self.nodes[ply_count].increaseDraws()
 
+        #self.nodes[ply_count].increaseWhiteWins() if self.nodes[ply_count].isWhitePlayer() else self.nodes[ply_count].increaseBlackWins()
+        #self.nodes[ply_count].increaseDraws() if self.nodes[ply_count].isWhitePlayer() else self.nodes[ply_count].increaseDraws()
+        return newNode
 
     def getNodes(self):
         return self.nodes.values()
@@ -134,43 +132,75 @@ class Printer:
     def __init__(self, games):
         self.games = games
 
-    def createGraph(self):
+    def lookForNodeInChildren(self, move_name, children):
+        for node in children:
+            if node.getName() == move_name:
+                return node
+        return None
+
+    def createGraph(self, maxSteps):
         graph = Graph(self.games)
         for game in self.games:
-            ply_count = 1
-            for move in game.get_moves():
-                graph.newNode(move, ply_count)
-                ply_count += 1
+            if game.get_result() == "1-0":
+                winner = "white_wins"
+            elif game.get_result() == "0-1":
+                winner = "black_wins"
+            else:
+                winner = "draws"
+
+            currentNode = graph.root
+            currentDepth = 0
+            for move in game.get_moves()[:maxSteps]:
+                nextNode = self.lookForNodeInChildren(
+                    move.get_move_text(), currentNode.children)
+                if nextNode:
+                    nextNode.meta[winner] += 1
+                    #edge = graph.lookForEdge(currentNode, nextNode)
+                    # edge.increaseWeight()
+                    currentNode = nextNode
+                    currentDepth += 1
+                else:
+                    break
+            for move in game.get_moves()[currentDepth:maxSteps]:
+                newNode = graph.newNode(
+                    move, currentDepth+1, currentNode, winner)
+                currentNode.children.append(newNode)
+                currentNode = newNode
+                currentDepth += 1
         return graph
 
-    def exportGraph(self, fileName):
-        graph = self.createGraph()
-        with open(fileName, "w") as f:
-            self.printGraph(graph, f)
+    def drawDiagram(self, graph, file_path):
+        with open(file_path, 'w') as file:
+            file.write("graph ChessTree {\n")
+            for node in graph.nodes:
+                if node.ply_count % 2 == 1:
+                    file.write(
+                        f"\t{node.nodeID} [label = \"{node.name}\"]; \n")
+                else:
+                    file.write(
+                        f"\t{node.nodeID} [label = \"{node.name}\", style = filled, fillcolor = black, fontcolor = white]; \n")
+            for edge in graph.edges:
+                file.write(
+                    f"\t{edge.getSourceNode().nodeID} -- {edge.getTargetNode().nodeID};\n")
+            file.write("}")
 
-    def printGraph(self, outputFile):
-        graph = self.createGraph()
-        outputFile.write("graph {0:s}\n".format(graph.getName()))
-        for node in graph.getNodes():
-            self.printNode(node, outputFile)
-        for edge in graph.getEdges():
-            self.printEdge(edge, outputFile)
-        outputFile.write("end\n")
+    def drawPopularOpenings(self, graph, file_path, depth, treshhold):
+        with open(file_path, 'w') as file:
+            file.write("graph ChessOpenings {\n")
+            for node in graph.nodes:
+                if (node.getGamesPlayed() > treshhold) and (node.getMoveNumber() <= depth):
+                    if node.ply_count % 2 == 1:
+                        file.write(
+                            f"\t{node.nodeID} [label = \"{node.name}\n{node.meta['white_wins']}, {node.meta['draws']}, {node.meta['black_wins']}\"]; \n")
+                    else:
+                        file.write(
+                            f"\t{node.nodeID} [label = \"{node.name}\n{node.meta['white_wins']}, {node.meta['draws']}, {node.meta['black_wins']}\", style = filled, fillcolor = black, fontcolor = white]; \n")
+            for edge in graph.edges:
+                if (edge.getTargetNode().getGamesPlayed() > treshhold) and (edge.getTargetNode().getMoveNumber() <= depth):
+                    file.write(
+                        f"\t{edge.getSourceNode().nodeID} -- {edge.getTargetNode().nodeID};\n")
+            file.write("}")
 
-    def printNode(self, node, outputFile):
-        outputFile.write("\tnode {0:s}\n".format(node.getName()))
-
-    def printEdge(self, edge, outputFile):
-        sourceNode = edge.getSourceNode()
-        targetNode = edge.getTargetNode()
-        weight = edge.getWeight()
-        outputFile.write("\tedge ")
-        outputFile.write(sourceNode.getName())
-        outputFile.write(" ")
-        outputFile.write(targetNode.getName())
-        outputFile.write(" ")
-        outputFile.write("{0:f}".format(weight))
-        outputFile.write("\n")
 
 # 6. Reader
 # ---------
@@ -201,8 +231,8 @@ class Reader:
                 sourceNodeName = tokens[index+1]
                 targetNodeName = tokens[index+2]
                 weightString = tokens[index+3]
-                sourceNode = graph.lookForNode(sourceNodeName)
-                targetNode = graph.lookForNode(targetNodeName)
+                sourceNode = graph.lookForNodeInChildren(sourceNodeName)
+                targetNode = graph.lookForNodeInChildren(targetNodeName)
                 weight = float(weightString)
                 graph.newEdge(sourceNode, targetNode, weight)
                 index = index + 4
@@ -255,8 +285,8 @@ digraph SLETTMyNet {
 #     node1 = Node(e4, teller, teller mod 2, previousMoves)
 
 
-# lookForNode(move, moveCount, previousMoves[])
+# lookForNodeInChildren(move, moveCount, previousMoves[])
 # createNewNode(move, moveCount, previousMoves[]). Oppretter en edge fra siste node i previousMoves til denne.
 # addNode
-# if lookfornode
+# if lookForNodeInChildren
 #increaseWeight(node, node.previousMoves[-1])

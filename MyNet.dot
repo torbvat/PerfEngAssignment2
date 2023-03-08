@@ -1,0 +1,2315 @@
+graph ChessTree {
+	0 [label = 'Root'] 
+	0 [label = 'f4'] 
+	0 [label = 'd5'] 
+	0 [label = 'b3'] 
+	0 [label = 'Bg4'] 
+	0 [label = 'Bb2'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'd4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'c4'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Bb4'] 
+	0 [label = 'e4'] 
+	0 [label = 'c5'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'd6'] 
+	0 [label = 'd4'] 
+	0 [label = 'cxd4'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Bb5'] 
+	0 [label = 'g6'] 
+	0 [label = 'd5'] 
+	0 [label = 'c4'] 
+	0 [label = 'dxc4'] 
+	0 [label = 'e4'] 
+	0 [label = 'e5'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'e5'] 
+	0 [label = 'dxe5'] 
+	0 [label = 'Ng4'] 
+	0 [label = 'c6'] 
+	0 [label = 'e3'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'd5'] 
+	0 [label = 'e6'] 
+	0 [label = 'd4'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Bb4'] 
+	0 [label = 'e5'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Bb5'] 
+	0 [label = 'a6'] 
+	0 [label = 'c4'] 
+	0 [label = 'e5'] 
+	0 [label = 'g3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'c6'] 
+	0 [label = 'g6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'd5'] 
+	0 [label = 'f4'] 
+	0 [label = 'd5'] 
+	0 [label = 'exd5'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'd4'] 
+	0 [label = 'cxd4'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'c5'] 
+	0 [label = 'b3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Bb2'] 
+	0 [label = 'd6'] 
+	0 [label = 'c6'] 
+	0 [label = 'd4'] 
+	0 [label = 'd5'] 
+	0 [label = 'e5'] 
+	0 [label = 'c5'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'd5'] 
+	0 [label = 'd4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'c4'] 
+	0 [label = 'e6'] 
+	0 [label = 'c3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'e6'] 
+	0 [label = 'd4'] 
+	0 [label = 'cxd4'] 
+	0 [label = 'f5'] 
+	0 [label = 'c4'] 
+	0 [label = 'd5'] 
+	0 [label = 'exd5'] 
+	0 [label = 'cxd5'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'c4'] 
+	0 [label = 'c5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'g6'] 
+	0 [label = 'c4'] 
+	0 [label = 'd6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nd7'] 
+	0 [label = 'b6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'c5'] 
+	0 [label = 'f4'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'e3'] 
+	0 [label = 'g6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'f4'] 
+	0 [label = 'd5'] 
+	0 [label = 'e6'] 
+	0 [label = 'c4'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Be7'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'dxe4'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'g6'] 
+	0 [label = 'c4'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'c4'] 
+	0 [label = 'c6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'd4'] 
+	0 [label = 'Nxe4'] 
+	0 [label = 'Bb5+'] 
+	0 [label = 'Bd7'] 
+	0 [label = 'Qe2'] 
+	0 [label = 'c5'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'f4'] 
+	0 [label = 'exf4'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'g5'] 
+	0 [label = 'Bc4'] 
+	0 [label = 'Bc5'] 
+	0 [label = 'Nd2'] 
+	0 [label = 'c5'] 
+	0 [label = 'd4'] 
+	0 [label = 'exd4'] 
+	0 [label = 'g6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'g3'] 
+	0 [label = 'g6'] 
+	0 [label = 'dxc4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'e3'] 
+	0 [label = 'g6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'd6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'g6'] 
+	0 [label = 'g3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'c3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'e5'] 
+	0 [label = 'Nd5'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'cxd5'] 
+	0 [label = 'Qxd5'] 
+	0 [label = 'Nd2'] 
+	0 [label = 'dxe4'] 
+	0 [label = 'g3'] 
+	0 [label = 'h5'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'h4'] 
+	0 [label = 'g3'] 
+	0 [label = 'd5'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'g6'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'd5'] 
+	0 [label = 'b3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'g3'] 
+	0 [label = 'c6'] 
+	0 [label = 'e4'] 
+	0 [label = 'd6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'c5'] 
+	0 [label = 'Bf5'] 
+	0 [label = 'e5'] 
+	0 [label = 'c5'] 
+	0 [label = 'Bb5'] 
+	0 [label = 'Nd4'] 
+	0 [label = 'exd5'] 
+	0 [label = 'cxd5'] 
+	0 [label = 'c5'] 
+	0 [label = 'd5'] 
+	0 [label = 'b5'] 
+	0 [label = 'g3'] 
+	0 [label = 'g6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'c5'] 
+	0 [label = 'g3'] 
+	0 [label = 'e5'] 
+	0 [label = 'c4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'c6'] 
+	0 [label = 'Bb4+'] 
+	0 [label = 'c6'] 
+	0 [label = 'Bg5'] 
+	0 [label = 'd5'] 
+	0 [label = 'Bxf6'] 
+	0 [label = 'exf6'] 
+	0 [label = 'b3'] 
+	0 [label = 'Bg4'] 
+	0 [label = 'e3'] 
+	0 [label = 'Nd7'] 
+	0 [label = 'g3'] 
+	0 [label = 'Bg4'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'Nd7'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'd5'] 
+	0 [label = 'e5'] 
+	0 [label = 'Bg4'] 
+	0 [label = 'Bc5'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'c6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'Bg4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'e6'] 
+	0 [label = 'g3'] 
+	0 [label = 'd5'] 
+	0 [label = 'e4'] 
+	0 [label = 'd6'] 
+	0 [label = 'd4'] 
+	0 [label = 'cxd4'] 
+	0 [label = 'Nxe5'] 
+	0 [label = 'd6'] 
+	0 [label = 'd5'] 
+	0 [label = 'e6'] 
+	0 [label = 'g3'] 
+	0 [label = 'a6'] 
+	0 [label = 'Be7'] 
+	0 [label = 'g6'] 
+	0 [label = 'd4'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'd6'] 
+	0 [label = 'g6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'e5'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'd6'] 
+	0 [label = 'g3'] 
+	0 [label = 'g6'] 
+	0 [label = 'd4'] 
+	0 [label = 'cxd4'] 
+	0 [label = 'c3'] 
+	0 [label = 'dxc3'] 
+	0 [label = 'g6'] 
+	0 [label = 'g3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'e5'] 
+	0 [label = 'Nd5'] 
+	0 [label = 'd4'] 
+	0 [label = 'd6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'd5'] 
+	0 [label = 'd4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'g6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'exd4'] 
+	0 [label = 'b4'] 
+	0 [label = 'e5'] 
+	0 [label = 'Bb2'] 
+	0 [label = 'Bxb4'] 
+	0 [label = 'Bxe5'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'e5'] 
+	0 [label = 'Be7'] 
+	0 [label = 'c5'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'f5'] 
+	0 [label = 'c3'] 
+	0 [label = 'g6'] 
+	0 [label = 'Bg5'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'e6'] 
+	0 [label = 'Bf4'] 
+	0 [label = 'c5'] 
+	0 [label = 'Bb4'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Bxc3'] 
+	0 [label = 'c6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'd5'] 
+	0 [label = 'g3'] 
+	0 [label = 'g6'] 
+	0 [label = 'd6'] 
+	0 [label = 'd4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'g6'] 
+	0 [label = 'g3'] 
+	0 [label = 'g6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'b6'] 
+	0 [label = 'd4'] 
+	0 [label = 'Bb7'] 
+	0 [label = 'b6'] 
+	0 [label = 'g3'] 
+	0 [label = 'c5'] 
+	0 [label = 'g3'] 
+	0 [label = 'b6'] 
+	0 [label = 'g3'] 
+	0 [label = 'c5'] 
+	0 [label = 'c5'] 
+	0 [label = 'g3'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'g3'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'g6'] 
+	0 [label = 'g3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'd4'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'b6'] 
+	0 [label = 'a3'] 
+	0 [label = 'Bb7'] 
+	0 [label = 'd6'] 
+	0 [label = 'c4'] 
+	0 [label = 'Nd7'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'c4'] 
+	0 [label = 'e5'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nce7'] 
+	0 [label = 'Bf4'] 
+	0 [label = 'c5'] 
+	0 [label = 'e3'] 
+	0 [label = 'Qb6'] 
+	0 [label = 'b6'] 
+	0 [label = 'Bxf6'] 
+	0 [label = 'exf6'] 
+	0 [label = 'Bc4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'd4'] 
+	0 [label = 'exd4'] 
+	0 [label = 'b6'] 
+	0 [label = 'e3'] 
+	0 [label = 'Bb7'] 
+	0 [label = 'd6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'g6'] 
+	0 [label = 'Bf4'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'd4'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'e6'] 
+	0 [label = 'e4'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'g3'] 
+	0 [label = 'd5'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Bg4'] 
+	0 [label = 'c3'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'd4'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'c6'] 
+	0 [label = 'c4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'f5'] 
+	0 [label = 'g3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'g6'] 
+	0 [label = 'c4'] 
+	0 [label = 'b6'] 
+	0 [label = 'e6'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'c3'] 
+	0 [label = 'd6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'f4'] 
+	0 [label = 'd6'] 
+	0 [label = 'e5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'd5'] 
+	0 [label = 'e4'] 
+	0 [label = 'c6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Bg4'] 
+	0 [label = 'c6'] 
+	0 [label = 'Bg5'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'c4'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'g6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'h3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'g6'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'g6'] 
+	0 [label = 'd5'] 
+	0 [label = 'e4'] 
+	0 [label = 'dxe4'] 
+	0 [label = 'd4'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'g3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'd5'] 
+	0 [label = 'exd5'] 
+	0 [label = 'Qxd5'] 
+	0 [label = 'Bf4'] 
+	0 [label = 'Bf5'] 
+	0 [label = 'c4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'c6'] 
+	0 [label = 'c4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'g6'] 
+	0 [label = 'd4'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'Bc4'] 
+	0 [label = 'e6'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'e6'] 
+	0 [label = 'c5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'g3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'a6'] 
+	0 [label = 'Nd7'] 
+	0 [label = 'Be7'] 
+	0 [label = 'd3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'c6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Bg4'] 
+	0 [label = 'dxc4'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'g3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'g6'] 
+	0 [label = 'd4'] 
+	0 [label = 'e6'] 
+	0 [label = 'Bg5'] 
+	0 [label = 'd5'] 
+	0 [label = 'd5'] 
+	0 [label = 'exd5'] 
+	0 [label = 'Qxd5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Qd6'] 
+	0 [label = 'e5'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'c6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'f3'] 
+	0 [label = 'c5'] 
+	0 [label = 'd3'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nd2'] 
+	0 [label = 'g6'] 
+	0 [label = 'g6'] 
+	0 [label = 'd4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'b6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Bb7'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nd2'] 
+	0 [label = 'h6'] 
+	0 [label = 'c6'] 
+	0 [label = 'c4'] 
+	0 [label = 'c6'] 
+	0 [label = 'd4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'cxd4'] 
+	0 [label = 'c4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'g3'] 
+	0 [label = 'e6'] 
+	0 [label = 'd6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'g3'] 
+	0 [label = 'g6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'e6'] 
+	0 [label = 'b3'] 
+	0 [label = 'd5'] 
+	0 [label = 'Bb2'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'g3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'e5'] 
+	0 [label = 'e3'] 
+	0 [label = 'a6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'e3'] 
+	0 [label = 'c5'] 
+	0 [label = 'g6'] 
+	0 [label = 'Be2'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'e5'] 
+	0 [label = 'Bb5'] 
+	0 [label = 'Nge7'] 
+	0 [label = 'g6'] 
+	0 [label = 'd6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'd4'] 
+	0 [label = 'e6'] 
+	0 [label = 'g3'] 
+	0 [label = 'd5'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'c5'] 
+	0 [label = 'd4'] 
+	0 [label = 'b4'] 
+	0 [label = 'f6'] 
+	0 [label = 'Qh5'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Bc4'] 
+	0 [label = 'g6'] 
+	0 [label = 'g3'] 
+	0 [label = 'c6'] 
+	0 [label = 'Bg5'] 
+	0 [label = 'g6'] 
+	0 [label = 'h4'] 
+	0 [label = 'h6'] 
+	0 [label = 'f5'] 
+	0 [label = 'd3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'd4'] 
+	0 [label = 'e6'] 
+	0 [label = 'd3'] 
+	0 [label = 'g6'] 
+	0 [label = 'Nd2'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'g3'] 
+	0 [label = 'd6'] 
+	0 [label = 'c5'] 
+	0 [label = 'e3'] 
+	0 [label = 'cxd4'] 
+	0 [label = 'd4'] 
+	0 [label = 'e6'] 
+	0 [label = 'a6'] 
+	0 [label = 'd3'] 
+	0 [label = 'g6'] 
+	0 [label = 'g3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'c6'] 
+	0 [label = 'd4'] 
+	0 [label = 'Bb4+'] 
+	0 [label = 'Qa5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Bb7'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'c4'] 
+	0 [label = 'e5'] 
+	0 [label = 'd4'] 
+	0 [label = 'exd4'] 
+	0 [label = 'Qxd4'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'd5'] 
+	0 [label = 'e6'] 
+	0 [label = 'e3'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'd5'] 
+	0 [label = 'e5'] 
+	0 [label = 'Nfd7'] 
+	0 [label = 'c6'] 
+	0 [label = 'd4'] 
+	0 [label = 'b5'] 
+	0 [label = 'e4'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nd2'] 
+	0 [label = 'Be7'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'e5'] 
+	0 [label = 'Nd5'] 
+	0 [label = 'b5'] 
+	0 [label = 'a3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'g3'] 
+	0 [label = 'c6'] 
+	0 [label = 'e5'] 
+	0 [label = 'Bc5'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'c5'] 
+	0 [label = 'Bb2'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'b6'] 
+	0 [label = 'a6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'd6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'b5'] 
+	0 [label = 'c5'] 
+	0 [label = 'd5'] 
+	0 [label = 'e5'] 
+	0 [label = 'e4'] 
+	0 [label = 'd6'] 
+	0 [label = 'a6'] 
+	0 [label = 'Bd3'] 
+	0 [label = 'e5'] 
+	0 [label = 'Bc5'] 
+	0 [label = 'dxe4'] 
+	0 [label = 'c5'] 
+	0 [label = 'd3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'd5'] 
+	0 [label = 'cxd5'] 
+	0 [label = 'Nxd5'] 
+	0 [label = 'e6'] 
+	0 [label = 'e6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'Be7'] 
+	0 [label = 'g6'] 
+	0 [label = 'b3'] 
+	0 [label = 'a5'] 
+	0 [label = 'e4'] 
+	0 [label = 'd5'] 
+	0 [label = 'exd5'] 
+	0 [label = 'Qxd5'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'd6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Bg4'] 
+	0 [label = 'e4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'c6'] 
+	0 [label = 'd4'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Bb4+'] 
+	0 [label = 'c5'] 
+	0 [label = 'g6'] 
+	0 [label = 'c4'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'e5'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'b6'] 
+	0 [label = 'd4'] 
+	0 [label = 'Bb7'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'e6'] 
+	0 [label = 'e4'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'd4'] 
+	0 [label = 'c5'] 
+	0 [label = 'g6'] 
+	0 [label = 'e4'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'd6'] 
+	0 [label = 'd5'] 
+	0 [label = 'c4'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'e5'] 
+	0 [label = 'Nd5'] 
+	0 [label = 'e4'] 
+	0 [label = 'd6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'd5'] 
+	0 [label = 'd3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'd6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'e5'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'g3'] 
+	0 [label = 'g6'] 
+	0 [label = 'b3'] 
+	0 [label = 'd6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'e6'] 
+	0 [label = 'e4'] 
+	0 [label = 'Bb4'] 
+	0 [label = 'f3'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'c5'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'c6'] 
+	0 [label = 'g6'] 
+	0 [label = 'c4'] 
+	0 [label = 'dxc4'] 
+	0 [label = 'c5'] 
+	0 [label = 'd5'] 
+	0 [label = 'd6'] 
+	0 [label = 'Bg4'] 
+	0 [label = 'Nbd7'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'd6'] 
+	0 [label = 'd4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'f5'] 
+	0 [label = 'g3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'g6'] 
+	0 [label = 'c3'] 
+	0 [label = 'c5'] 
+	0 [label = 'Bf4'] 
+	0 [label = 'Bf5'] 
+	0 [label = 'd4'] 
+	0 [label = 'e6'] 
+	0 [label = 'g6'] 
+	0 [label = 'e4'] 
+	0 [label = 'e5'] 
+	0 [label = 'fxe5'] 
+	0 [label = 'd6'] 
+	0 [label = 'exd6'] 
+	0 [label = 'Bxd6'] 
+	0 [label = 'c3'] 
+	0 [label = 'dxc3'] 
+	0 [label = 'b4'] 
+	0 [label = 'cxb4'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'e6'] 
+	0 [label = 'f5'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'd6'] 
+	0 [label = 'd5'] 
+	0 [label = 'dxe4'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'g6'] 
+	0 [label = 'e4'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'd4'] 
+	0 [label = 'd6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'g3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'c6'] 
+	0 [label = 'e6'] 
+	0 [label = 'd4'] 
+	0 [label = 'exd5'] 
+	0 [label = 'd3'] 
+	0 [label = 'd6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'd5'] 
+	0 [label = 'g6'] 
+	0 [label = 'd4'] 
+	0 [label = 'cxd4'] 
+	0 [label = 'Bc4'] 
+	0 [label = 'd5'] 
+	0 [label = 'f4'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nd7'] 
+	0 [label = 'c4'] 
+	0 [label = 'e5'] 
+	0 [label = 'a6'] 
+	0 [label = 'e3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'e6'] 
+	0 [label = 'e4'] 
+	0 [label = 'd5'] 
+	0 [label = 'c5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'd3'] 
+	0 [label = 'e5'] 
+	0 [label = 'c6'] 
+	0 [label = 'b6'] 
+	0 [label = 'e4'] 
+	0 [label = 'Bb7'] 
+	0 [label = 'Bd3'] 
+	0 [label = 'd6'] 
+	0 [label = 'g3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'c6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'Bg4'] 
+	0 [label = 'g3'] 
+	0 [label = 'c6'] 
+	0 [label = 'e5'] 
+	0 [label = 'c5'] 
+	0 [label = 'Ne2'] 
+	0 [label = 'd6'] 
+	0 [label = 'Nbc3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Bb5+'] 
+	0 [label = 'Bd7'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Bb4'] 
+	0 [label = 'e4'] 
+	0 [label = 'd5'] 
+	0 [label = 'exd5'] 
+	0 [label = 'cxd5'] 
+	0 [label = 'Bf4'] 
+	0 [label = 'c5'] 
+	0 [label = 'f6'] 
+	0 [label = 'e4'] 
+	0 [label = 'Bxb4'] 
+	0 [label = 'b3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'Bg4'] 
+	0 [label = 'g3'] 
+	0 [label = 'Nd7'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'd5'] 
+	0 [label = 'a6'] 
+	0 [label = 'd4'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'd5'] 
+	0 [label = 'b6'] 
+	0 [label = 'd4'] 
+	0 [label = 'e6'] 
+	0 [label = 'e4'] 
+	0 [label = 'Bb7'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'c5'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Nd2'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'dxc4'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'dxe4'] 
+	0 [label = 'Nxe4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'e3'] 
+	0 [label = 'e6'] 
+	0 [label = 'Bb4+'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nbc3'] 
+	0 [label = 'd6'] 
+	0 [label = 'c6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'd5'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'e5'] 
+	0 [label = 'a6'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'g6'] 
+	0 [label = 'Bg5'] 
+	0 [label = 'h6'] 
+	0 [label = 'g3'] 
+	0 [label = 'd5'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'dxc4'] 
+	0 [label = 'f4'] 
+	0 [label = 'g6'] 
+	0 [label = 'd4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'g3'] 
+	0 [label = 'g6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'd5'] 
+	0 [label = 'Bb4'] 
+	0 [label = 'dxc4'] 
+	0 [label = 'e6'] 
+	0 [label = 'd4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Bf4'] 
+	0 [label = 'Be7'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'c4'] 
+	0 [label = 'e5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'g6'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'd6'] 
+	0 [label = 'c5'] 
+	0 [label = 'c4'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'g6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'd4'] 
+	0 [label = 'cxd4'] 
+	0 [label = 'd4'] 
+	0 [label = 'e4'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'e6'] 
+	0 [label = 'g3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'd6'] 
+	0 [label = 'c4'] 
+	0 [label = 'Bg4'] 
+	0 [label = 'b5'] 
+	0 [label = 'e3'] 
+	0 [label = 'a6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'c4'] 
+	0 [label = 'g6'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'g6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'd5'] 
+	0 [label = 'Bf4'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nd2'] 
+	0 [label = 'c5'] 
+	0 [label = 'g3'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'd5'] 
+	0 [label = 'e3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'd3'] 
+	0 [label = 'dxe4'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'c5'] 
+	0 [label = 'd5'] 
+	0 [label = 'e6'] 
+	0 [label = 'g3'] 
+	0 [label = 'd5'] 
+	0 [label = 'e6'] 
+	0 [label = 'c3'] 
+	0 [label = 'Bf5'] 
+	0 [label = 'd6'] 
+	0 [label = 'Bf4'] 
+	0 [label = 'Nbd7'] 
+	0 [label = 'Bg2'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'Bb7'] 
+	0 [label = 'e3'] 
+	0 [label = 'c5'] 
+	0 [label = 'c5'] 
+	0 [label = 'cxd5'] 
+	0 [label = 'Qxd5'] 
+	0 [label = 'e5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'h6'] 
+	0 [label = 'Bh4'] 
+	0 [label = 'g5'] 
+	0 [label = 'e3'] 
+	0 [label = 'e6'] 
+	0 [label = 'c4'] 
+	0 [label = 'd5'] 
+	0 [label = 'd5'] 
+	0 [label = 'd4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'e6'] 
+	0 [label = 'c4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'dxe4'] 
+	0 [label = 'Bf5'] 
+	0 [label = 'e5'] 
+	0 [label = 'd6'] 
+	0 [label = 'c4'] 
+	0 [label = 'g6'] 
+	0 [label = 'g3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'Qa4'] 
+	0 [label = 'c5'] 
+	0 [label = 'b3'] 
+	0 [label = 'b6'] 
+	0 [label = 'a6'] 
+	0 [label = 'Qc2'] 
+	0 [label = 'g6'] 
+	0 [label = 'e4'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'e3'] 
+	0 [label = 'e6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'b6'] 
+	0 [label = 'd4'] 
+	0 [label = 'exd4'] 
+	0 [label = 'Qxd4'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'd3'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Bg5'] 
+	0 [label = 'c6'] 
+	0 [label = 'e3'] 
+	0 [label = 'Bf5'] 
+	0 [label = 'c6'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'd5'] 
+	0 [label = 'Bf4'] 
+	0 [label = 'Bg4'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'd5'] 
+	0 [label = 'Bf4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'c3'] 
+	0 [label = 'Nbd7'] 
+	0 [label = 'f4'] 
+	0 [label = 'h5'] 
+	0 [label = 'a6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'b3'] 
+	0 [label = 'c5'] 
+	0 [label = 'Bb2'] 
+	0 [label = 'g6'] 
+	0 [label = 'c5'] 
+	0 [label = 'dxc5'] 
+	0 [label = 'Qa5+'] 
+	0 [label = 'd3'] 
+	0 [label = 'e6'] 
+	0 [label = 'f4'] 
+	0 [label = 'd5'] 
+	0 [label = 'b6'] 
+	0 [label = 'g3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'exd5'] 
+	0 [label = 'exd5'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'cxd5'] 
+	0 [label = 'cxd5'] 
+	0 [label = 'd4'] 
+	0 [label = 'cxd4'] 
+	0 [label = 'e3'] 
+	0 [label = 'g6'] 
+	0 [label = 'c4'] 
+	0 [label = 'c6'] 
+	0 [label = 'e5'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'c4'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'Nc3'] 
+	0 [label = 'c5'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'Bb4'] 
+	0 [label = 'Bg7'] 
+	0 [label = 'c6'] 
+	0 [label = 'c5'] 
+	0 [label = 'e3'] 
+	0 [label = 'g6'] 
+	0 [label = 'c5'] 
+	0 [label = 'b3'] 
+	0 [label = 'e6'] 
+	0 [label = 'e6'] 
+	0 [label = 'exd4'] 
+	0 [label = 'Nf3'] 
+	0 [label = 'Nc6'] 
+	0 [label = 'c5'] 
+	0 [label = 'e3'] 
+	0 [label = 'd5'] 
+	0 [label = 'd4'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'Nf6'] 
+	0 [label = 'g3'] 
+	0 [label = 'd5'] 
+	0 [label = 'c5'] 
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+	0 -- 0;
+}
