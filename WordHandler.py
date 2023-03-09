@@ -18,10 +18,10 @@ class WordHandler:
         return self.games
 
     def isWhiteGame(self, game):
-        return game.white_player.get_name().startswith("Stockfish")
+        return game.white_player.getName().startswith("Stockfish")
 
     def isBlackGame(self, game):
-        return game.black_player.get_name().startswith("Stockfish")
+        return game.black_player.getName().startswith("Stockfish")
 
     def isStockfishWin(self, game):
         return (self.isWhiteGame(game) and game.result == "1-0") or (self.isBlackGame(game) and game.result == "0-1")
@@ -50,14 +50,14 @@ class WordHandler:
         black_lost = 0
 
         for game in self.games:
-            if game.white_player.get_name().startswith("Stockfish"):
+            if game.white_player.getName().startswith("Stockfish"):
                 if game.result == "1-0":
                     white_won += 1
                 elif game.result == "0-1":
                     white_lost += 1
                 elif game.result == "1/2-1/2":
                     white_drawn += 1
-            elif game.black_player.get_name().startswith("Stockfish"):
+            elif game.black_player.getName().startswith("Stockfish"):
                 if game.result == "0-1":
                     black_won += 1
                 elif game.result == "1-0":

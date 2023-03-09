@@ -10,7 +10,7 @@ import WordHandler
 
 # Excel:
 game_reader = DatabaseHandler.DatabaseHandler(
-    "Stockfish_15_64-bit.commented.[2600].pgn")
+    "Datafiles\Stockfish_15_64-bit.commented.[2600].pgn")
 games = game_reader.read_games()
 #game_reader.write_to_file(games, "Datafiles\Stockfish_complete_rewritten.pgn")
 # print(games[2000].get_variation())
@@ -35,3 +35,5 @@ graph = printer.createGraph(games)
 printer.drawGamesWithOpening(
     "Datafiles\FrenchOpening.dot", "French", games, 5, 3)
 printer.drawGraph(graph, "Datafiles\ChessTree.dot", 5, 3)
+printer.drawGamesWithOpening(
+    "Datafiles\SicilianOpening.dot", "Sicilian", games, 5, 3)
