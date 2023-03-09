@@ -70,6 +70,9 @@ class Graph:
     def getID(self):
         return self.node_ID
 
+    def setRootName(self, name):
+        self.root.name = name
+
     def increaseID(self):
         self.node_ID += 1
 
@@ -104,8 +107,8 @@ class Graph:
 
 
 class Printer:
-    def __init__(self, games):
-        self.games = games
+    def __init__(self):
+        pass
 
     def lookForNodeInChildren(self, move_name, children):
         for node in children:
@@ -114,11 +117,11 @@ class Printer:
         return None
 
     # Creates a graph of the first 'max_steps' moves of each game given in the constructor
-    def createGraph(self, max_steps=500): 
+    def createGraph(self, games, max_steps=500): 
         if max_steps < 1:
             raise ValueError("Max steps must be greater than 0")
-        graph = Graph(self.games)
-        for game in self.games:
+        graph = Graph(games)
+        for game in games:
             if game.getResult() == "1-0":
                 winner = "white_wins"
             elif game.getResult() == "0-1":
@@ -128,6 +131,7 @@ class Printer:
 
             current_node = graph.getRoot()
             current_depth = 0
+
             #Iterate through the moves of the game until the max depth is reached or the end of the game is reached
             for move in game.getMoves()[:max_steps] if max_steps < len(game.getMoves()) else game.getMoves():
                 next_node = self.lookForNodeInChildren(move.getMoveText(), current_node.getChildren())
@@ -137,13 +141,14 @@ class Printer:
                     current_depth += 1
                 else:
                     break #If the node doesn't exist, break out of the loop and create the rest of the nodes (loop below)
+            
             for move in game.getMoves()[current_depth:max_steps] if max_steps < len(game.getMoves()) else game.getMoves()[current_depth:]:  
                 new_node = graph.newNode(move, current_depth+1, current_node, winner) 
                 current_node.children.append(new_node)
                 current_node = new_node
                 current_depth += 1
         return graph
-
+    """
     # Writes the entire graph to a file in the DOT language
     def drawGraph(self, graph, file_path):
         with open(file_path, 'w') as file:
@@ -152,23 +157,32 @@ class Printer:
             for node in graph.getNodes():
                 if node.isWhitePlayer():
                     file.write(
-                        f"\t{node.getID()} [label = \"{node.getName}\n{node.meta['white_wins']}, {node.meta['draws']}, {node.meta['black_wins']()}\"]; \n")
+                        f"\t{node.getID()} [label = \"{node.getName()}\n{node.getResultCounts()['white_wins']}, {node.getResultCounts()['draws']}, {node.getResultCounts()['black_wins']}\"]; \n")
                 else:
                     file.write(
-                        f"\t{node.nodeID} [label = \"{node.name}\", style = filled, fillcolor = black, fontcolor = white]; \n")
-            for edge in graph.edges:
+                        f"\t{node.getID()} [label = \"{node.getName()}\n{node.getResultCounts()['white_wins']}, {node.getResultCounts()['draws']}, {node.getResultCounts()['black_wins']}\"; style = filled, fillcolor = black, fontcolor = white]; \n")
+            for edge in graph.getEdges():
                 file.write(
                     f"\t{edge.getSourceNode().getID()} -- {edge.getTargetNode().getID()};\n")
             file.write("}")
+    """
 
     # Writes the graph to a file in the DOT language, but only writes nodes that have been played more than 'threshold' times,
     # and only 'depth' moves deep
-    def drawPopularOpenings(self, graph, file_path, depth=5, threshold=1):
+    def drawGraph(self, graph, file_path, depth=10, threshold=1):
         if threshold < 1 or depth < 1:
             raise ValueError("Threshold and depth must be greater than 0")
         with open(file_path, 'w') as file:
             file.write("graph ChessOpenings {\n")
             file.write('\trankdir="LR";\n')
+            root = graph.getRoot()
+
+            # Adds up the result counts of all the children of the root node 
+            for i in range(0, len(graph.getRoot().getChildren())):
+                graph.getRoot().getResultCounts()["white_wins"] += graph.getRoot().getChildren()[i].getResultCounts()['white_wins']
+                graph.getRoot().getResultCounts()["black_wins"] += graph.getRoot().getChildren()[i].getResultCounts()['black_wins']
+                graph.getRoot().getResultCounts()["draws"] += graph.getRoot().getChildren()[i].getResultCounts()['draws']
+           
             for node in graph.getNodes():
                 if (node.getGamesPlayed() > threshold) and (node.getPlyCount() <= depth):
                     if node.isWhitePlayer():
@@ -181,26 +195,17 @@ class Printer:
                 if (edge.getTargetNode().getGamesPlayed() > threshold) and (edge.getTargetNode().getPlyCount() <= depth):
                     file.write(
                         f"\t{edge.getSourceNode().getID()} -- {edge.getTargetNode().getID()};\n")
+            file.write(f"\t{root.getID()} [label = \"{root.getName()}\n{root.getResultCounts()['white_wins']}, {root.getResultCounts()['draws']}, {root.getResultCounts()['black_wins']}\", shape = octagon, style = filled, fillcolor = green, fontcolor = white]; \n")
             file.write("}")
 
-    #UNFINISHED
-    def drawOpening(self, graph, file_path, opening, depth):
-        if depth < 1:
-            raise ValueError("Depth must be greater than 0")
-        with open(file_path, 'w') as file:
-            file.write("graph OpeningTree {\n")
-            for game in graph.getGames():
-                if game.getOpening() == opening:
-                    for node in graph.getNodes():
-                        if node.getName() == opening and node.getMoveNumber() <= depth:
-                            if node.isWhitePlayer():
-                                file.write(
-                                    f"\t{node.getID()} [label = \"{node.getName()}\"]; \n")
-                            else:
-                                file.write(
-                                    f"\t{node.getID()} [label = \"{node.getName()}\", style = filled, fillcolor = black, fontcolor = white]; \n")
-                    for edge in graph.getEdges():
-                        if edge.getSourceNode().getName() == opening and edge.getTargetNode().getMoveNumber() <= depth:
-                            file.write(
-                                f"\t{edge.getSourceNode().getID()} -- {edge.getTargetNode().getID()};\n")
-            file.write("}")
+    # Writes a graph of the games with a certain opening to a DOT-file
+    def drawGamesWithOpening(self, file_path, opening, games, depth=500, threshold=1):
+        if depth < 1 or threshold < 1:
+            raise ValueError("Depth and threshold must be greater than 0")
+        relevant_games = []
+        for game in games:
+            if game.getOpening() == opening:
+                relevant_games.append(game)
+        graph = self.createGraph(relevant_games, depth)
+        graph.setRootName(opening)
+        self.drawGraph(graph, file_path, depth, threshold)

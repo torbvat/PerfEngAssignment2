@@ -34,7 +34,7 @@ print(imported_game.variation)
 """
 
 # Tree:
-printer = Printer(games)
-graph = printer.createGraph()
-print(graph.nodes)
-printer.drawPopularOpenings(graph, "Datafiles\MyTree.dot", 13, 1)
+printer = Printer()
+graph = printer.createGraph(games)
+#print(graph.nodes)
+printer.drawGamesWithOpening("Datafiles\FrenchOpening.dot", "French", games, 5, 3)
