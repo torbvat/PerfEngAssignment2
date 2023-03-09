@@ -148,14 +148,15 @@ class Printer:
     def drawGraph(self, graph, file_path):
         with open(file_path, 'w') as file:
             file.write("graph ChessTree {\n")
+            file.write('\trankdir="LR";\n')
             for node in graph.getNodes():
                 if node.isWhitePlayer():
                     file.write(
-                        f"\t{node.getID()} [label = \"{node.getName()}\"]; \n")
+                        f"\t{node.getID()} [label = \"{node.getName}\n{node.meta['white_wins']}, {node.meta['draws']}, {node.meta['black_wins']()}\"]; \n")
                 else:
                     file.write(
-                        f"\t{node.getID()} [label = \"{node.getName()}\", style = filled, fillcolor = black, fontcolor = white]; \n")
-            for edge in graph.getEdges():
+                        f"\t{node.nodeID} [label = \"{node.name}\", style = filled, fillcolor = black, fontcolor = white]; \n")
+            for edge in graph.edges:
                 file.write(
                     f"\t{edge.getSourceNode().getID()} -- {edge.getTargetNode().getID()};\n")
             file.write("}")
@@ -167,6 +168,7 @@ class Printer:
             raise ValueError("Threshold and depth must be greater than 0")
         with open(file_path, 'w') as file:
             file.write("graph ChessOpenings {\n")
+            file.write('\trankdir="LR";\n')
             for node in graph.getNodes():
                 if (node.getGamesPlayed() > threshold) and (node.getPlyCount() <= depth):
                     if node.isWhitePlayer():
