@@ -13,43 +13,43 @@ class ChessGame:
         self.moves = moves
         self.variation = variation
 
-    def get_moves(self):
+    def getMoves(self):
         return self.moves
 
-    def set_moves(self, moves):
+    def setMoves(self, moves):
         self.moves = moves
 
-    def get_event(self):
+    def getEvent(self):
         return self.event
     
-    def get_site(self):
+    def getSite(self):
         return self.site
     
-    def get_date(self):
+    def getDate(self):
         return self.date
     
-    def get_round(self):
+    def getRound(self):
         return self.round
     
-    def get_result(self):
+    def getResult(self):
         return self.result
     
-    def get_eco(self):
+    def getEco(self):
         return self.eco
     
-    def get_opening(self):  
+    def getOpening(self):  
         return self.opening
     
-    def get_plycount(self):
+    def getPlyCount(self):
         return self.plycount
     
-    def get_white_player(self):
+    def getWhitePlayer(self):
         return self.white_player
     
-    def get_black_player(self):
+    def getBlackPlayer(self):
         return self.black_player
     
-    def get_variation(self):
+    def getVariation(self):
         return self.variation
     
     
@@ -64,13 +64,13 @@ class ChessMove:
         self.player = player
         self.move_text = move_text
 
-    def get_move_number(self):
+    def getMoveNumber(self):
         return self.move_number
     
-    def get_player(self):
+    def getPlayer(self):
         return self.player
     
-    def get_move_text(self):
+    def getMoveText(self):
         return self.move_text
 
     def __repr__(self):
@@ -83,10 +83,10 @@ class ChessPlayer:
         self.name = name
         self.rating = rating
 
-    def get_name(self):
+    def getName(self):
         return self.name
     
-    def get_rating(self):
+    def getRating(self):
         return self.rating
     
     def __repr__(self):

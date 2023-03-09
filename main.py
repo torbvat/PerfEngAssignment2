@@ -35,7 +35,6 @@ print(imported_game.variation)
 
 # Tree:
 printer = Printer(games)
-graph = printer.createGraph(3)
+graph = printer.createGraph()
 print(graph.nodes)
-# Finn ut koffor dybda ikkje blir større når vi øke parameterennnnnnnnn
-printer.drawPopularOpenings(graph, "MyNet2.dot", 5, 1)
+printer.drawPopularOpenings(graph, "Datafiles\MyTree.dot", 13, 1)

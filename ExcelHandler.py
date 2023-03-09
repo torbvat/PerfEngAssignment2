@@ -5,21 +5,21 @@ class ExcelHandler:
 
     def export_game_to_excel(self, game, file_path):
         data = {
-            "Move Number": [move.move_number for move in game.get_moves()],
-            "Move": [move.move_text for move in game.get_moves()],
-            "Meta Data": ["Event: " + game.get_event(), 
-                          "Site: " + game.get_site(), 
-                          "Date: " + game.get_date(), 
-                          "Round: " + game.get_round(), 
-                          "Result: " + game.get_result(),
-                          "White: " + game.get_white_player().get_name(), 
-                          "Black: " + game.get_black_player().get_name(),  
-                          "Eco: " + game.get_eco(), 
-                          "Opening: " + game.get_opening(), 
-                          "Variation: " + game.get_variation(),
-                          "Plycount: " + game.get_plycount(), 
-                          "WhiteElo: " + game.get_white_player().get_rating(),
-                          "BlackElo: " + game.get_black_player().get_rating()
+            "Move Number": [move.getMoveNumber() for move in game.getMoves()],
+            "Move": [move.getMoveText for move in game.getMoves()],
+            "Meta Data": ["Event: " + game.getEvent(), 
+                          "Site: " + game.getSite(), 
+                          "Date: " + game.getDate(), 
+                          "Round: " + game.getRound(), 
+                          "Result: " + game.getResult(),
+                          "White: " + game.getWhitePlayer().getName(), 
+                          "Black: " + game.getBlackPlayer().getName(),  
+                          "Eco: " + game.getEco(), 
+                          "Opening: " + game.getOpening(), 
+                          "Variation: " + game.getVariation(),
+                          "Plycount: " + game.getPlyCount(), 
+                          "WhiteElo: " + game.getWhitePlayer().getRating(),
+                          "BlackElo: " + game.getBlackPlayer().getRating()
                         ]
                 }
         for _ in range(0, data.get("Move Number").__len__() - data.get("Meta Data").__len__()):

@@ -75,30 +75,30 @@ class DatabaseHandler:
         with open(file_path, 'w') as file:
             for game in Games:
                 move_counter = 0
-                file.write("[Event\t" + game.get_event() + "]\n")
-                file.write("[Site\t" + game.get_site() + "]\n")
-                file.write("[Date\t" + game.get_date() + "]\n")
-                file.write("[Round\t" + game.get_round() + "]\n")
-                file.write("[White\t" + game.get_white_player().get_name() + "]\n")
-                file.write("[Black\t" + game.get_black_player().get_name() + "]\n")
-                file.write("[Result\t" + game.get_result() + "]\n")
-                file.write("[ECO\t" + game.get_eco() + "]\n")
-                file.write("[Opening\t" + game.get_opening() + "]\n")
-                file.write("[Variation\t" + game.get_variation() + "]\n")
-                file.write("[PlyCount\t" + game.get_plycount() + "]\n")
-                file.write("[WhiteElo\t" + game.get_white_player().get_rating() + "]\n")
-                file.write("[BlackElo\t" + game.get_black_player().get_rating() + "]\n")
+                file.write("[Event\t" + game.getEvent() + "]\n")
+                file.write("[Site\t" + game.getSite() + "]\n")
+                file.write("[Date\t" + game.getDate() + "]\n")
+                file.write("[Round\t" + game.getRound() + "]\n")
+                file.write("[White\t" + game.getWhitePlayer().getName() + "]\n")
+                file.write("[Black\t" + game.getBlackPlayer().getName() + "]\n")
+                file.write("[Result\t" + game.getResult() + "]\n")
+                file.write("[ECO\t" + game.getEco() + "]\n")
+                file.write("[Opening\t" + game.getOpening() + "]\n")
+                file.write("[Variation\t" + game.getVariation() + "]\n")
+                file.write("[PlyCount\t" + game.getPlyCount() + "]\n")
+                file.write("[WhiteElo\t" + game.getWhitePlayer().getRating() + "]\n")
+                file.write("[BlackElo\t" + game.getBlackPlayer().getRating() + "]\n")
                 file.write("\n")
-                for i in range(0, len(game.get_moves()), 2):
+                for i in range(0, len(game.getMoves()), 2):
                     move_counter += 1
-                    if i+2 == len(game.get_moves()):
-                        file.write(str(game.get_moves()[i].get_move_number()) + ". " + game.get_moves()[i].get_move_text() + " " + game.get_moves()[i+1].get_move_text() + " " + game.get_result() + "\n\n")
-                    elif i+1 < len(game.get_moves()):
-                        file.write(str(game.get_moves()[i].get_move_number()) + ". " + game.get_moves()[i].get_move_text() + " " + game.get_moves()[i+1].get_move_text()+ " ")
-                    elif i+1 == len(game.get_moves()):
-                        file.write(str(game.get_moves()[i].get_move_number()) + ". " + game.get_moves()[i].get_move_text() + " " + game.get_result() + "\n\n")
+                    if i+2 == len(game.getMoves()):
+                        file.write(str(game.getMoves()[i].getMoveNumber()) + ". " + game.getMoves()[i].getMoveText() + " " + game.getMoves()[i+1].getMoveText() + " " + game.getResult() + "\n\n")
+                    elif i+1 < len(game.getMoves()):
+                        file.write(str(game.getMoves()[i].getMoveNumber()) + ". " + game.getMoves()[i].getMoveText() + " " + game.getMoves()[i+1].getMoveText()+ " ")
+                    elif i+1 == len(game.getMoves()):
+                        file.write(str(game.getMoves()[i].getMoveNumber()) + ". " + game.getMoves()[i].getMoveText() + " " + game.getMesult() + "\n\n")
                     else: 
-                        file.write(str(game.get_moves()[i].get_move_number()) + ". " + game.get_moves()[i].get_move_text() + " " + game.get_result() + "\n\n")
+                        file.write(str(game.getMoves()[i].getMoveNumber()) + ". " + game.getMoves()[i].getMoveText() + " " + game.getMesult() + "\n\n")
                     if move_counter % 4 == 0:
                         file.write("\n")
                 if move_counter % 4 != 0:
