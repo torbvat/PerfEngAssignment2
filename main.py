@@ -1,10 +1,14 @@
 import ExcelHandler
 import DatabaseHandler
 from Tree import Printer, Graph
+import WordHandler
 
-# Database:
-# game_reader = DatabaseHandler.DatabaseHandler(
-#     "Datafiles\StockfishShort.pgn")
+# reader = DatabaseHandler.DatabaseHandler(
+#     "Stockfish_15_64-bit.commented.[2600].pgn")
+
+# print(reader.read_games())
+
+# Excel:
 game_reader = DatabaseHandler.DatabaseHandler(
     "Datafiles\Stockfish_15_64-bit.commented.[2600].pgn")
 games = game_reader.read_games()
@@ -17,25 +21,19 @@ games = game_reader.read_games()
 #game_exporter.export_game_to_excel(games[0], "Datafiles\game_0.xlsx")
 #imported_game = game_exporter.import_game_from_excel("Datafiles\game_2000.xlsx")
 
-#game_reader.write_to_file(([imported_game]), "Datafiles\game_0.pgn")
-"""
-print(imported_game.black_player)
-print(imported_game.white_player)
-print(imported_game.moves)
-print(imported_game.event)
-print(imported_game.site)
-print(imported_game.date)
-print(imported_game.round)
-print(imported_game.result)
-print(imported_game.eco)
-print(imported_game.opening)
-print(imported_game.plycount)
-print(imported_game.variation)
-"""
+# Word:
+word_exporter = WordHandler.WordHandler("testFil.docx", games)
+# for game in word_exporter.get_games():
+#     print(game)
+word_exporter.create_graphs()
+word_exporter.create_document()
 
 # Tree:
 printer = Printer()
 graph = printer.createGraph(games)
-#print(graph.nodes)
-printer.drawGamesWithOpening("Datafiles\FrenchOpening.dot", "French", games, 5, 3)
+# print(graph.nodes)
+printer.drawGamesWithOpening(
+    "Datafiles\FrenchOpening.dot", "French", games, 5, 3)
 printer.drawGraph(graph, "Datafiles\ChessTree.dot", 5, 3)
+printer.drawGamesWithOpening(
+    "Datafiles\SicilianOpening.dot", "Sicilian", games, 5, 3)
