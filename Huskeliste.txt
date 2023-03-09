@@ -1,0 +1,15 @@
+-Forkorte enkelte metoder?
+-Innkapsling: Opprette getters for tilfeller hvor vi direkte aksesserer attributter 
+-Opprydding:
+    -Fjerne metoder vi ikke bruker
+    -metoder: camelCase
+    -variabler: variable_name
+    -Lage oversiktlig main-fil
+    -Kommentere kode hvor det er hensiktsmessig
+
+Ej he no gått over alt bortsett fra WordHandler og fiksa:
+    -innkapsling 
+    -metoder til camelCase
+    -variabler til variable_name
+    -delvis kommentert kode (burde gjøres mer nøye)
+    
