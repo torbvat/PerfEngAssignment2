@@ -17,10 +17,6 @@ class WordHandler:
     def get_games(self):
         return self.games
 
-    # def print_games(self):
-    #     for game in self.games:
-    #         print(game)
-
     def isWhiteGame(self, game):
         return game.white_player.get_name().startswith("Stockfish")
 
@@ -38,8 +34,8 @@ class WordHandler:
 
         document.add_heading('Chess game', 0)
         self.add_result_tables(document)
-        document.add_picture('proportionPlot.png')
         self.add_medianSD_tables(document)
+        document.add_picture('proportionResultsPlot.png')
         document.add_picture('proportionStockfishPlot.png')
         document.save("testFil.docx")
 
@@ -208,16 +204,20 @@ class WordHandler:
             proportionOfBlackGames.append(
                 round(ongoingBlackGamesOnMove[i]*100/nrOfBlackGames, 2))
 
-        plt.plot(moveList, proportionOfGames, 'b')
-        plt.plot(whiteMoveList, proportionOfWhiteGames, 'r')
-        plt.plot(blackMoveList, proportionOfBlackGames, 'g')
+        plt.figure(1)
+        plt.plot(moveList, proportionOfGames, 'b', label="All games")
+        plt.plot(whiteMoveList, proportionOfWhiteGames,
+                 'r', label="White games")
+        plt.plot(blackMoveList, proportionOfBlackGames,
+                 'g', label="Black games")
         plt.xlim(0, longestGameCount+2)
         plt.ylim(0, 102)
         plt.xlabel("Number of moves")
         plt.ylabel("Percentage of games ongoing")
         plt.suptitle("Proportion of games still ongoing after n moves")
+        plt.legend(loc="upper right")
         plt.savefig("proportionResultsPlot.png")
-        # plt.show()
+        plt.show()
 
     def create_SF_result_graph(self):
         longestGameCount = int(self.games[0].plycount)
@@ -235,6 +235,9 @@ class WordHandler:
                 lostGames.append(game)
                 if int(game.plycount) > longestLostGameCount:
                     longestLostGameCount = int(game.plycount)
+
+        longestGameCount = max(longestWonGameCount, longestLostGameCount)
+        print(longestGameCount)
 
         nrOfWonGames = len(wonGames)
         nrOfLostGames = len(lostGames)
@@ -272,14 +275,21 @@ class WordHandler:
             proportionOfLostGames.append(
                 round(ongoingLostGamesOnMove[i]*100/nrOfLostGames))
 
-        plt.plot(wonMoveList, proportionOfWonGames, 'b')
-        plt.plot(lostMoveList, proportionOfLostGames, 'r')
+        print(wonMoveList)
+        print(lostMoveList)
+
+        plt.figure(2)
+        plt.plot(wonMoveList, proportionOfWonGames, 'g', label="Games won")
+        plt.plot(lostMoveList, proportionOfLostGames, 'r', label="Games lost")
         plt.xlim(0, longestGameCount+2)
         plt.ylim(0, 102)
         plt.xlabel("Number of moves")
         plt.ylabel("Percentage of games ongoing")
-        plt.suptitle("Proportion of games still ongoing after n moves")
+        plt.suptitle(
+            "Proportion of Stockfish games still ongoing after n moves")
+        plt.legend(loc="upper right")
         plt.savefig("proportionStockfishPlot.png")
+        plt.show()
 
     def create_graphs(self):
         self.create_result_graph()

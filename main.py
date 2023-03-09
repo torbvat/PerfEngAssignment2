@@ -2,10 +2,10 @@ import ExcelHandler
 import DatabaseHandler
 import WordHandler
 
-reader = DatabaseHandler.DatabaseHandler(
-    "Stockfish_15_64-bit.commented.[2600].pgn")
+# reader = DatabaseHandler.DatabaseHandler(
+#     "Stockfish_15_64-bit.commented.[2600].pgn")
 
-print(reader.read_games())
+# print(reader.read_games())
 
 # Excel:
 game_reader = DatabaseHandler.DatabaseHandler(
