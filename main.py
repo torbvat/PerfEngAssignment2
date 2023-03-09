@@ -38,4 +38,4 @@ printer = Printer(games)
 graph = printer.createGraph(3)
 print(graph.nodes)
 # Finn ut koffor dybda ikkje blir større når vi øke parameterennnnnnnnn
-printer.drawPopularOpenings(graph, "MyNet2.dot", 5, 1)
+printer.drawDiagram(graph, "MyNet2.dot")

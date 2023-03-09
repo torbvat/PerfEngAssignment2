@@ -172,13 +172,14 @@ class Printer:
     def drawDiagram(self, graph, file_path):
         with open(file_path, 'w') as file:
             file.write("graph ChessTree {\n")
+            file.write('\trankdir="LR";\n')
             for node in graph.nodes:
                 if node.ply_count % 2 == 1:
                     file.write(
-                        f"\t{node.nodeID} [label = \"{node.name}\"]; \n")
+                        f"\t{node.nodeID} [label = \"{node.name}\n{node.meta['white_wins']}, {node.meta['draws']}, {node.meta['black_wins']}\"]; \n")
                 else:
                     file.write(
-                        f"\t{node.nodeID} [label = \"{node.name}\", style = filled, fillcolor = black, fontcolor = white]; \n")
+                        f"\t{node.nodeID} [label = \"{node.name}\n{node.meta['white_wins']}, {node.meta['draws']}, {node.meta['black_wins']}\", style = filled, fillcolor = black, fontcolor = white]; \n")
             for edge in graph.edges:
                 file.write(
                     f"\t{edge.getSourceNode().nodeID} -- {edge.getTargetNode().nodeID};\n")
@@ -187,6 +188,7 @@ class Printer:
     def drawPopularOpenings(self, graph, file_path, depth, treshhold):
         with open(file_path, 'w') as file:
             file.write("graph ChessOpenings {\n")
+            file.write('\trankdir="LR";\n')
             for node in graph.nodes:
                 if (node.getGamesPlayed() > treshhold) and (node.getMoveNumber() <= depth):
                     if node.ply_count % 2 == 1:
