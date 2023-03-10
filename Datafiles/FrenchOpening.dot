@@ -1,43 +1,81 @@
 graph ChessOpenings {
 	rankdir="LR";
 	0 [label = "French
-42, 77, 11", style = filled, fillcolor = black, fontcolor = white]; 
+White:42
+Draws:77
+Black:11", style = filled, fillcolor = black, fontcolor = white]; 
 	1 [label = "e4
-38, 70, 10"]; 
+White:38
+Draws:70
+Black:10"]; 
 	2 [label = "e6
-37, 67, 10", style = filled, fillcolor = black, fontcolor = white]; 
+White:37
+Draws:67
+Black:10", style = filled, fillcolor = black, fontcolor = white]; 
 	3 [label = "d4
-35, 61, 10"]; 
+White:35
+Draws:61
+Black:10"]; 
 	4 [label = "d5
-35, 61, 10", style = filled, fillcolor = black, fontcolor = white]; 
+White:35
+Draws:61
+Black:10", style = filled, fillcolor = black, fontcolor = white]; 
 	5 [label = "Nc3
-20, 34, 5"]; 
+White:20
+Draws:34
+Black:5"]; 
 	6 [label = "Qe2
-1, 3, 0"]; 
+White:1
+Draws:3
+Black:0"]; 
 	7 [label = "c5
-1, 3, 0", style = filled, fillcolor = black, fontcolor = white]; 
+White:1
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
 	9 [label = "Nd2
-10, 18, 3"]; 
+White:10
+Draws:18
+Black:3"]; 
 	10 [label = "e5
-4, 8, 2"]; 
+White:4
+Draws:8
+Black:2"]; 
 	11 [label = "Nc3
-1, 3, 0"]; 
+White:1
+Draws:3
+Black:0"]; 
 	12 [label = "d5
-1, 3, 0", style = filled, fillcolor = black, fontcolor = white]; 
+White:1
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
 	13 [label = "d4
-1, 3, 0"]; 
+White:1
+Draws:3
+Black:0"]; 
 	14 [label = "d4
-4, 7, 1"]; 
+White:4
+Draws:7
+Black:1"]; 
 	15 [label = "e6
-3, 4, 1", style = filled, fillcolor = black, fontcolor = white]; 
+White:3
+Draws:4
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
 	16 [label = "e4
-3, 4, 1"]; 
+White:3
+Draws:4
+Black:1"]; 
 	17 [label = "d5
-3, 4, 1", style = filled, fillcolor = black, fontcolor = white]; 
+White:3
+Draws:4
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
 	18 [label = "Nc3
-2, 1, 1"]; 
+White:2
+Draws:1
+Black:1"]; 
 	23 [label = "d5
-1, 3, 0", style = filled, fillcolor = black, fontcolor = white]; 
+White:1
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
 	0 -- 1;
 	1 -- 2;
 	2 -- 3;
@@ -57,5 +95,7 @@ graph ChessOpenings {
 	17 -- 18;
 	14 -- 23;
 	0 [label = "French
-42, 77, 11", shape = octagon, style = filled, fillcolor = darkgreen, fontcolor = black]; 
+White:42
+Draws:77
+Black:11", shape = octagon, style = filled, fillcolor = darkgreen, fontcolor = black]; 
 }

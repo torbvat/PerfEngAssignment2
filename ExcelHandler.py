@@ -7,7 +7,7 @@ class ExcelHandler:
     def exportGameToExcel(self, game, filePath):
         data = {
             "Move Number": [move.getMoveNumber() for move in game.getMoves()],
-            "Move": [move.getMoveText for move in game.getMoves()],
+            "Move": [move.getMoveText() for move in game.getMoves()],
             "Meta Data": ["Event: " + game.getEvent(),
                           "Site: " + game.getSite(),
                           "Date: " + game.getDate(),

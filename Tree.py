@@ -126,7 +126,7 @@ class Printer:
             current_depth = 0
 
             #Iterate through the moves of the game until the max depth is reached or the end of the game is reached
-            for move in game.getMoves()[:max_steps] if max_steps < len(game.getMoves()) else game.getMoves():
+            for move in game.getMoves()[:maxSteps] if maxSteps < len(game.getMoves()) else game.getMoves():
                 next_node = self.lookForNodeInChildren(move.getMoveText(), current_node.getChildren())
                 if next_node: #If the node already exists, just increment the result count and move on
                     next_node.getResultCounts()[winner] += 1
@@ -135,7 +135,7 @@ class Printer:
                 else:
                     break #If the node doesn't exist, break out of the loop and create the rest of the nodes (loop below)
             
-            for move in game.getMoves()[current_depth:max_steps] if max_steps < len(game.getMoves()) else game.getMoves()[current_depth:]:  
+            for move in game.getMoves()[current_depth:maxSteps] if maxSteps < len(game.getMoves()) else game.getMoves()[current_depth:]:  
                 new_node = graph.newNode(move, current_depth+1, current_node, winner) 
                 current_node.children.append(new_node)
                 current_node = new_node
@@ -179,19 +179,16 @@ class Printer:
             for node in graph.getNodes():
                 if (node.getGamesPlayed() > threshold) and (node.getPlyCount() <= depth):
                     if node.isWhitePlayer():
-                        file.write(f"\t{node.getID()} [label = \"{node.getName()}\n{node.getResultCounts()['white_wins']},\
-                                    {node.getResultCounts()['draws']}, {node.getResultCounts()['black_wins']}\"]; \n")
+                        file.write(f"\t{node.getID()} [label = \"{node.getName()}\nWhite:{node.getResultCounts()['white_wins']}\nDraws:{node.getResultCounts()['draws']}\nBlack:{node.getResultCounts()['black_wins']}\"]; \n")
                     else:
                         file.write(
-                            f"\t{node.getID()} [label = \"{node.getName()}\n{node.getResultCounts()['white_wins']}, {node.getResultCounts()['draws']},\
-                                  {node.getResultCounts()['black_wins']}\", style = filled, fillcolor = black, fontcolor = white]; \n")
+                            f"\t{node.getID()} [label = \"{node.getName()}\nWhite:{node.getResultCounts()['white_wins']}\nDraws:{node.getResultCounts()['draws']}\nBlack:{node.getResultCounts()['black_wins']}\", style = filled, fillcolor = black, fontcolor = white]; \n")
             
             # Writes each edge to the file if the target node has been played more than 'threshold' times and is 'depth' moves deep
             for edge in graph.getEdges():
                 if (edge.getTargetNode().getGamesPlayed() > threshold) and (edge.getTargetNode().getPlyCount() <= depth):
                     file.write(f"\t{edge.getSourceNode().getID()} -- {edge.getTargetNode().getID()};\n")
-            file.write(f"\t{root.getID()} [label = \"{root.getName()}\n{root.getResultCounts()['white_wins']}, {root.getResultCounts()['draws']},\
-                        {root.getResultCounts()['black_wins']}\", shape = octagon, style = filled, fillcolor = darkgreen, fontcolor = black]; \n")
+            file.write(f"\t{root.getID()} [label = \"{root.getName()}\nWhite:{root.getResultCounts()['white_wins']}\nDraws:{root.getResultCounts()['draws']}\nBlack:{root.getResultCounts()['black_wins']}\", shape = octagon, style = filled, fillcolor = darkgreen, fontcolor = black]; \n")
             
             file.write("}")
 

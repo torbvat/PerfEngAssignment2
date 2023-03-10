@@ -1,7 +1,7 @@
 from docx import Document
+from docx.shared import Inches
 import matplotlib.pyplot as plt
 import statistics
-
 
 class WordHandler:
     def __init__(self, filePath, games):
@@ -16,6 +16,9 @@ class WordHandler:
 
     def getGames(self):
         return self.games
+    
+    def getFilePath(self):
+        return self.filePath
 
     def isWhiteGame(self, game):
         return game.whitePlayer.getName().startswith("Stockfish")
@@ -29,15 +32,16 @@ class WordHandler:
     def isStockfishLoss(self, game):
         return (self.isWhiteGame(game) and game.result == "0-1") or (self.isBlackGame(game) and game.result == "1-0")
 
-    def createDocument(self):
+    def createDocument(self, listOfPNGs):
         document = Document()
-
         document.add_heading('Chess game', 0)
         self.addResultTables(document)
         self.addMedianSDTables(document)
-        document.add_picture('proportionResultsPlot.png')
-        document.add_picture('proportionStockfishPlot.png')
-        document.save("testFil.docx")
+        document.add_picture('Datafiles\proportionResultsPlot.png')
+        document.add_picture('Datafiles\proportionStockfishPlot.png')
+        for png in listOfPNGs:
+            document.add_picture(png, width = Inches(6), height = Inches(6))
+        document.save(self.getFilePath())
 
     def addResultTables(self, document):
 
@@ -215,7 +219,7 @@ class WordHandler:
         plt.ylabel("Percentage of games ongoing")
         plt.suptitle("Proportion of games still ongoing after n moves")
         plt.legend(loc="upper right")
-        plt.savefig("proportionResultsPlot.png")
+        plt.savefig("Datafiles\proportionResultsPlot.png")
 
     def createSFResultGraph(self):
         longestGameCount = int(self.games[0].plycount)
@@ -281,8 +285,10 @@ class WordHandler:
         plt.suptitle(
             "Proportion of Stockfish games still ongoing after n moves")
         plt.legend(loc="upper right")
-        plt.savefig("proportionStockfishPlot.png")
+        plt.savefig("Datafiles\proportionStockfishPlot.png")
 
     def createGraphs(self):
         self.createResultGraph()
         self.createSFResultGraph()
+
+
