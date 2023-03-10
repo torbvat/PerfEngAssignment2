@@ -1,7 +1,7 @@
 import ExcelHandler
 import DatabaseHandler
 from Tree import Printer
-import WordHandler
+#import WordHandler
 import pydot
 
 
@@ -22,7 +22,7 @@ printer = Printer()
 graph = printer.createGraph(games)
 printer.drawGamesWithOpening(
     "Datafiles\FrenchOpening.dot", "French", games, 5, 3)
-printer.drawGraph(graph, "Datafiles\ChessTree.dot", 5, 3)
+printer.drawGraph(graph, "Datafiles\AllGames.dot", 5, 3)
 printer.drawGamesWithOpening(
     "Datafiles\SicilianOpening.dot", "Sicilian", games, 5, 3)
 
@@ -35,6 +35,6 @@ graph2.write_png('Datafiles\SicilianOpening.png')
 
 
 # Word:
-wordHandler = WordHandler.WordHandler("testFil2.docx", games)
-wordHandler.createGraphs()
-wordHandler.createDocument(["Datafiles\FrenchOpening.png", "Datafiles\SicilianOpening.png" ])
+#wordHandler = WordHandler.WordHandler("testFil2.docx", games)
+#wordHandler.createGraphs()
+#wordHandler.createDocument(["Datafiles\FrenchOpening.png", "Datafiles\SicilianOpening.png" ])

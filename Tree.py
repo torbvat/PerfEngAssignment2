@@ -198,6 +198,8 @@ class Printer:
             if game.getOpening() == opening:
                 relevantGames.append(game)
         return relevantGames
+    
+    
 
     # Writes a graph of the games with a certain opening to a DOT-file
     def drawGamesWithOpening(self, filePath, opening, games, depth=500, threshold=1):
@@ -207,6 +209,8 @@ class Printer:
         for game in games:
             if game.getOpening() == opening:
                 relevant_games.append(game)
+        if relevant_games == []:
+            raise ValueError("No games with that opening")
         graph = self.createGraph(relevant_games, depth)
         graph.setRootName(opening)
         self.drawGraph(graph, filePath, depth, threshold)

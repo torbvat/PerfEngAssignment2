@@ -3,6 +3,7 @@ from docx.shared import Inches
 import matplotlib.pyplot as plt
 import statistics
 
+
 class WordHandler:
     def __init__(self, filePath, games):
         self.filePath = filePath
@@ -16,9 +17,6 @@ class WordHandler:
 
     def getGames(self):
         return self.games
-    
-    def getFilePath(self):
-        return self.filePath
 
     def isWhiteGame(self, game):
         return game.whitePlayer.getName().startswith("Stockfish")
@@ -32,18 +30,52 @@ class WordHandler:
     def isStockfishLoss(self, game):
         return (self.isWhiteGame(game) and game.result == "0-1") or (self.isBlackGame(game) and game.result == "1-0")
 
-    def createDocument(self, listOfPNGs):
+    def filterOpeningsPlayedNTimes(self, n):
+        if n < 1:
+            raise ValueError("n must be a positive integer.")
+        openings = dict()
+        for game in self.games:
+            if game.getOpening() not in openings.keys():
+                openings[game.getOpening()] = [0, 0, 0]
+            result = game.getResult()
+            if result == "1-0":
+                openings[game.getOpening()][0] += 1
+            elif result == "1/2-1/2":
+                openings[game.getOpening()][1] += 1
+            elif result == "0-1":
+                openings[game.getOpening()][2] += 1
+
+        # Checking that there exists an opening with n amount of games
+        if not bool(openings):
+            raise ValueError("Choose a lower amount of games.")
+
+        popularOpenings = dict()
+        for key, value in openings.items():
+            if sum(value) >= n:
+                popularOpenings[key] = value
+
+        if not bool(popularOpenings):
+            raise ValueError("No openings played {n} times. Choose a lower amount of games.")
+
+        return popularOpenings
+
+    def createDocument(self, listOfPNGs, relevantGames=0, opening=0, minAmountOfGames=0):
         document = Document()
+
         document.add_heading('Chess game', 0)
-        self.addResultTables(document)
+        self.addResultTables(document, self.games)
         self.addMedianSDTables(document)
         document.add_picture('Datafiles\proportionResultsPlot.png')
         document.add_picture('Datafiles\proportionStockfishPlot.png')
+        if relevantGames and opening:
+            self.addResultTables(document, relevantGames, opening)
+        if minAmountOfGames:
+            self.addOpeningsWithNGamesTable(document, minAmountOfGames)
+        document.save("Datafiles\Report.docx")
         for png in listOfPNGs:
             document.add_picture(png, width = Inches(6), height = Inches(6))
-        document.save(self.getFilePath())
 
-    def addResultTables(self, document):
+    def addResultTables(self, document, games, opening=0):
 
         # Calculate games won:
         whiteWon = 0
@@ -53,7 +85,7 @@ class WordHandler:
         blackDrawn = 0
         blackLost = 0
 
-        for game in self.games:
+        for game in games:
             if game.whitePlayer.getName().startswith("Stockfish"):
                 if game.result == "1-0":
                     whiteWon += 1
@@ -73,42 +105,45 @@ class WordHandler:
         gamesDrawn = whiteDrawn + blackDrawn
         gamesLost = whiteLost + blackLost
 
-        # Create tables
-        document.add_heading("Stockfish all games", 3)
-        allGamesTable = document.add_table(rows=2, cols=3)
-        allGamesTable.style = "Medium Shading 1"
-        header_row = allGamesTable.rows[0].cells
-        header_row[0].text = 'Won'
-        header_row[1].text = 'Drawn'
-        header_row[2].text = 'Lost'
-        value_row = allGamesTable.rows[1].cells
-        value_row[0].text = str(gamesWon)
-        value_row[1].text = str(gamesDrawn)
-        value_row[2].text = str(gamesLost)
+        allGamesRecords = (
+            ("Won", "Stockfish all games", [gamesWon, whiteWon, blackWon]),
+            ("Drawn", "Stockfish white games", [
+             gamesDrawn, whiteDrawn, blackDrawn]),
+            ("Lost", "Stockfish black games", [
+             gamesLost, whiteLost, blackLost])
+        )
+        if opening:
+            document.add_heading(f"Games played with the {opening} opening", 2)
 
-        document.add_heading("Stockfish white games", 3)
-        whiteGamesTable = document.add_table(rows=2, cols=3)
-        whiteGamesTable.style = "Medium Shading 1"
-        header_row = whiteGamesTable.rows[0].cells
-        header_row[0].text = 'Won'
-        header_row[1].text = 'Drawn'
-        header_row[2].text = 'Lost'
-        value_row = whiteGamesTable.rows[1].cells
-        value_row[0].text = str(whiteWon)
-        value_row[1].text = str(whiteDrawn)
-        value_row[2].text = str(whiteLost)
+        for i in range(len(allGamesRecords)):
+            document.add_heading(allGamesRecords[i][1], 3)
+            table = document.add_table(rows=1, cols=2)
+            table.style = "Medium Shading 1"
+            header = table.rows[0].cells
+            header[0].text = "Result"
+            header[1].text = "Amount"
+            for type, _, value in allGamesRecords:
+                row_cells = table.add_row().cells
+                row_cells[0].text = type
+                row_cells[1].text = str(value[i])
 
-        document.add_heading("Stockfish black games", 3)
-        blackGamesTable = document.add_table(rows=2, cols=3)
-        blackGamesTable.style = "Medium Shading 1"
-        header_row = blackGamesTable.rows[0].cells
-        header_row[0].text = 'Won'
-        header_row[1].text = 'Drawn'
-        header_row[2].text = 'Lost'
-        value_row = blackGamesTable.rows[1].cells
-        value_row[0].text = str(blackWon)
-        value_row[1].text = str(blackDrawn)
-        value_row[2].text = str(blackLost)
+    def addOpeningsWithNGamesTable(self, document, amountOfGames):
+        document.add_heading(
+            f"All openings with at least {amountOfGames} games played.")
+        openingsTable = document.add_table(rows=1, cols=4)
+        openingsTable.style = "Medium Shading 1"
+        openingsHeader = openingsTable.rows[0].cells
+        openingsHeader[0].text = "Opening"
+        openingsHeader[1].text = "White won"
+        openingsHeader[2].text = "Draw"
+        openingsHeader[3].text = "Black won"
+        openings = self.filterOpeningsPlayedNTimes(amountOfGames)
+        for key, value in openings.items():
+            row = openingsTable.add_row().cells
+            row[0].text = str(key)
+            row[1].text = str(value[0])
+            row[2].text = str(value[1])
+            row[3].text = str(value[2])
 
     def addMedianSDTables(self, document):
         document.add_heading(
@@ -290,5 +325,3 @@ class WordHandler:
     def createGraphs(self):
         self.createResultGraph()
         self.createSFResultGraph()
-
-

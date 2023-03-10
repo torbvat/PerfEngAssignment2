@@ -1,0 +1,1751 @@
+graph ChessOpenings {
+	rankdir="LR";
+	0 [label = "Root
+White:704
+Draws:1600
+Black:296", style = filled, fillcolor = black, fontcolor = white]; 
+	1 [label = "f4
+White:3
+Draws:7
+Black:6"]; 
+	2 [label = "d5
+White:2
+Draws:2
+Black:6", style = filled, fillcolor = black, fontcolor = white]; 
+	3 [label = "b3
+White:1
+Draws:2
+Black:3"]; 
+	4 [label = "Bg4
+White:1
+Draws:1
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	5 [label = "Bb2
+White:1
+Draws:1
+Black:2"]; 
+	204 [label = "d4
+White:232
+Draws:543
+Black:87"]; 
+	205 [label = "Nf6
+White:154
+Draws:342
+Black:57", style = filled, fillcolor = black, fontcolor = white]; 
+	206 [label = "c4
+White:133
+Draws:290
+Black:50"]; 
+	207 [label = "e6
+White:70
+Draws:169
+Black:38", style = filled, fillcolor = black, fontcolor = white]; 
+	208 [label = "Nc3
+White:23
+Draws:48
+Black:14"]; 
+	467 [label = "e4
+White:345
+Draws:746
+Black:149"]; 
+	468 [label = "c5
+White:166
+Draws:360
+Black:92", style = filled, fillcolor = black, fontcolor = white]; 
+	469 [label = "Nf3
+White:151
+Draws:296
+Black:77"]; 
+	470 [label = "d6
+White:73
+Draws:143
+Black:42", style = filled, fillcolor = black, fontcolor = white]; 
+	471 [label = "d4
+White:63
+Draws:124
+Black:36"]; 
+	613 [label = "Nc6
+White:47
+Draws:99
+Black:25", style = filled, fillcolor = black, fontcolor = white]; 
+	614 [label = "Bb5
+White:7
+Draws:27
+Black:7"]; 
+	803 [label = "d5
+White:55
+Draws:163
+Black:19", style = filled, fillcolor = black, fontcolor = white]; 
+	804 [label = "c4
+White:47
+Draws:130
+Black:16"]; 
+	805 [label = "dxc4
+White:8
+Draws:19
+Black:3", style = filled, fillcolor = black, fontcolor = white]; 
+	806 [label = "e4
+White:4
+Draws:7
+Black:3"]; 
+	1039 [label = "e6
+White:12
+Draws:41
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	1040 [label = "Nc3
+White:6
+Draws:21
+Black:1"]; 
+	1192 [label = "e5
+White:9
+Draws:17
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	1193 [label = "dxe5
+White:9
+Draws:17
+Black:0"]; 
+	1426 [label = "c6
+White:27
+Draws:64
+Black:11", style = filled, fillcolor = black, fontcolor = white]; 
+	1718 [label = "Nf3
+White:41
+Draws:110
+Black:23"]; 
+	1955 [label = "e6
+White:37
+Draws:67
+Black:10", style = filled, fillcolor = black, fontcolor = white]; 
+	1956 [label = "d4
+White:35
+Draws:61
+Black:10"]; 
+	1957 [label = "d5
+White:35
+Draws:61
+Black:10", style = filled, fillcolor = black, fontcolor = white]; 
+	1958 [label = "Nc3
+White:20
+Draws:34
+Black:5"]; 
+	2153 [label = "e5
+White:79
+Draws:199
+Black:27", style = filled, fillcolor = black, fontcolor = white]; 
+	2154 [label = "Nf3
+White:73
+Draws:175
+Black:23"]; 
+	2155 [label = "Nc6
+White:64
+Draws:151
+Black:23", style = filled, fillcolor = black, fontcolor = white]; 
+	2156 [label = "Bb5
+White:47
+Draws:101
+Black:15"]; 
+	2450 [label = "c4
+White:57
+Draws:124
+Black:25"]; 
+	2451 [label = "e5
+White:18
+Draws:49
+Black:10", style = filled, fillcolor = black, fontcolor = white]; 
+	2452 [label = "g3
+White:6
+Draws:17
+Black:3"]; 
+	2453 [label = "Nf6
+White:3
+Draws:7
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	2454 [label = "Bg2
+White:3
+Draws:7
+Black:2"]; 
+	2729 [label = "g6
+White:37
+Draws:77
+Black:9", style = filled, fillcolor = black, fontcolor = white]; 
+	2730 [label = "Nc3
+White:32
+Draws:56
+Black:8"]; 
+	2905 [label = "f4
+White:1
+Draws:7
+Black:0"]; 
+	2906 [label = "d5
+White:0
+Draws:6
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	2907 [label = "exd5
+White:0
+Draws:6
+Black:0"]; 
+	3330 [label = "d4
+White:32
+Draws:60
+Black:16"]; 
+	3574 [label = "Nf3
+White:60
+Draws:156
+Black:23"]; 
+	3575 [label = "c5
+White:9
+Draws:22
+Black:5", style = filled, fillcolor = black, fontcolor = white]; 
+	3576 [label = "b3
+White:1
+Draws:2
+Black:1"]; 
+	3577 [label = "Nc6
+White:1
+Draws:2
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	3578 [label = "Bb2
+White:1
+Draws:2
+Black:1"]; 
+	3879 [label = "c6
+White:37
+Draws:75
+Black:10", style = filled, fillcolor = black, fontcolor = white]; 
+	3880 [label = "d4
+White:29
+Draws:60
+Black:7"]; 
+	3881 [label = "d5
+White:29
+Draws:60
+Black:7", style = filled, fillcolor = black, fontcolor = white]; 
+	3882 [label = "e5
+White:10
+Draws:21
+Black:4"]; 
+	4783 [label = "d5
+White:16
+Draws:57
+Black:9", style = filled, fillcolor = black, fontcolor = white]; 
+	4784 [label = "d4
+White:9
+Draws:25
+Black:2"]; 
+	4785 [label = "Nf6
+White:7
+Draws:21
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	4786 [label = "c4
+White:7
+Draws:19
+Black:2"]; 
+	5175 [label = "c3
+White:5
+Draws:1
+Black:4"]; 
+	5390 [label = "Nf3
+White:2
+Draws:10
+Black:0"]; 
+	5904 [label = "e6
+White:28
+Draws:43
+Black:10", style = filled, fillcolor = black, fontcolor = white]; 
+	5905 [label = "d4
+White:22
+Draws:36
+Black:9"]; 
+	6354 [label = "c4
+White:2
+Draws:9
+Black:1"]; 
+	6355 [label = "d5
+White:2
+Draws:9
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	6356 [label = "exd5
+White:2
+Draws:9
+Black:1"]; 
+	6518 [label = "Nf6
+White:27
+Draws:71
+Black:8", style = filled, fillcolor = black, fontcolor = white]; 
+	6519 [label = "c4
+White:18
+Draws:52
+Black:4"]; 
+	6520 [label = "c5
+White:4
+Draws:12
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	6521 [label = "Nc3
+White:2
+Draws:8
+Black:0"]; 
+	6670 [label = "g6
+White:5
+Draws:7
+Black:4", style = filled, fillcolor = black, fontcolor = white]; 
+	6671 [label = "c4
+White:2
+Draws:3
+Black:0"]; 
+	6672 [label = "d6
+White:2
+Draws:2
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	6673 [label = "Nc3
+White:2
+Draws:2
+Black:0"]; 
+	7122 [label = "Nc3
+White:2
+Draws:3
+Black:3"]; 
+	7123 [label = "c5
+White:1
+Draws:3
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	7124 [label = "f4
+White:1
+Draws:3
+Black:2"]; 
+	8046 [label = "Nc3
+White:1
+Draws:3
+Black:0"]; 
+	8047 [label = "Nf6
+White:1
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	8404 [label = "e6
+White:5
+Draws:7
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	8405 [label = "c4
+White:2
+Draws:3
+Black:1"]; 
+	8406 [label = "d5
+White:1
+Draws:2
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	8407 [label = "Nc3
+White:1
+Draws:2
+Black:1"]; 
+	8611 [label = "Nc3
+White:7
+Draws:24
+Black:2"]; 
+	8691 [label = "Nf3
+White:22
+Draws:44
+Black:10"]; 
+	9749 [label = "Nf3
+White:12
+Draws:33
+Black:3"]; 
+	9750 [label = "g6
+White:1
+Draws:8
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	11040 [label = "Nf3
+White:3
+Draws:22
+Black:1"]; 
+	11041 [label = "Nf6
+White:3
+Draws:20
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	11042 [label = "c4
+White:2
+Draws:10
+Black:0"]; 
+	12015 [label = "Nf6
+White:8
+Draws:21
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	12016 [label = "d4
+White:3
+Draws:9
+Black:0"]; 
+	12228 [label = "Bb5+
+White:3
+Draws:14
+Black:2"]; 
+	12930 [label = "Qe2
+White:1
+Draws:3
+Black:0"]; 
+	12931 [label = "c5
+White:1
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	13189 [label = "Nf3
+White:6
+Draws:20
+Black:1"]; 
+	14052 [label = "f4
+White:1
+Draws:8
+Black:1"]; 
+	14053 [label = "exf4
+White:1
+Draws:8
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	14054 [label = "Nf3
+White:1
+Draws:4
+Black:1"]; 
+	14292 [label = "Bc4
+White:10
+Draws:32
+Black:4"]; 
+	14512 [label = "Nd2
+White:10
+Draws:18
+Black:3"]; 
+	15255 [label = "d4
+White:4
+Draws:8
+Black:0"]; 
+	15983 [label = "g6
+White:2
+Draws:1
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	15984 [label = "Bg2
+White:2
+Draws:1
+Black:1"]; 
+	16576 [label = "Nc3
+White:5
+Draws:16
+Black:11"]; 
+	16577 [label = "Nc6
+White:4
+Draws:14
+Black:10", style = filled, fillcolor = black, fontcolor = white]; 
+	16578 [label = "g3
+White:1
+Draws:5
+Black:4"]; 
+	19396 [label = "Nf3
+White:2
+Draws:8
+Black:4"]; 
+	20368 [label = "c3
+White:6
+Draws:23
+Black:3"]; 
+	20369 [label = "Nf6
+White:3
+Draws:15
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	20370 [label = "e5
+White:3
+Draws:15
+Black:2"]; 
+	20852 [label = "Nc6
+White:0
+Draws:4
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	20853 [label = "cxd5
+White:0
+Draws:4
+Black:0"]; 
+	21110 [label = "Nd2
+White:5
+Draws:7
+Black:0"]; 
+	22731 [label = "g3
+White:7
+Draws:14
+Black:3"]; 
+	22732 [label = "d5
+White:2
+Draws:4
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	22733 [label = "Bg2
+White:2
+Draws:4
+Black:2"]; 
+	22786 [label = "e6
+White:1
+Draws:14
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	22787 [label = "Nf3
+White:1
+Draws:6
+Black:1"]; 
+	22788 [label = "d5
+White:0
+Draws:5
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	22789 [label = "b3
+White:0
+Draws:5
+Black:1"]; 
+	24055 [label = "g3
+White:1
+Draws:7
+Black:0"]; 
+	24257 [label = "e4
+White:3
+Draws:4
+Black:4"]; 
+	24258 [label = "d6
+White:2
+Draws:3
+Black:3", style = filled, fillcolor = black, fontcolor = white]; 
+	25213 [label = "e5
+White:4
+Draws:8
+Black:2"]; 
+	26190 [label = "Bb5
+White:1
+Draws:1
+Black:2"]; 
+	26698 [label = "exd5
+White:6
+Draws:7
+Black:1"]; 
+	27496 [label = "c5
+White:9
+Draws:12
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	27497 [label = "d5
+White:9
+Draws:12
+Black:1"]; 
+	27728 [label = "g3
+White:1
+Draws:5
+Black:0"]; 
+	27729 [label = "g6
+White:1
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	27730 [label = "Bg2
+White:1
+Draws:3
+Black:0"]; 
+	29410 [label = "g3
+White:3
+Draws:15
+Black:0"]; 
+	29411 [label = "e5
+White:1
+Draws:7
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	29412 [label = "c4
+White:1
+Draws:3
+Black:0"]; 
+	31373 [label = "Bg5
+White:2
+Draws:9
+Black:2"]; 
+	31374 [label = "d5
+White:0
+Draws:5
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	31375 [label = "Bxf6
+White:0
+Draws:3
+Black:1"]; 
+	31737 [label = "b3
+White:0
+Draws:3
+Black:1"]; 
+	32049 [label = "g3
+White:4
+Draws:20
+Black:4"]; 
+	32050 [label = "Bg4
+White:2
+Draws:3
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	32051 [label = "Bg2
+White:2
+Draws:3
+Black:1"]; 
+	32909 [label = "Nf3
+White:3
+Draws:3
+Black:0"]; 
+	32910 [label = "d5
+White:3
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	32911 [label = "e5
+White:2
+Draws:2
+Black:0"]; 
+	34264 [label = "d5
+White:2
+Draws:8
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	34265 [label = "Nf3
+White:1
+Draws:3
+Black:0"]; 
+	35086 [label = "Nf6
+White:18
+Draws:29
+Black:6", style = filled, fillcolor = black, fontcolor = white]; 
+	35087 [label = "Nf3
+White:1
+Draws:4
+Black:1"]; 
+	35088 [label = "e6
+White:1
+Draws:2
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	35089 [label = "g3
+White:1
+Draws:2
+Black:1"]; 
+	35326 [label = "e4
+White:2
+Draws:5
+Black:1"]; 
+	35327 [label = "d6
+White:1
+Draws:4
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	35328 [label = "d4
+White:1
+Draws:2
+Black:1"]; 
+	35510 [label = "Nxe5
+White:5
+Draws:10
+Black:0"]; 
+	36186 [label = "e6
+White:6
+Draws:18
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	36187 [label = "g3
+White:2
+Draws:9
+Black:1"]; 
+	36759 [label = "g6
+White:9
+Draws:11
+Black:5", style = filled, fillcolor = black, fontcolor = white]; 
+	36760 [label = "d4
+White:9
+Draws:8
+Black:4"]; 
+	36761 [label = "Bg7
+White:7
+Draws:8
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	36762 [label = "Nc3
+White:6
+Draws:7
+Black:2"]; 
+	36966 [label = "g6
+White:7
+Draws:13
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	36967 [label = "Nc3
+White:6
+Draws:8
+Black:0"]; 
+	37379 [label = "Nc3
+White:16
+Draws:22
+Black:5"]; 
+	37380 [label = "e5
+White:4
+Draws:6
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	37381 [label = "Nf3
+White:4
+Draws:6
+Black:2"]; 
+	38569 [label = "Nc3
+White:11
+Draws:29
+Black:7"]; 
+	38570 [label = "d6
+White:1
+Draws:2
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	39307 [label = "d4
+White:2
+Draws:7
+Black:1"]; 
+	39308 [label = "cxd4
+White:2
+Draws:7
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	39309 [label = "c3
+White:2
+Draws:7
+Black:1"]; 
+	40466 [label = "g6
+White:5
+Draws:6
+Black:3", style = filled, fillcolor = black, fontcolor = white]; 
+	40467 [label = "g3
+White:3
+Draws:3
+Black:2"]; 
+	40839 [label = "Nf6
+White:8
+Draws:25
+Black:6", style = filled, fillcolor = black, fontcolor = white]; 
+	40840 [label = "Nf3
+White:8
+Draws:23
+Black:4"]; 
+	41057 [label = "Nf6
+White:6
+Draws:7
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	41058 [label = "e5
+White:5
+Draws:5
+Black:0"]; 
+	41059 [label = "Nd5
+White:5
+Draws:5
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	41060 [label = "d4
+White:5
+Draws:5
+Black:0"]; 
+	41898 [label = "Nc3
+White:4
+Draws:16
+Black:0"]; 
+	42845 [label = "Nc3
+White:1
+Draws:3
+Black:0"]; 
+	42846 [label = "d5
+White:1
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	42847 [label = "d4
+White:1
+Draws:3
+Black:0"]; 
+	44164 [label = "b4
+White:1
+Draws:2
+Black:1"]; 
+	44165 [label = "e5
+White:1
+Draws:2
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	44166 [label = "Bb2
+White:1
+Draws:2
+Black:1"]; 
+	45198 [label = "Nc6
+White:5
+Draws:8
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	45199 [label = "Nc3
+White:1
+Draws:2
+Black:1"]; 
+	45619 [label = "c5
+White:8
+Draws:15
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	45620 [label = "Nf3
+White:3
+Draws:6
+Black:1"]; 
+	45621 [label = "Nf6
+White:2
+Draws:5
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	45622 [label = "Nc3
+White:2
+Draws:5
+Black:1"]; 
+	47685 [label = "e6
+White:5
+Draws:14
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	48400 [label = "c6
+White:3
+Draws:7
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	48401 [label = "Nf3
+White:2
+Draws:0
+Black:2"]; 
+	48402 [label = "d5
+White:2
+Draws:0
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	48577 [label = "d6
+White:7
+Draws:9
+Black:3", style = filled, fillcolor = black, fontcolor = white]; 
+	48578 [label = "d4
+White:6
+Draws:8
+Black:3"]; 
+	48579 [label = "Nf6
+White:5
+Draws:8
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	48580 [label = "Nc3
+White:4
+Draws:7
+Black:2"]; 
+	51199 [label = "b6
+White:1
+Draws:9
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	51200 [label = "g3
+White:1
+Draws:3
+Black:0"]; 
+	52176 [label = "g3
+White:1
+Draws:3
+Black:0"]; 
+	52709 [label = "c5
+White:3
+Draws:4
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	53112 [label = "Nc3
+White:4
+Draws:7
+Black:1"]; 
+	53113 [label = "Nf6
+White:2
+Draws:3
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	53114 [label = "g3
+White:1
+Draws:2
+Black:1"]; 
+	54922 [label = "g6
+White:1
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	54923 [label = "g3
+White:1
+Draws:3
+Black:0"]; 
+	56935 [label = "d6
+White:2
+Draws:0
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	57284 [label = "Nc6
+White:2
+Draws:2
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	57852 [label = "Bf4
+White:4
+Draws:5
+Black:1"]; 
+	57853 [label = "c5
+White:2
+Draws:1
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	57854 [label = "e3
+White:2
+Draws:1
+Black:1"]; 
+	58035 [label = "b6
+White:0
+Draws:3
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	58036 [label = "Bxf6
+White:0
+Draws:3
+Black:1"]; 
+	58247 [label = "Bc4
+White:3
+Draws:7
+Black:2"]; 
+	58248 [label = "Nf6
+White:3
+Draws:7
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	58249 [label = "d4
+White:1
+Draws:2
+Black:1"]; 
+	59509 [label = "Bf4
+White:1
+Draws:2
+Black:1"]; 
+	60350 [label = "Nf3
+White:4
+Draws:6
+Black:0"]; 
+	61099 [label = "e4
+White:3
+Draws:4
+Black:1"]; 
+	61100 [label = "d5
+White:3
+Draws:4
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	61101 [label = "Nc3
+White:2
+Draws:1
+Black:1"]; 
+	64643 [label = "g3
+White:6
+Draws:11
+Black:1"]; 
+	66968 [label = "Nc3
+White:1
+Draws:2
+Black:1"]; 
+	66969 [label = "d5
+White:1
+Draws:2
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	66970 [label = "Nf3
+White:1
+Draws:2
+Black:1"]; 
+	67747 [label = "c3
+White:2
+Draws:1
+Black:2"]; 
+	69958 [label = "Nc3
+White:1
+Draws:2
+Black:3"]; 
+	71086 [label = "f5
+White:6
+Draws:14
+Black:4", style = filled, fillcolor = black, fontcolor = white]; 
+	71087 [label = "g3
+White:4
+Draws:7
+Black:1"]; 
+	71088 [label = "Nf6
+White:3
+Draws:6
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	71089 [label = "Bg2
+White:3
+Draws:6
+Black:1"]; 
+	71945 [label = "c4
+White:2
+Draws:9
+Black:0"]; 
+	74516 [label = "Nc3
+White:0
+Draws:3
+Black:1"]; 
+	74517 [label = "Bg7
+White:0
+Draws:3
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	74518 [label = "f4
+White:0
+Draws:3
+Black:1"]; 
+	80414 [label = "c4
+White:5
+Draws:10
+Black:3"]; 
+	80415 [label = "Nc6
+White:2
+Draws:6
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	80416 [label = "Nc3
+White:2
+Draws:4
+Black:2"]; 
+	83159 [label = "h3
+White:0
+Draws:4
+Black:0"]; 
+	83160 [label = "Nc6
+White:0
+Draws:4
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	83161 [label = "Nf3
+White:0
+Draws:4
+Black:0"]; 
+	84067 [label = "d5
+White:1
+Draws:2
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	84068 [label = "e4
+White:1
+Draws:2
+Black:1"]; 
+	88964 [label = "g3
+White:1
+Draws:3
+Black:0"]; 
+	89258 [label = "d5
+White:3
+Draws:8
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	89259 [label = "exd5
+White:3
+Draws:8
+Black:1"]; 
+	89765 [label = "Bf4
+White:3
+Draws:6
+Black:1"]; 
+	91518 [label = "g6
+White:1
+Draws:7
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	91519 [label = "d4
+White:0
+Draws:6
+Black:0"]; 
+	100113 [label = "Nc3
+White:6
+Draws:11
+Black:1"]; 
+	100919 [label = "Nc3
+White:3
+Draws:2
+Black:1"]; 
+	101472 [label = "Nc3
+White:2
+Draws:4
+Black:0"]; 
+	107392 [label = "d3
+White:2
+Draws:5
+Black:1"]; 
+	107833 [label = "Bg2
+White:1
+Draws:5
+Black:0"]; 
+	107834 [label = "c6
+White:1
+Draws:5
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	108408 [label = "Nc3
+White:1
+Draws:6
+Black:1"]; 
+	109382 [label = "d4
+White:2
+Draws:3
+Black:1"]; 
+	109657 [label = "d5
+White:2
+Draws:13
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	109658 [label = "exd5
+White:2
+Draws:11
+Black:1"]; 
+	109659 [label = "Qxd5
+White:2
+Draws:7
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	109660 [label = "Nc3
+White:2
+Draws:7
+Black:1"]; 
+	110907 [label = "Nf3
+White:2
+Draws:9
+Black:1"]; 
+	111838 [label = "c6
+White:0
+Draws:6
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	111839 [label = "Nc3
+White:0
+Draws:4
+Black:0"]; 
+	112101 [label = "f3
+White:1
+Draws:3
+Black:0"]; 
+	116735 [label = "d3
+White:2
+Draws:1
+Black:1"]; 
+	116736 [label = "d5
+White:2
+Draws:1
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	116737 [label = "Nd2
+White:2
+Draws:1
+Black:1"]; 
+	116922 [label = "g6
+White:5
+Draws:7
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	118480 [label = "c4
+White:1
+Draws:5
+Black:2"]; 
+	118951 [label = "c4
+White:0
+Draws:4
+Black:0"]; 
+	118952 [label = "Nf6
+White:0
+Draws:4
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	118953 [label = "g3
+White:0
+Draws:4
+Black:0"]; 
+	120074 [label = "d6
+White:1
+Draws:2
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	122281 [label = "Nf6
+White:3
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	122282 [label = "Nc3
+White:3
+Draws:3
+Black:0"]; 
+	123602 [label = "b3
+White:1
+Draws:3
+Black:1"]; 
+	123603 [label = "d5
+White:1
+Draws:3
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	123604 [label = "Bb2
+White:1
+Draws:3
+Black:1"]; 
+	124660 [label = "e3
+White:2
+Draws:2
+Black:0"]; 
+	125471 [label = "Nf6
+White:1
+Draws:5
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	125472 [label = "e3
+White:1
+Draws:5
+Black:0"]; 
+	130455 [label = "d4
+White:1
+Draws:1
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	130456 [label = "b4
+White:1
+Draws:1
+Black:2"]; 
+	131144 [label = "g3
+White:2
+Draws:9
+Black:0"]; 
+	131664 [label = "Bg5
+White:1
+Draws:1
+Black:2"]; 
+	132738 [label = "d4
+White:0
+Draws:4
+Black:0"]; 
+	133184 [label = "d3
+White:1
+Draws:3
+Black:0"]; 
+	133185 [label = "g6
+White:1
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	133186 [label = "g3
+White:1
+Draws:3
+Black:0"]; 
+	136056 [label = "d4
+White:1
+Draws:3
+Black:0"]; 
+	136057 [label = "exd4
+White:1
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	137873 [label = "Nc3
+White:1
+Draws:2
+Black:1"]; 
+	137874 [label = "d5
+White:1
+Draws:2
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	137875 [label = "e5
+White:1
+Draws:2
+Black:1"]; 
+	138694 [label = "e4
+White:1
+Draws:2
+Black:1"]; 
+	144156 [label = "c5
+White:2
+Draws:2
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	147712 [label = "d3
+White:2
+Draws:2
+Black:0"]; 
+	148142 [label = "d5
+White:2
+Draws:2
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	148143 [label = "cxd5
+White:2
+Draws:2
+Black:0"]; 
+	148963 [label = "g6
+White:2
+Draws:3
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	148964 [label = "b3
+White:2
+Draws:1
+Black:1"]; 
+	152342 [label = "d6
+White:2
+Draws:3
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	152343 [label = "Nf3
+White:2
+Draws:3
+Black:1"]; 
+	152842 [label = "Nf6
+White:0
+Draws:6
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	152843 [label = "Bg2
+White:0
+Draws:4
+Black:0"]; 
+	155662 [label = "e4
+White:0
+Draws:4
+Black:0"]; 
+	160428 [label = "d5
+White:3
+Draws:8
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	160429 [label = "c4
+White:0
+Draws:6
+Black:0"]; 
+	161189 [label = "Nf6
+White:1
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	161190 [label = "e5
+White:1
+Draws:3
+Black:0"]; 
+	161491 [label = "e4
+White:1
+Draws:2
+Black:1"]; 
+	163918 [label = "d6
+White:1
+Draws:2
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	163919 [label = "Nc3
+White:1
+Draws:2
+Black:1"]; 
+	167371 [label = "Nc3
+White:0
+Draws:5
+Black:0"]; 
+	168046 [label = "g6
+White:1
+Draws:9
+Black:2", style = filled, fillcolor = black, fontcolor = white]; 
+	168186 [label = "c5
+White:2
+Draws:2
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	168187 [label = "d5
+White:2
+Draws:2
+Black:0"]; 
+	169842 [label = "d6
+White:1
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	169843 [label = "d4
+White:1
+Draws:3
+Black:0"]; 
+	170558 [label = "f5
+White:3
+Draws:2
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	179445 [label = "g6
+White:4
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	179446 [label = "e4
+White:3
+Draws:2
+Black:0"]; 
+	179817 [label = "Nc3
+White:3
+Draws:7
+Black:0"]; 
+	181135 [label = "Nc3
+White:3
+Draws:2
+Black:1"]; 
+	181136 [label = "Bg7
+White:3
+Draws:2
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	181137 [label = "g3
+White:3
+Draws:2
+Black:1"]; 
+	183961 [label = "Bc4
+White:0
+Draws:4
+Black:0"]; 
+	185927 [label = "e6
+White:2
+Draws:4
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	185928 [label = "e4
+White:1
+Draws:3
+Black:0"]; 
+	188880 [label = "c6
+White:1
+Draws:2
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	188881 [label = "Bg2
+White:1
+Draws:2
+Black:1"]; 
+	191771 [label = "Ne2
+White:0
+Draws:4
+Black:0"]; 
+	193493 [label = "e4
+White:1
+Draws:5
+Black:0"]; 
+	193494 [label = "d5
+White:1
+Draws:5
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	193495 [label = "exd5
+White:1
+Draws:5
+Black:0"]; 
+	195353 [label = "Bf4
+White:2
+Draws:1
+Black:1"]; 
+	198171 [label = "c5
+White:1
+Draws:3
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	198172 [label = "Bg2
+White:1
+Draws:3
+Black:0"]; 
+	221202 [label = "Bg2
+White:1
+Draws:8
+Black:1"]; 
+	228599 [label = "Nc3
+White:2
+Draws:1
+Black:1"]; 
+	228600 [label = "d5
+White:2
+Draws:1
+Black:1", style = filled, fillcolor = black, fontcolor = white]; 
+	228601 [label = "Bf4
+White:2
+Draws:1
+Black:1"]; 
+	247412 [label = "e6
+White:2
+Draws:2
+Black:0", style = filled, fillcolor = black, fontcolor = white]; 
+	247413 [label = "c4
+White:2
+Draws:2
+Black:0"]; 
+	0 -- 1;
+	1 -- 2;
+	2 -- 3;
+	3 -- 4;
+	4 -- 5;
+	0 -- 204;
+	204 -- 205;
+	205 -- 206;
+	206 -- 207;
+	207 -- 208;
+	0 -- 467;
+	467 -- 468;
+	468 -- 469;
+	469 -- 470;
+	470 -- 471;
+	469 -- 613;
+	613 -- 614;
+	204 -- 803;
+	803 -- 804;
+	804 -- 805;
+	805 -- 806;
+	804 -- 1039;
+	1039 -- 1040;
+	206 -- 1192;
+	1192 -- 1193;
+	804 -- 1426;
+	207 -- 1718;
+	467 -- 1955;
+	1955 -- 1956;
+	1956 -- 1957;
+	1957 -- 1958;
+	467 -- 2153;
+	2153 -- 2154;
+	2154 -- 2155;
+	2155 -- 2156;
+	0 -- 2450;
+	2450 -- 2451;
+	2451 -- 2452;
+	2452 -- 2453;
+	2453 -- 2454;
+	206 -- 2729;
+	2729 -- 2730;
+	468 -- 2905;
+	2905 -- 2906;
+	2906 -- 2907;
+	613 -- 3330;
+	0 -- 3574;
+	3574 -- 3575;
+	3575 -- 3576;
+	3576 -- 3577;
+	3577 -- 3578;
+	467 -- 3879;
+	3879 -- 3880;
+	3880 -- 3881;
+	3881 -- 3882;
+	3574 -- 4783;
+	4783 -- 4784;
+	4784 -- 4785;
+	4785 -- 4786;
+	470 -- 5175;
+	805 -- 5390;
+	469 -- 5904;
+	5904 -- 5905;
+	3879 -- 6354;
+	6354 -- 6355;
+	6355 -- 6356;
+	3574 -- 6518;
+	6518 -- 6519;
+	6519 -- 6520;
+	6520 -- 6521;
+	204 -- 6670;
+	6670 -- 6671;
+	6671 -- 6672;
+	6672 -- 6673;
+	0 -- 7122;
+	7122 -- 7123;
+	7123 -- 7124;
+	2153 -- 8046;
+	8046 -- 8047;
+	204 -- 8404;
+	8404 -- 8405;
+	8405 -- 8406;
+	8406 -- 8407;
+	3881 -- 8611;
+	1426 -- 8691;
+	205 -- 9749;
+	9749 -- 9750;
+	803 -- 11040;
+	11040 -- 11041;
+	11041 -- 11042;
+	2154 -- 12015;
+	12015 -- 12016;
+	470 -- 12228;
+	1955 -- 12930;
+	12930 -- 12931;
+	1039 -- 13189;
+	2153 -- 14052;
+	14052 -- 14053;
+	14053 -- 14054;
+	2155 -- 14292;
+	1957 -- 14512;
+	2155 -- 15255;
+	2452 -- 15983;
+	15983 -- 15984;
+	468 -- 16576;
+	16576 -- 16577;
+	16577 -- 16578;
+	16577 -- 19396;
+	468 -- 20368;
+	20368 -- 20369;
+	20369 -- 20370;
+	804 -- 20852;
+	20852 -- 20853;
+	3881 -- 21110;
+	6518 -- 22731;
+	22731 -- 22732;
+	22732 -- 22733;
+	2450 -- 22786;
+	22786 -- 22787;
+	22787 -- 22788;
+	22788 -- 22789;
+	11041 -- 24055;
+	6670 -- 24257;
+	24257 -- 24258;
+	1957 -- 25213;
+	16577 -- 26190;
+	3881 -- 26698;
+	206 -- 27496;
+	27496 -- 27497;
+	3575 -- 27728;
+	27728 -- 27729;
+	27729 -- 27730;
+	0 -- 29410;
+	29410 -- 29411;
+	29411 -- 29412;
+	205 -- 31373;
+	31373 -- 31374;
+	31374 -- 31375;
+	4783 -- 31737;
+	4783 -- 32049;
+	32049 -- 32050;
+	32050 -- 32051;
+	3879 -- 32909;
+	32909 -- 32910;
+	32910 -- 32911;
+	29410 -- 34264;
+	34264 -- 34265;
+	2450 -- 35086;
+	35086 -- 35087;
+	35087 -- 35088;
+	35088 -- 35089;
+	3575 -- 35326;
+	35326 -- 35327;
+	35327 -- 35328;
+	12015 -- 35510;
+	6519 -- 36186;
+	36186 -- 36187;
+	467 -- 36759;
+	36759 -- 36760;
+	36760 -- 36761;
+	36761 -- 36762;
+	6519 -- 36966;
+	36966 -- 36967;
+	35086 -- 37379;
+	37379 -- 37380;
+	37380 -- 37381;
+	2451 -- 38569;
+	38569 -- 38570;
+	468 -- 39307;
+	39307 -- 39308;
+	39308 -- 39309;
+	37379 -- 40466;
+	40466 -- 40467;
+	38569 -- 40839;
+	40839 -- 40840;
+	467 -- 41057;
+	41057 -- 41058;
+	41058 -- 41059;
+	41059 -- 41060;
+	1426 -- 41898;
+	1955 -- 42845;
+	42845 -- 42846;
+	42846 -- 42847;
+	0 -- 44164;
+	44164 -- 44165;
+	44165 -- 44166;
+	206 -- 45198;
+	45198 -- 45199;
+	2450 -- 45619;
+	45619 -- 45620;
+	45620 -- 45621;
+	45621 -- 45622;
+	9749 -- 47685;
+	2450 -- 48400;
+	48400 -- 48401;
+	48401 -- 48402;
+	467 -- 48577;
+	48577 -- 48578;
+	48578 -- 48579;
+	48579 -- 48580;
+	6519 -- 51199;
+	51199 -- 51200;
+	47685 -- 52176;
+	37379 -- 52709;
+	45619 -- 53112;
+	53112 -- 53113;
+	53113 -- 53114;
+	53112 -- 54922;
+	54922 -- 54923;
+	36760 -- 56935;
+	204 -- 57284;
+	205 -- 57852;
+	57852 -- 57853;
+	57853 -- 57854;
+	31373 -- 58035;
+	58035 -- 58036;
+	2153 -- 58247;
+	58247 -- 58248;
+	58248 -- 58249;
+	9750 -- 59509;
+	45198 -- 60350;
+	8404 -- 61099;
+	61099 -- 61100;
+	61100 -- 61101;
+	207 -- 64643;
+	3879 -- 66968;
+	66968 -- 66969;
+	66969 -- 66970;
+	2155 -- 67747;
+	24258 -- 69958;
+	204 -- 71086;
+	71086 -- 71087;
+	71087 -- 71088;
+	71088 -- 71089;
+	47685 -- 71945;
+	36759 -- 74516;
+	74516 -- 74517;
+	74517 -- 74518;
+	3575 -- 80414;
+	80414 -- 80415;
+	80415 -- 80416;
+	468 -- 83159;
+	83159 -- 83160;
+	83160 -- 83161;
+	7124 -- 84067;
+	84067 -- 84068;
+	36966 -- 88964;
+	20368 -- 89258;
+	89258 -- 89259;
+	803 -- 89765;
+	469 -- 91518;
+	91518 -- 91519;
+	613 -- 100113;
+	5904 -- 100919;
+	470 -- 101472;
+	58248 -- 107392;
+	34264 -- 107833;
+	107833 -- 107834;
+	2155 -- 108408;
+	6518 -- 109382;
+	467 -- 109657;
+	109657 -- 109658;
+	109658 -- 109659;
+	109659 -- 109660;
+	2729 -- 110907;
+	2452 -- 111838;
+	111838 -- 111839;
+	2729 -- 112101;
+	3879 -- 116735;
+	116735 -- 116736;
+	116736 -- 116737;
+	2450 -- 116922;
+	4783 -- 118480;
+	71086 -- 118951;
+	118951 -- 118952;
+	118952 -- 118953;
+	16576 -- 120074;
+	80414 -- 122281;
+	122281 -- 122282;
+	0 -- 123602;
+	123602 -- 123603;
+	123603 -- 123604;
+	805 -- 124660;
+	89765 -- 125471;
+	125471 -- 125472;
+	118480 -- 130455;
+	130455 -- 130456;
+	2729 -- 131144;
+	71086 -- 131664;
+	51199 -- 132738;
+	2451 -- 133184;
+	133184 -- 133185;
+	133185 -- 133186;
+	2153 -- 136056;
+	136056 -- 136057;
+	41057 -- 137873;
+	137873 -- 137874;
+	137874 -- 137875;
+	803 -- 138694;
+	204 -- 144156;
+	5904 -- 147712;
+	37379 -- 148142;
+	148142 -- 148143;
+	22731 -- 148963;
+	148963 -- 148964;
+	204 -- 152342;
+	152342 -- 152343;
+	32049 -- 152842;
+	152842 -- 152843;
+	116922 -- 155662;
+	9749 -- 160428;
+	160428 -- 160429;
+	469 -- 161189;
+	161189 -- 161190;
+	40466 -- 161491;
+	206 -- 163918;
+	163918 -- 163919;
+	22786 -- 167371;
+	32049 -- 168046;
+	9749 -- 168186;
+	168186 -- 168187;
+	2154 -- 169842;
+	169842 -- 169843;
+	2450 -- 170558;
+	3574 -- 179445;
+	179445 -- 179446;
+	36186 -- 179817;
+	116922 -- 181135;
+	181135 -- 181136;
+	181136 -- 181137;
+	14053 -- 183961;
+	37379 -- 185927;
+	185927 -- 185928;
+	32049 -- 188880;
+	188880 -- 188881;
+	468 -- 191771;
+	48400 -- 193493;
+	193493 -- 193494;
+	193494 -- 193495;
+	160428 -- 195353;
+	22731 -- 198171;
+	198171 -- 198172;
+	168046 -- 221202;
+	205 -- 228599;
+	228599 -- 228600;
+	228600 -- 228601;
+	4784 -- 247412;
+	247412 -- 247413;
+	0 [label = "Root
+White:704
+Draws:1600
+Black:296", shape = octagon, style = filled, fillcolor = darkgreen, fontcolor = black]; 
+}
