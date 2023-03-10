@@ -19,22 +19,22 @@ class WordHandler:
         return self.games
 
     def isWhiteGame(self, game):
-        return game.whitePlayer.getName().startswith("Stockfish")
+        return game.getWhitePlayer().getName().startswith("Stockfish")
 
     def isBlackGame(self, game):
-        return game.blackPlayer.getName().startswith("Stockfish")
+        return game.getBlackPlayer().getName().startswith("Stockfish")
 
     def isStockfishWin(self, game):
-        return (self.isWhiteGame(game) and game.result == "1-0") or (self.isBlackGame(game) and game.result == "0-1")
+        return (self.isWhiteGame(game) and game.getResult() == "1-0") or (self.isBlackGame(game) and game.getResult() == "0-1")
 
     def isStockfishLoss(self, game):
-        return (self.isWhiteGame(game) and game.result == "0-1") or (self.isBlackGame(game) and game.result == "1-0")
+        return (self.isWhiteGame(game) and game.getResult() == "0-1") or (self.isBlackGame(game) and game.getResult() == "1-0")
 
-    def filterOpeningsPlayedNTimes(self, n):
+    def filterOpeningsPlayedNTimes(self, n=1):
         if n < 1:
             raise ValueError("n must be a positive integer.")
         openings = dict()
-        for game in self.games:
+        for game in self.getGames():
             if game.getOpening() not in openings.keys():
                 openings[game.getOpening()] = [0, 0, 0]
             result = game.getResult()
@@ -59,46 +59,50 @@ class WordHandler:
 
         return popularOpenings
 
-    def createDocument(self, listOfPNGs, relevantGames=0, opening=0, minAmountOfGames=0):
+    def getGamesWithOpening(self, games, opening):
+        relevantGames = []
+        for game in games:
+            if game.getOpening() == opening:
+                relevantGames.append(game)
+        if relevantGames == []:
+            raise ValueError("No games with that opening")
+        return relevantGames
+    
+    def createDocument(self, listOfPNGs, openings=[], minAmountOfGames=1):
         document = Document()
-
         document.add_heading('Chess game', 0)
-        self.addResultTables(document, self.games)
+        self.addResultTables(document, self.getGames())
         self.addMedianSDTables(document)
         document.add_picture('Datafiles\proportionResultsPlot.png')
         document.add_picture('Datafiles\proportionStockfishPlot.png')
-        if relevantGames and opening:
-            self.addResultTables(document, relevantGames, opening)
+        if openings:
+            for opening in openings:
+                relevantGames = self.getGamesWithOpening(self.getGames(), opening)
+                self.addResultTables(document, relevantGames, opening)
         if minAmountOfGames:
             self.addOpeningsWithNGamesTable(document, minAmountOfGames)
-        document.save("Datafiles\Report.docx")
         for png in listOfPNGs:
             document.add_picture(png, width = Inches(6), height = Inches(6))
-
+        document.save(self.filePath)
+   
+    
+    # Creates a table with the amount of games won, drawn and lost by Stockfish
     def addResultTables(self, document, games, opening=0):
-
-        # Calculate games won:
-        whiteWon = 0
-        whiteDrawn = 0
-        whiteLost = 0
-        blackWon = 0
-        blackDrawn = 0
-        blackLost = 0
-
+        whiteWon = whiteDrawn = whiteLost = blackWon = blackDrawn = blackLost = 0
         for game in games:
-            if game.whitePlayer.getName().startswith("Stockfish"):
-                if game.result == "1-0":
+            if game.getWhitePlayer().getName().startswith("Stockfish"):
+                if game.getResult() == "1-0":
                     whiteWon += 1
-                elif game.result == "0-1":
+                elif game.getResult() == "0-1":
                     whiteLost += 1
-                elif game.result == "1/2-1/2":
+                elif game.getResult() == "1/2-1/2":
                     whiteDrawn += 1
-            elif game.blackPlayer.getName().startswith("Stockfish"):
-                if game.result == "0-1":
+            elif game.getBlackPlayer().getName().startswith("Stockfish"):
+                if game.getResult() == "0-1":
                     blackWon += 1
-                elif game.result == "1-0":
+                elif game.getResult() == "1-0":
                     blackLost += 1
-                elif game.result == "1/2-1/2":
+                elif game.getResult() == "1/2-1/2":
                     blackDrawn += 1
 
         gamesWon = whiteWon + blackWon
@@ -127,6 +131,7 @@ class WordHandler:
                 row_cells[0].text = type
                 row_cells[1].text = str(value[i])
 
+    # Creates a table with statistics of each opening played at least n times
     def addOpeningsWithNGamesTable(self, document, amountOfGames):
         document.add_heading(
             f"All openings with at least {amountOfGames} games played.")
@@ -145,6 +150,7 @@ class WordHandler:
             row[2].text = str(value[1])
             row[3].text = str(value[2])
 
+    # Creates a table with the median and standard deviation of the length of games
     def addMedianSDTables(self, document):
         document.add_heading(
             "Median and standard deviation for length of games", 3)
@@ -169,34 +175,33 @@ class WordHandler:
             row_cells[1].text = str(round(value, 2))
 
     def createResultGraph(self):
-        longestGameCount = int(self.games[0].plycount)
-        longestWhiteGameCount = 0
-        longestBlackGameCount = 0
+        longestGameCount = int(self.getGames()[0].getPlyCount())
+        longestWhiteGameCount = longestBlackGameCount = 0
         movesAllGames = []
         movesWhiteGames = []
         movesBlackGames = []
         gamesStockfishWhite = []
         gamesStockfishBlack = []
 
-        for game in self.games:
+        for game in self.getGames():
             # Find stockfish white and black games
             if self.isWhiteGame(game):
                 gamesStockfishWhite.append(game)
-                movesWhiteGames.append(int(game.plycount))
-                if int(game.plycount) > longestWhiteGameCount:
-                    longestWhiteGameCount = int(game.plycount)
+                movesWhiteGames.append(int(game.getPlyCount()))
+                if int(game.getPlyCount()) > longestWhiteGameCount:
+                    longestWhiteGameCount = int(game.getPlyCount())
             elif self.isBlackGame(game):
                 gamesStockfishBlack.append(game)
-                movesBlackGames.append(int(game.plycount))
-                if int(game.plycount) > longestBlackGameCount:
-                    longestBlackGameCount = int(game.plycount)
+                movesBlackGames.append(int(game.getPlyCount()))
+                if int(game.getPlyCount()) > longestBlackGameCount:
+                    longestBlackGameCount = int(game.getPlyCount())
 
             # Find longest game
-            movesAllGames.append(int(game.plycount))
-            if int(game.plycount) > longestGameCount:
-                longestGameCount = int(game.plycount)
+            movesAllGames.append(int(game.getPlyCount()))
+            if int(game.getPlyCount()) > longestGameCount:
+                longestGameCount = int(game.getPlyCount())
 
-        nrOfGames = len(self.games)
+        nrOfGames = len(self.getGames())
         nrOfWhiteGames = len(gamesStockfishWhite)
         nrOfBlackGames = len(gamesStockfishBlack)
 
@@ -216,8 +221,8 @@ class WordHandler:
         ongoingGamesOnMove = [0] * (int(longestGameCount) + 1)
         ongoingWhiteGamesOnMove = [0] * (int(longestWhiteGameCount) + 1)
         ongoingBlackGamesOnMove = [0] * (int(longestBlackGameCount) + 1)
-        for game in self.games:
-            gameLength = int(game.plycount)
+        for game in self.getGames():
+            gameLength = int(game.getPlyCount())
             if self.isWhiteGame(game):
                 for i in range(gameLength):
                     ongoingWhiteGamesOnMove[i] += 1
@@ -227,8 +232,8 @@ class WordHandler:
             for i in range(gameLength):
                 ongoingGamesOnMove[i] += 1
 
-        proportionOfGames = []
-        proportionOfWhiteGames = []
+        proportionOfGames = [] 
+        proportionOfWhiteGames = [] 
         proportionOfBlackGames = []
         for i in range(len(ongoingGamesOnMove)):
             proportionOfGames.append(
@@ -256,33 +261,25 @@ class WordHandler:
         plt.legend(loc="upper right")
         plt.savefig("Datafiles\proportionResultsPlot.png")
 
+    # Create a graph of the results of the games played by Stockfish
     def createSFResultGraph(self):
-        longestGameCount = int(self.games[0].plycount)
-        wonGames = []
-        lostGames = []
-        longestWonGameCount = 0
-        longestLostGameCount = 0
+        longestGameCount = int(self.getGames()[0].getPlyCount())
+        wonGames = lostGames = []
+        longestWonGameCount = longestLostGameCount = 0
 
-        for game in self.games:
+        for game in self.getGames():
             if self.isStockfishWin(game):
                 wonGames.append(game)
-                if int(game.plycount) > longestWonGameCount:
-                    longestWonGameCount = int(game.plycount)
+                if int(game.getPlyCount()) > longestWonGameCount:
+                    longestWonGameCount = int(game.getPlyCount())
             elif self.isStockfishLoss(game):
                 lostGames.append(game)
-                if int(game.plycount) > longestLostGameCount:
-                    longestLostGameCount = int(game.plycount)
+                if int(game.getPlyCount()) > longestLostGameCount:
+                    longestLostGameCount = int(game.getPlyCount())
 
         longestGameCount = max(longestWonGameCount, longestLostGameCount)
         nrOfWonGames = len(wonGames)
         nrOfLostGames = len(lostGames)
-
-        # if wonGames:
-        #     self.medianOfWonGames = statistics.median(wonGames)
-        #     self.SDofWonGames = statistics.pstdev(wonGames)
-        # if lostGames:
-        #     self.medianOfLostGames = statistics.median(lostGames)
-        #     self.SDofLostGames = statistics.pstdev(lostGames)
 
         wonMoveList = list(range(1, int(longestWonGameCount) + 2))
         lostMoveList = list(range(1, int(longestLostGameCount) + 2))
@@ -290,8 +287,8 @@ class WordHandler:
         ongoingWonGamesOnMove = [0] * (int(longestWonGameCount) + 1)
         ongoingLostGamesOnMove = [0] * (int(longestLostGameCount) + 1)
 
-        for game in self.games:
-            gameLength = int(game.plycount)
+        for game in self.getGames():
+            gameLength = int(game.getPlyCount())
             if self.isStockfishWin(game):
                 for i in range(gameLength):
                     ongoingWonGamesOnMove[i] += 1
