@@ -3,7 +3,7 @@ class Player:
         self.name = name
         self.rating = rating
 
-    def get_name(self):
+    def getName(self):
         return self.name
 
     def __repr__(self):

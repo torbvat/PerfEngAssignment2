@@ -4,8 +4,8 @@ import statistics
 
 
 class WordHandler:
-    def __init__(self, filepath, games):
-        self.filepath = filepath
+    def __init__(self, filePath, games):
+        self.filePath = filePath
         self.games = games
         self.medianOfAllGames = 0
         self.SDofAllGames = 0
@@ -14,14 +14,14 @@ class WordHandler:
         self.medianOfBlackGames = 0
         self.SDofBlackGames = 0
 
-    def get_games(self):
+    def getGames(self):
         return self.games
 
     def isWhiteGame(self, game):
-        return game.white_player.getName().startswith("Stockfish")
+        return game.whitePlayer.getName().startswith("Stockfish")
 
     def isBlackGame(self, game):
-        return game.black_player.getName().startswith("Stockfish")
+        return game.blackPlayer.getName().startswith("Stockfish")
 
     def isStockfishWin(self, game):
         return (self.isWhiteGame(game) and game.result == "1-0") or (self.isBlackGame(game) and game.result == "0-1")
@@ -29,89 +29,89 @@ class WordHandler:
     def isStockfishLoss(self, game):
         return (self.isWhiteGame(game) and game.result == "0-1") or (self.isBlackGame(game) and game.result == "1-0")
 
-    def create_document(self):
+    def createDocument(self):
         document = Document()
 
         document.add_heading('Chess game', 0)
-        self.add_result_tables(document)
-        self.add_medianSD_tables(document)
+        self.addResultTables(document)
+        self.addMedianSDTables(document)
         document.add_picture('proportionResultsPlot.png')
         document.add_picture('proportionStockfishPlot.png')
         document.save("testFil.docx")
 
-    def add_result_tables(self, document):
+    def addResultTables(self, document):
 
         # Calculate games won:
-        white_won = 0
-        white_drawn = 0
-        white_lost = 0
-        black_won = 0
-        black_drawn = 0
-        black_lost = 0
+        whiteWon = 0
+        whiteDrawn = 0
+        whiteLost = 0
+        blackWon = 0
+        blackDrawn = 0
+        blackLost = 0
 
         for game in self.games:
-            if game.white_player.getName().startswith("Stockfish"):
+            if game.whitePlayer.getName().startswith("Stockfish"):
                 if game.result == "1-0":
-                    white_won += 1
+                    whiteWon += 1
                 elif game.result == "0-1":
-                    white_lost += 1
+                    whiteLost += 1
                 elif game.result == "1/2-1/2":
-                    white_drawn += 1
-            elif game.black_player.getName().startswith("Stockfish"):
+                    whiteDrawn += 1
+            elif game.blackPlayer.getName().startswith("Stockfish"):
                 if game.result == "0-1":
-                    black_won += 1
+                    blackWon += 1
                 elif game.result == "1-0":
-                    black_lost += 1
+                    blackLost += 1
                 elif game.result == "1/2-1/2":
-                    black_drawn += 1
+                    blackDrawn += 1
 
-        games_won = white_won + black_won
-        games_drawn = white_drawn + black_drawn
-        games_lost = white_lost + black_lost
+        gamesWon = whiteWon + blackWon
+        gamesDrawn = whiteDrawn + blackDrawn
+        gamesLost = whiteLost + blackLost
 
         # Create tables
         document.add_heading("Stockfish all games", 3)
-        all_games_table = document.add_table(rows=2, cols=3)
-        all_games_table.style = "Medium Shading 1"
-        header_row = all_games_table.rows[0].cells
+        allGamesTable = document.add_table(rows=2, cols=3)
+        allGamesTable.style = "Medium Shading 1"
+        header_row = allGamesTable.rows[0].cells
         header_row[0].text = 'Won'
         header_row[1].text = 'Drawn'
         header_row[2].text = 'Lost'
-        value_row = all_games_table.rows[1].cells
-        value_row[0].text = str(games_won)
-        value_row[1].text = str(games_drawn)
-        value_row[2].text = str(games_lost)
+        value_row = allGamesTable.rows[1].cells
+        value_row[0].text = str(gamesWon)
+        value_row[1].text = str(gamesDrawn)
+        value_row[2].text = str(gamesLost)
 
         document.add_heading("Stockfish white games", 3)
-        white_games_table = document.add_table(rows=2, cols=3)
-        white_games_table.style = "Medium Shading 1"
-        header_row = white_games_table.rows[0].cells
+        whiteGamesTable = document.add_table(rows=2, cols=3)
+        whiteGamesTable.style = "Medium Shading 1"
+        header_row = whiteGamesTable.rows[0].cells
         header_row[0].text = 'Won'
         header_row[1].text = 'Drawn'
         header_row[2].text = 'Lost'
-        value_row = white_games_table.rows[1].cells
-        value_row[0].text = str(white_won)
-        value_row[1].text = str(white_drawn)
-        value_row[2].text = str(white_lost)
+        value_row = whiteGamesTable.rows[1].cells
+        value_row[0].text = str(whiteWon)
+        value_row[1].text = str(whiteDrawn)
+        value_row[2].text = str(whiteLost)
 
         document.add_heading("Stockfish black games", 3)
-        black_games_table = document.add_table(rows=2, cols=3)
-        black_games_table.style = "Medium Shading 1"
-        header_row = black_games_table.rows[0].cells
+        blackGamesTable = document.add_table(rows=2, cols=3)
+        blackGamesTable.style = "Medium Shading 1"
+        header_row = blackGamesTable.rows[0].cells
         header_row[0].text = 'Won'
         header_row[1].text = 'Drawn'
         header_row[2].text = 'Lost'
-        value_row = black_games_table.rows[1].cells
-        value_row[0].text = str(black_won)
-        value_row[1].text = str(black_drawn)
-        value_row[2].text = str(black_lost)
+        value_row = blackGamesTable.rows[1].cells
+        value_row[0].text = str(blackWon)
+        value_row[1].text = str(blackDrawn)
+        value_row[2].text = str(blackLost)
 
-    def add_medianSD_tables(self, document):
+    def addMedianSDTables(self, document):
         document.add_heading(
             "Median and standard deviation for length of games", 3)
-        medianSD_table = document.add_table(rows=1, cols=2)
-        medianSD_table.style = "Medium Shading 1"
-        tableHeader = medianSD_table.rows[0].cells
+        medianSDTable = document.add_table(rows=1, cols=2)
+        medianSDTable.style = "Medium Shading 1"
+        tableHeader = medianSDTable.rows[0].cells
         tableHeader[0].text = "Type"
         tableHeader[1].text = "Value"
 
@@ -125,11 +125,11 @@ class WordHandler:
         )
 
         for type, value in records:
-            row_cells = medianSD_table.add_row().cells
+            row_cells = medianSDTable.add_row().cells
             row_cells[0].text = type
             row_cells[1].text = str(round(value, 2))
 
-    def create_result_graph(self):
+    def createResultGraph(self):
         longestGameCount = int(self.games[0].plycount)
         longestWhiteGameCount = 0
         longestBlackGameCount = 0
@@ -160,7 +160,6 @@ class WordHandler:
         nrOfGames = len(self.games)
         nrOfWhiteGames = len(gamesStockfishWhite)
         nrOfBlackGames = len(gamesStockfishBlack)
-        print(nrOfBlackGames)
 
         # Find median and SD of all games, stockfish games with white and stockfish games with black
         self.medianOfAllGames = statistics.median(movesAllGames)
@@ -217,9 +216,8 @@ class WordHandler:
         plt.suptitle("Proportion of games still ongoing after n moves")
         plt.legend(loc="upper right")
         plt.savefig("proportionResultsPlot.png")
-        plt.show()
 
-    def create_SF_result_graph(self):
+    def createSFResultGraph(self):
         longestGameCount = int(self.games[0].plycount)
         wonGames = []
         lostGames = []
@@ -237,8 +235,6 @@ class WordHandler:
                     longestLostGameCount = int(game.plycount)
 
         longestGameCount = max(longestWonGameCount, longestLostGameCount)
-        print(longestGameCount)
-
         nrOfWonGames = len(wonGames)
         nrOfLostGames = len(lostGames)
 
@@ -275,9 +271,6 @@ class WordHandler:
             proportionOfLostGames.append(
                 round(ongoingLostGamesOnMove[i]*100/nrOfLostGames))
 
-        print(wonMoveList)
-        print(lostMoveList)
-
         plt.figure(2)
         plt.plot(wonMoveList, proportionOfWonGames, 'g', label="Games won")
         plt.plot(lostMoveList, proportionOfLostGames, 'r', label="Games lost")
@@ -289,8 +282,7 @@ class WordHandler:
             "Proportion of Stockfish games still ongoing after n moves")
         plt.legend(loc="upper right")
         plt.savefig("proportionStockfishPlot.png")
-        plt.show()
 
-    def create_graphs(self):
-        self.create_result_graph()
-        self.create_SF_result_graph()
+    def createGraphs(self):
+        self.createResultGraph()
+        self.createSFResultGraph()
