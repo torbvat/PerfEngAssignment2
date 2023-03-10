@@ -1,44 +1,28 @@
-import ExcelHandler
+# import ExcelHandler
 import DatabaseHandler
-from Tree import Printer, Graph
+from Tree import Printer
+import WordHandler
 
-# Database:
-# game_reader = DatabaseHandler.DatabaseHandler(
-#     "Datafiles\StockfishShort.pgn")
-game_reader = DatabaseHandler.DatabaseHandler(
+gameReader = DatabaseHandler.DatabaseHandler(
     "Datafiles\Stockfish_15_64-bit.commented.[2600].pgn")
-games = game_reader.read_games()
-#game_reader.write_to_file(games, "Datafiles\Stockfish_complete_rewritten.pgn")
-# print(games[2000].get_variation())
-# print(games[0].moves)
+games = gameReader.readGames()
+
 
 # Excel:
-#game_exporter = ExcelHandler.ExcelHandler()
-#game_exporter.export_game_to_excel(games[0], "Datafiles\game_0.xlsx")
-#imported_game = game_exporter.import_game_from_excel("Datafiles\game_2000.xlsx")
+# game_exporter = ExcelHandler.ExcelHandler()
+# game_exporter.exportGameToExcel(games[0], "Datafiles\game_0.xlsx")
+# imported_game = game_exporter.import_game_from_excel("Datafiles\game_2000.xlsx")
 
-#game_reader.write_to_file(([imported_game]), "Datafiles\game_0.pgn")
-"""
-print(imported_game.black_player)
-print(imported_game.white_player)
-print(imported_game.moves)
-print(imported_game.event)
-print(imported_game.site)
-print(imported_game.date)
-print(imported_game.round)
-print(imported_game.result)
-print(imported_game.eco)
-print(imported_game.opening)
-print(imported_game.plycount)
-print(imported_game.variation)
-"""
-import pydot
+# Word:
+wordHandler = WordHandler.WordHandler("testFil.docx", games)
+wordHandler.createGraphs()
+wordHandler.createDocument()
+
 # Tree:
 printer = Printer()
-#graph = printer.createGraph(games)
-#print(graph.nodes)
-printer.drawGamesWithOpening("Datafiles\FrenchOpening.dot", "French", games, 5, 3)
-#printer.drawGraph(graph, "Datafiles\ChessTree.dot", 5, 3)
-
-(graph_pydot,) = pydot.graph_from_dot_file('Datafiles\FrenchOpening.dot')
-graph_pydot.write_png('Datafiles/FrenchOpening.png')
+graph = printer.createGraph(games)
+printer.drawGamesWithOpening(
+    "Datafiles\FrenchOpening.dot", "French", games, 5, 3)
+printer.drawGraph(graph, "Datafiles\ChessTree.dot", 5, 3)
+printer.drawGamesWithOpening(
+    "Datafiles\SicilianOpening.dot", "Sicilian", games, 5, 3)

@@ -1,5 +1,5 @@
 class ChessGame:
-    def __init__(self, event, site, date, round, result, eco, opening, plycount, white_player, black_player, moves, variation):
+    def __init__(self, event, site, date, round, result, eco, opening, plycount, whitePlayer, blackPlayer, moves, variation):
         self.event = event
         self.site = site
         self.date = date
@@ -8,8 +8,8 @@ class ChessGame:
         self.eco = eco
         self.opening = opening
         self.plycount = plycount
-        self.white_player = white_player
-        self.black_player = black_player
+        self.whitePlayer = whitePlayer
+        self.blackPlayer = blackPlayer
         self.moves = moves
         self.variation = variation
 
@@ -44,37 +44,37 @@ class ChessGame:
         return self.plycount
     
     def getWhitePlayer(self):
-        return self.white_player
+        return self.whitePlayer
     
     def getBlackPlayer(self):
-        return self.black_player
+        return self.blackPlayer
     
     def getVariation(self):
         return self.variation
     
     
     def __repr__(self):
-        return f"(Round: {self.round}, Result: {self.result}, White Player: {self.white_player}, Black Player: {self.black_player})\n"
+        return f"(Round: {self.round}, Result: {self.result}, White Player: {self.whitePlayer}, Black Player: {self.blackPlayer})\n"
 
 
 
 class ChessMove:
-    def __init__(self, move_number, player, move_text):
-        self.move_number = move_number
+    def __init__(self, moveNumber, player, moveText):
+        self.moveNumber = moveNumber
         self.player = player
-        self.move_text = move_text
+        self.moveText = moveText
 
     def getMoveNumber(self):
-        return self.move_number
+        return self.moveNumber
     
     def getPlayer(self):
         return self.player
     
     def getMoveText(self):
-        return self.move_text
+        return self.moveText
 
     def __repr__(self):
-        return f" Move Number: {self.move_number}, Move Text: {self.move_text}\n"
+        return f" Move Number: {self.moveNumber}, Move Text: {self.moveText}\n"
 
   
     
