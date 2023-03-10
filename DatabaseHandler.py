@@ -14,7 +14,7 @@ class DatabaseHandler:
             white_name = white_elo = black_name = black_elo = None
             variation = "Standard"
             for line in file:
-                if line is None or line=="\n" or line == " " or line == "": #Skip empty lines
+                if line is None or line=="\n" or line == " " or line == "":
                     continue
                 elif line.startswith('[Event'):
                     if game_count == number_of_games: #If we have read the number of games we want to read, stop reading
@@ -55,7 +55,7 @@ class DatabaseHandler:
                     move_string = move_string.replace(".", " ") #Replace all periods with spaces to seperate moves and move numbers when creating a list
                     move_elements = re.findall(r'\S+', re.sub(r'{.*?}', '', move_string)) #Remove comments and creates a list of all elements in move_string
                     for i in range(0, len(move_elements)-2, 3):
-                        if move_elements[i+2] == "1-0" or move_elements[i+2] == "0-1" or move_elements[i+2] == "1/2-1/2":
+                        if move_elements[i+2] == "1-0" or move_elements[i+2] == "0-1" or move_elements[i+2] == "1/2-1/2": #When the result is reached, add the last move to the list, then break
                             white_move = Chess.ChessMove(move_elements[i].strip("."), white_player, move_elements[i+1])
                             moves.append(white_move)
                             break
@@ -64,7 +64,6 @@ class DatabaseHandler:
                         move_str_black = move_elements[i+2]
                         black_move = Chess.ChessMove(move_number, black_player, move_str_black)
                         white_move = Chess.ChessMove(move_number, white_player, move_str_white)
-                        
                         moves.append(white_move)
                         moves.append(black_move)
                     move_string = ""
@@ -101,7 +100,7 @@ class DatabaseHandler:
                         file.write(str(game.getMoves()[i].getMoveNumber()) + ". " + game.getMoves()[i].getMoveText() + " " + game.getMesult() + "\n\n")
                     if move_counter % 4 == 0:
                         file.write("\n")
-                if move_counter % 4 != 0:
+                if move_counter % 4 != 0: #To make sure that there is space between games
                     file.write("\n\n")
 
 

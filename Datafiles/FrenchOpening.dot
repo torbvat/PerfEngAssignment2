@@ -57,5 +57,5 @@ graph ChessOpenings {
 	17 -- 18;
 	14 -- 23;
 	0 [label = "French
-42, 77, 11", shape = octagon, style = filled, fillcolor = green, fontcolor = white]; 
+42, 77, 11", shape = octagon, style = filled, fillcolor = darkgreen, fontcolor = black]; 
 }

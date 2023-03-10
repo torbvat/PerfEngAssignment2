@@ -1,9 +1,7 @@
-# Graphs
 import DatabaseHandler
+
 # Nodes
 # --------
-
-
 class Node:
     def __init__(self, move, ply_count=0, node_ID=0):
         self.name = move.getMoveText() if not ply_count == 0 else "Root"
@@ -40,10 +38,9 @@ class Node:
 
     def __repr__(self):
         return (f"|{self.name} : {self.ply_count} : {len(self.children)}|")
+
 # Edges
 # --------
-
-
 class Edge:
     def __init__(self, source_node, target_node):
         self.source_node = source_node
@@ -57,8 +54,6 @@ class Edge:
 
 # Graphs
 # ---------
-
-
 class Graph:
     def __init__(self, games):
         self.edges = []
@@ -104,8 +99,6 @@ class Graph:
 
 # Printer
 # ----------
-
-
 class Printer:
     def __init__(self):
         pass
@@ -120,6 +113,7 @@ class Printer:
     def createGraph(self, games, max_steps=500): 
         if max_steps < 1:
             raise ValueError("Max steps must be greater than 0")
+        
         graph = Graph(games)
         for game in games:
             if game.getResult() == "1-0":
@@ -131,7 +125,6 @@ class Printer:
 
             current_node = graph.getRoot()
             current_depth = 0
-
             #Iterate through the moves of the game until the max depth is reached or the end of the game is reached
             for move in game.getMoves()[:max_steps] if max_steps < len(game.getMoves()) else game.getMoves():
                 next_node = self.lookForNodeInChildren(move.getMoveText(), current_node.getChildren())
@@ -147,25 +140,8 @@ class Printer:
                 current_node.children.append(new_node)
                 current_node = new_node
                 current_depth += 1
+        
         return graph
-    """
-    # Writes the entire graph to a file in the DOT language
-    def drawGraph(self, graph, file_path):
-        with open(file_path, 'w') as file:
-            file.write("graph ChessTree {\n")
-            file.write('\trankdir="LR";\n')
-            for node in graph.getNodes():
-                if node.isWhitePlayer():
-                    file.write(
-                        f"\t{node.getID()} [label = \"{node.getName()}\n{node.getResultCounts()['white_wins']}, {node.getResultCounts()['draws']}, {node.getResultCounts()['black_wins']}\"]; \n")
-                else:
-                    file.write(
-                        f"\t{node.getID()} [label = \"{node.getName()}\n{node.getResultCounts()['white_wins']}, {node.getResultCounts()['draws']}, {node.getResultCounts()['black_wins']}\"; style = filled, fillcolor = black, fontcolor = white]; \n")
-            for edge in graph.getEdges():
-                file.write(
-                    f"\t{edge.getSourceNode().getID()} -- {edge.getTargetNode().getID()};\n")
-            file.write("}")
-    """
 
     # Writes the graph to a file in the DOT language, but only writes nodes that have been played more than 'threshold' times,
     # and only 'depth' moves deep
@@ -183,25 +159,31 @@ class Printer:
                 graph.getRoot().getResultCounts()["black_wins"] += graph.getRoot().getChildren()[i].getResultCounts()['black_wins']
                 graph.getRoot().getResultCounts()["draws"] += graph.getRoot().getChildren()[i].getResultCounts()['draws']
            
+            # Writes each node to the file if it has been played more than 'threshold' times and is 'depth' moves deep           
             for node in graph.getNodes():
                 if (node.getGamesPlayed() > threshold) and (node.getPlyCount() <= depth):
                     if node.isWhitePlayer():
-                        file.write(
-                            f"\t{node.getID()} [label = \"{node.getName()}\n{node.getResultCounts()['white_wins']}, {node.getResultCounts()['draws']}, {node.getResultCounts()['black_wins']}\"]; \n")
+                        file.write(f"\t{node.getID()} [label = \"{node.getName()}\n{node.getResultCounts()['white_wins']},\
+                                    {node.getResultCounts()['draws']}, {node.getResultCounts()['black_wins']}\"]; \n")
                     else:
                         file.write(
-                            f"\t{node.getID()} [label = \"{node.getName()}\n{node.getResultCounts()['white_wins']}, {node.getResultCounts()['draws']}, {node.getResultCounts()['black_wins']}\", style = filled, fillcolor = black, fontcolor = white]; \n")
+                            f"\t{node.getID()} [label = \"{node.getName()}\n{node.getResultCounts()['white_wins']}, {node.getResultCounts()['draws']},\
+                                  {node.getResultCounts()['black_wins']}\", style = filled, fillcolor = black, fontcolor = white]; \n")
+            
+            # Writes each edge to the file if the target node has been played more than 'threshold' times and is 'depth' moves deep
             for edge in graph.getEdges():
                 if (edge.getTargetNode().getGamesPlayed() > threshold) and (edge.getTargetNode().getPlyCount() <= depth):
-                    file.write(
-                        f"\t{edge.getSourceNode().getID()} -- {edge.getTargetNode().getID()};\n")
-            file.write(f"\t{root.getID()} [label = \"{root.getName()}\n{root.getResultCounts()['white_wins']}, {root.getResultCounts()['draws']}, {root.getResultCounts()['black_wins']}\", shape = octagon, style = filled, fillcolor = green, fontcolor = white]; \n")
+                    file.write(f"\t{edge.getSourceNode().getID()} -- {edge.getTargetNode().getID()};\n")
+            file.write(f"\t{root.getID()} [label = \"{root.getName()}\n{root.getResultCounts()['white_wins']}, {root.getResultCounts()['draws']},\
+                        {root.getResultCounts()['black_wins']}\", shape = octagon, style = filled, fillcolor = darkgreen, fontcolor = black]; \n")
+            
             file.write("}")
 
     # Writes a graph of the games with a certain opening to a DOT-file
     def drawGamesWithOpening(self, file_path, opening, games, depth=500, threshold=1):
         if depth < 1 or threshold < 1:
             raise ValueError("Depth and threshold must be greater than 0")
+        
         relevant_games = []
         for game in games:
             if game.getOpening() == opening:

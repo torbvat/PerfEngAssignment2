@@ -32,10 +32,13 @@ print(imported_game.opening)
 print(imported_game.plycount)
 print(imported_game.variation)
 """
-
+import pydot
 # Tree:
 printer = Printer()
-graph = printer.createGraph(games)
+#graph = printer.createGraph(games)
 #print(graph.nodes)
 printer.drawGamesWithOpening("Datafiles\FrenchOpening.dot", "French", games, 5, 3)
-printer.drawGraph(graph, "Datafiles\ChessTree.dot", 5, 3)
+#printer.drawGraph(graph, "Datafiles\ChessTree.dot", 5, 3)
+
+(graph_pydot,) = pydot.graph_from_dot_file('Datafiles\FrenchOpening.dot')
+graph_pydot.write_png('Datafiles/FrenchOpening.png')
