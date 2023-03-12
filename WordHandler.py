@@ -264,7 +264,8 @@ class WordHandler:
     # Create a graph of the results of the games played by Stockfish
     def createSFResultGraph(self):
         longestGameCount = int(self.getGames()[0].getPlyCount())
-        wonGames = lostGames = []
+        wonGames = []
+        lostGames = []
         longestWonGameCount = longestLostGameCount = 0
 
         for game in self.getGames():
