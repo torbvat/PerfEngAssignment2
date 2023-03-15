@@ -1,3 +1,7 @@
+""" 
+Created by: Torbjørn Vatne and Erlend Nygaard Kristiansen
+Group 18
+"""
 class ChessGame:
     def __init__(self, event, site, date, round, result, eco, opening, plycount, whitePlayer, blackPlayer, moves, variation):
         self.event = event

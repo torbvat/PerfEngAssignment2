@@ -1,3 +1,7 @@
+""" 
+Created by: Torbjørn Vatne and Erlend Nygaard Kristiansen
+Group 18
+"""
 import ExcelHandler
 import DatabaseHandler
 from Tree import Printer

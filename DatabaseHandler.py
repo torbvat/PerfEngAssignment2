@@ -1,3 +1,7 @@
+""" 
+Created by: Torbjørn Vatne and Erlend Nygaard Kristiansen
+Group 18
+"""
 import Chess #Class for storing data about a single move, player, and game
 import re
 class DatabaseHandler:

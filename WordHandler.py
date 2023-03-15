@@ -1,3 +1,7 @@
+""" 
+Created by: Torbjørn Vatne and Erlend Nygaard Kristiansen
+Group 18
+"""
 from docx import Document
 from docx.shared import Inches
 import matplotlib.pyplot as plt
